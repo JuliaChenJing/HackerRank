@@ -1,9 +1,16 @@
 eclipse.preferences.version=1
+encoding//src/datastructure/arrays/LongestDistance.java=UTF-8
+encoding//src/datastructure/arrays/ReminderMatch.java=UTF-8
 encoding//src/datastructure/arrays/RotateArray.java=UTF-8
 encoding//src/datastructure/arrays/Sum_I.java=UTF-8
 encoding//src/datastructure/arrays/Sum_II.java=UTF-8
 encoding//src/datastructure/arrays/Sum_III.java=UTF-8
 encoding//src/datastructure/hashtable/CourseResult.java=UTF-8
 encoding//src/datastructure/hashtable/RandomTest.java=UTF-8
+encoding//src/datastructure/intervals/CalculateOverlappingIntervals.java=UTF-8
+encoding//src/datastructure/intervals/InsertInterval.java=UTF-8
+encoding//src/datastructure/intervals/Interval.java=UTF-8
+encoding//src/datastructure/intervals/MergeInterval.java=UTF-8
+encoding//src/datastructure/intervals/Point.java=UTF-8
 encoding//src/datastructure/string/Anagram.java=UTF-8
 encoding//src/datastructure/string/RemoveDuplicateChar.java=UTF-8
