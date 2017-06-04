@@ -54,39 +54,6 @@ public class RemoveDuplicateChar {
 
 	}
 
-	/*
-	 * First, ask yourself, what does the interviewer mean by an additional
-	 * buffer? Can we use an additional array of constant size? Algorithm—No
-	 * (Large) Additional Memory: 1. For each character, check if it is a
-	 * duplicate of already found characters. 2. Skip duplicate characters and
-	 * update the non duplicate characters. Time complexity is O(N*N)
-	 * 不对，有问题
-	 */
-
-	public static char [] removeDuplicateChar(char[] str) {
-		if (str == null)
-			return str;
-		int len = str.length;
-		if (len < 2)
-			return str;
-
-		int tail = 1;
-
-		for (int i = 1; i < len; ++i) {
-			int j;
-			for (j = 0; j < tail; ++j) {
-				if (str[i] == str[j])
-					break;
-			}
-			if (j == tail) {
-				str[tail] = str[i];
-				++tail;
-			}
-		}
-		str[tail] = 0;
-		return str;
-	}
-
 	public static void main(String[] args) {
 
 		System.out.println("hashset:-----------");
@@ -102,16 +69,6 @@ public class RemoveDuplicateChar {
 		System.out.println(removeDuplicateChar_HashMap(""));
 		System.out.println(removeDuplicateChar_HashMap(null));
 		System.out.println();
-
-		System.out.println("not use extra space:------------");
-		char[] str1 = { 'a', 'a', 'a' };
-		char[] str2 = { 'a', 'b' };
-		char[] str3 = null;
-		char[] str4 = { 'a', 'a', 'b', 'b' };
-		System.out.println(removeDuplicateChar(str1));
-		// System.out.println( removeDuplicateChar(str2));
-		// System.out.println( removeDuplicateChar(str3));
-		// System.out.println( removeDuplicateChar(str4));
 
 	}
 }
