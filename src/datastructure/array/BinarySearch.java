@@ -1,4 +1,4 @@
-package datastructure.arrays;
+package datastructure.array;
 
 public class BinarySearch {
 
