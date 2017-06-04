@@ -11,7 +11,7 @@ public class RemoveDuplicatesFromLinkedlist {
 
 	// If we can use a buffer, we can keep track of elements in a hashtable and
 	// remove any duplicates
-	public static void deleteDups(Node head) {
+	public static void deleteduplicates(Node head) {
 		if (head == null)
 			return;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
@@ -22,12 +22,12 @@ public class RemoveDuplicatesFromLinkedlist {
 			if (!table.containsKey(n.data))// 如果节点的值不在表中
 			{
 				table.put(n.data, true);// 数值放入表中
-				previous = n;// ？
+				previous = n;
 			}
 
 			else // 如果节点的值在表中
 			{
-				previous.next = n.next;// ？
+				previous.next = n.next;//把当前节点去掉
 			}
 
 			n = n.next;
@@ -36,25 +36,25 @@ public class RemoveDuplicatesFromLinkedlist {
 	}
 
 	/*
-	 * Without a bu#er, we can iterate with two pointers: “current” does a
+	 * Without a buffer, we can iterate with two pointers: “current” does a
 	 * normal iteration, while “runner” iterates through all prior nodes to
-	 * check for dups. Runner will only see one dup per node, because if there
+	 * check for duplicates. Runner will only see one duplicate per node, because if there
 	 * were multiple duplicates they would have been removed already
 	 */
 
-	public static void deleteDups2(Node head) {
+	public static void deleteduplicates2(Node head) {
 		if (head == null)
 			return;
 		Node previous = head;
 		Node current = previous.next;
 		while (current != null) {
 			Node runner = head;
-			while (runner != current) { // Check for earlier dups
+			while (runner != current) { // Check for earlier duplicates
 				if (runner.data == current.data) {
 					Node tmp = current.next; // remove current
 					previous.next = tmp;
 					current = tmp; // update current to next node
-					break; // all other dups have already been removed
+					break; // all other duplicates have already been removed
 				}
 				runner = runner.next;
 			}
@@ -84,7 +84,7 @@ public class RemoveDuplicatesFromLinkedlist {
 			n = n.next;
 		}
 
-		deleteDups2(a);
+		deleteduplicates2(a);
 
 		System.out.println("\nAFTER: ");
 		n = a;
