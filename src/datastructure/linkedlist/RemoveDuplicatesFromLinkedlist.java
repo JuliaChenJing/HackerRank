@@ -1,4 +1,4 @@
-package datstructure.linkedlist;
+package datastructure.linkedlist;
 
 import java.util.Hashtable;
 
@@ -16,10 +16,10 @@ public class RemoveDuplicatesFromLinkedlist {
 			return;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
 		Node n = head;
-		Node previous = null;// 保存处理中的当前位置，下一个位置可以放入下一个不重复的数字
+		Node previous = null;// �?存处�?�中的当�?�?置，下一个�?置�?�以放入下一个�?�?�?的数字
 		while (n != null) {
 
-			if (!table.containsKey(n.data))// 如果节点的值不在表中
+			if (!table.containsKey(n.data))// 如果节点的值�?在表中
 			{
 				table.put(n.data, true);// 数值放入表中
 				previous = n;
@@ -27,17 +27,17 @@ public class RemoveDuplicatesFromLinkedlist {
 
 			else // 如果节点的值在表中
 			{
-				previous.next = n.next;//把当前节点去掉
+				previous.next = n.next;//把当�?节点去掉
 			}
 
 			n = n.next;
 		}
-		// return head;//直接就改变了原来的值，所以不返回head也行
+		// return head;//直接就改�?�了原�?�的值，所以�?返回head也行
 	}
 
 	/*
-	 * Without a buffer, we can iterate with two pointers: “current” does a
-	 * normal iteration, while “runner” iterates through all prior nodes to
+	 * Without a buffer, we can iterate with two pointers: “current�? does a
+	 * normal iteration, while “runner�? iterates through all prior nodes to
 	 * check for duplicates. Runner will only see one duplicate per node, because if there
 	 * were multiple duplicates they would have been removed already
 	 */
@@ -58,7 +58,7 @@ public class RemoveDuplicatesFromLinkedlist {
 				}
 				runner = runner.next;
 			}
-			if (runner == current) { // current not updated ‐ update now
+			if (runner == current) { // current not updated �? update now
 				previous = current;
 				current = current.next;
 			}

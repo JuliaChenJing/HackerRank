@@ -1,4 +1,4 @@
-package datstructure.linkedlist;
+package datastructure.linkedlist;
 
 /*
  *  Implement an algorithm to delete a node in the middle of a single linked list, given
