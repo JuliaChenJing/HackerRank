@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
  * Imagine a (literal) stack of plates. If the stack gets too high, 
- * it might topplevi. 倾倒；倒塌；摇摇欲坠. There fore, in real life,
+ * it might topple. 倾倒；倒塌；摇摇欲坠. There fore, in real life,
  *  we would likely start a new stack when the previous stack
  *  exceeds some threshold.
  *  
