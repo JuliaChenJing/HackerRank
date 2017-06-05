@@ -4,8 +4,8 @@ import java.util.Stack;
 
 /*
  *  How would you design a stack which, in addition to push and pop, also has a function
-min which returns the minimum element? Push, pop and min should all operate in
-O(1)
+    min which returns the minimum element? Push, pop and min should all operate in
+    O(1)
  */
 public class StackWithMin_I extends Stack<NodeWithMin> {
 	/**
@@ -17,7 +17,7 @@ public class StackWithMin_I extends Stack<NodeWithMin> {
 	 * You can implement this by having each node in the stack keep track of the
 	 * minimum beneath itself. Then, to find the min, you just look at what the
 	 * top element thinks is the min. When you push an element onto the stack,
-	 * the element is given the current minimum. It sets its ìlocal minî to be
+	 * the element is given the current minimum. It sets its ‚Äúlocal min‚Äù to be
 	 * the min.
 	 */
 	public void push(int value) {
@@ -36,7 +36,7 @@ public class StackWithMin_I extends Stack<NodeWithMin> {
 
 class NodeWithMin {
 	public int value;
-	public int min;
+	public int min;// added to store the new min when new value is pushed
 
 	public NodeWithMin(int v, int min) {
 		value = v;
