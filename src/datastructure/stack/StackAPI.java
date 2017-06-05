@@ -34,17 +34,4 @@ public class StackAPI {
 	
 }
 
-/*
- *Integer Stack
-Get index : 7
-Top Element : 7
-Element of stack : [5, 6]
-String Array
-Place of Red 3
-Place of Blue 2
-Place of Green -1
-Item = Yellow
-Element of s1[Red]
-Element of stack[10, hello]
 
- */
