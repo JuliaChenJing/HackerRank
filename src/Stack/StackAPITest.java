@@ -1,6 +1,6 @@
-package datastructure.stack;
+package Stack;
 import java.util.Stack;;
-public class StackAPI {
+public class StackAPITest {
 
 	public static void main(String[] args) {
 		

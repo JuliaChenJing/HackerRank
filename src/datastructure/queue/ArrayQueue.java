@@ -65,6 +65,7 @@ class ArrayQueue {
 			Object temp=a[0];
 			for(int i=0;i<back;i++)
 			{
+				//后移
 				a[i]=a[i+1];
 				
 			}

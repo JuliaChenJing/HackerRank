@@ -1,10 +1,10 @@
-package datastructure.stack;
+package Stack;
 
 import java.util.ArrayList;
 
 /*
  * Imagine a (literal) stack of plates. If the stack gets too high, 
- * it might topple. 倾倒；倒塌；摇摇欲坠. There fore, in real life,
+ * it might topple. 倾倒；倒塌；摇摇欲�?�. There fore, in real life,
  *  we would likely start a new stack when the previous stack
  *  exceeds some threshold.
  *  
@@ -73,17 +73,17 @@ public class SetOfStacks {
 	 * operation on a specific sub-stack.
 	 * 
 	 * What about the follow up question? This is a bit trickier to implement,
-	 * but essentially we should imagine a “rollover” system. If we pop an
+	 * but essentially we should imagine a “rollover�? system. If we pop an
 	 * element from stack 1, we need to remove the bottom of stack 2 and push it
 	 * onto stack 1. We then need to rollover from stack 3 to stack 2, stack 4
 	 * to stack 3, etc. 
 	 * 
 	 * NOTE: You could make an argument that, rather than
-	 * “rolling over,” we should be OK with some stacks not being at full
+	 * “rolling over,�? we should be OK with some stacks not being at full
 	 * capacity. This would improve the time complexity (by a fair amount, with
 	 * a large number of elements), but it might get us into tricky situations
 	 * later on if someone assumes that all stacks (other than the last) operate
-	 * at full capacity. There’s no “right answer” here; discuss this trade-off
+	 * at full capacity. There’s no “right answer�? here; discuss this trade-off
 	 * with your interviewer!
 	 */
 	public int popAt(int index) {

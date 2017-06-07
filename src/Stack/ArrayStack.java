@@ -1,4 +1,4 @@
-package datastructure.stack;
+package Stack;
 
 class ArrayStack implements Stack {
 	private Object a[];

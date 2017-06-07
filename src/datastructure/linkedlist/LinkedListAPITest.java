@@ -4,7 +4,7 @@ package datastructure.linkedlist;
 
 import java.util.LinkedList;
 import java.util.List;
-public class LinkedListAPI{
+public class LinkedListAPITest{
 	public static void main( String[ ] args)
 	{
 	    LinkedList<String> linkedlist = new LinkedList<String>();
