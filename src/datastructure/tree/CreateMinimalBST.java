@@ -5,18 +5,20 @@ public class CreateMinimalBST {
     
 	/*
 	 * Given a sorted (increasing order) array, write an algorithm to create a binary tree with
-minimal height.
+     minimal height.
 
-We will try to create a binary tree such that for each node, the number of nodes in the left
-subtree and the right subtree are equal, if possible.
+     We will try to create a binary tree such that for each node, the number of nodes in the left
+     subtree and the right subtree are equal, if possible.
 
-Algorithm:
-1. Insert into the tree the middle element of the array.
-2. Insert (into the left subtree) the left subarray elements
-3. Insert (into the right subtree) the right subarray elements
-4. Recurse
+      Algorithm:
+      1. Insert into the tree the middle element of the array.
+      2. Insert (into the left subtree) the left subarray elements
+	  3. Insert (into the right subtree) the right subarray elements
+      4. Recurse
+      
 	 */
-    //create minimal binary search tree
+	
+    //create minimal binary search tree from a sorted array
     public static TreeNode createMinimalBST(int array[]) {
         return addToTree(array, 0, array.length - 1);
     }
@@ -34,6 +36,4 @@ Algorithm:
         return n;
     }
 
-
-    
 }
