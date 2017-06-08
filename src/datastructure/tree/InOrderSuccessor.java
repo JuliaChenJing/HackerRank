@@ -26,10 +26,12 @@ public class InOrderSuccessor {
 	 * 
 	 * 1. If X has a right child, then the successor must be on the right side
 	 * of X (because of the order in which we visit nodes). Specifically, the
-	 * left-most child must be the first node visited in that subtree. 2. Else,
-	 * we go to X 's parent (call it P).
+	 * left-most child must be the first node visited in that subtree.
+	 
+	 2. Else， we go to X 's parent (call it P).
 	 * 
 	 * 2.a. If X was a left child (P.left = X), then P is the successor of X 
+	
 	 * 2.b. If X was a right child (P.right = X), then we have fully visited P, 
 	 * so we call successor(P).
 	 */
@@ -39,15 +41,17 @@ public class InOrderSuccessor {
 			return null;
 
 		TreeNode p;
-		// Found right children ‐> return 1st inorder node on right
+		
+		// 1 Found right children ‐> return 1st inorder node on right
 		if (e.parent == null || e.right != null) {
 			p = leftMostChild(e.right);
-		} else {
+		} 
+		else {
 
-			// Go up until we’re on left instead of right (case 2b)
+			//2b  Go up until we’re on left instead of right 
 			while ((p = e.parent) != null) {
 				if (p.left == e) {
-					break;
+					break;// 2a
 				}
 				e = p;
 			}
