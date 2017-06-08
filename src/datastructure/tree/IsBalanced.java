@@ -24,7 +24,7 @@ public class IsBalanced {
 		return (maxDepth(root) - minDepth(root) <= 1);
 	}
 	
-	//calculate the max depth of a tree
+	//calculate the max depth of a tree=the height of the tree
 	public static int maxDepth(TreeNode root) {
 		if (root == null) {
 			return 0;

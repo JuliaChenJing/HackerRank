@@ -23,17 +23,19 @@ public class RouteBetweenNodes {
 	
 	public static boolean search(Graph graph, Node from, Node to) {
 		
-		LinkedList<Node> relinkedlist = new LinkedList<Node>(); // operates as Stack
+		LinkedList<Node> returnlist = new LinkedList<Node>(); // operates as Stack
+		
 		//set all nodes in graph Unvisited
 		for (Node u : graph.getNodes()) {
 			u.state = State.Unvisited;
 		}
 		
 		from.state = State.Visiting;
-		relinkedlist.add(from);//add the first node to the relinkedlist
+		returnlist.add(from);//add the first node to the returnlist
+		
 		Node u;
-		while (!relinkedlist.isEmpty()) {
-			u = relinkedlist.removeFirst(); // i.e., pop()
+		while (!returnlist.isEmpty()) {
+			u = returnlist.removeFirst(); // remove the first element of the linkedlist
 			if (u != null) {
 				for (Node v : u.getAdjacent()) {
 					if (v.state == State.Unvisited) {
@@ -41,7 +43,7 @@ public class RouteBetweenNodes {
 							return true;
 						} else {
 							v.state = State.Visiting;
-							relinkedlist.add(v);
+							returnlist.add(v);
 						}
 					}
 				}
@@ -51,6 +53,7 @@ public class RouteBetweenNodes {
 		return false;
 	}
 
+	
 	class Graph {
 		Node[] nodes;
 
