@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/Stack/SetOfStacks.java=UTF-8
+encoding//src/algorithm/bitmanipulation/PrintBinary.java=UTF-8
 encoding//src/datastructure/array/GetClosestBigger.java=UTF-8
 encoding//src/datastructure/array/LongestDistance.java=UTF-8
 encoding//src/datastructure/array/ReminderMatch.java=UTF-8
@@ -18,6 +18,7 @@ encoding//src/datastructure/linkedlist/FindBeginnerOfLoop.java=UTF-8
 encoding//src/datastructure/linkedlist/FindNthToLast.java=UTF-8
 encoding//src/datastructure/linkedlist/RemoveDuplicatesFromLinkedlist.java=UTF-8
 encoding//src/datastructure/queue/ArrayQueue.java=UTF-8
+encoding//src/datastructure/stack/SetOfStacks.java=UTF-8
 encoding//src/datastructure/string/Anagram.java=UTF-8
 encoding//src/datastructure/string/RemoveDuplicateChar.java=UTF-8
 encoding//src/datastructure/tree/ContainsTree.java=UTF-8

@@ -1,4 +1,4 @@
-package Stack;
+package datastructure.stack;
 
 interface Stack {
 	public void push(Object ob);

@@ -1,4 +1,4 @@
-package Stack;
+package datastructure.stack;
 
 
 public class  LinkedListStack implements Stack{
