@@ -8,7 +8,9 @@ public class InsertNth {
 	/*
 	 * Sample Input
 	 * 
-	 * NULL, data = 3, position = 0 3 --> NULL, data = 4, position = 0
+	 * NULL, 
+	 data = 3, position = 0 
+	 data = 4, position = 0
 	 * 
 	 * Sample Output
 	 * 
@@ -16,17 +18,18 @@ public class InsertNth {
 	 */
 
 	Node insertNth(Node head, int data, int position) {
+		
 		// Will Need to Return Head Node
 		Node trackedHeadNode = head;
 
 		Node nodeToInsert = new Node(data);
 
-		// Empty List - Returned newly created node or null
+		// 1 Empty List - just return newly created node 
 		if (head == null) {
 			return nodeToInsert;
 		}
 
-		// Inserting a Node ahead of the List
+		// 2 Inserting a Node ahead of the List
 		if (position == 0) {
 			nodeToInsert.next = head;
 			return nodeToInsert;
