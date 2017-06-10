@@ -42,11 +42,9 @@ public class InsertNth {
 		}
 
 		// Inserting a Node in-between a List or at the end of of a List
-		Node nodeAtPosition = head.next;
-		head.next = nodeToInsert;
-		head = head.next;
-		head.next = nodeAtPosition;
-
+		 nodeToInsert.next =  head.next;
+	     head.next = nodeToInsert;
+	  
 		return trackedHeadNode;
 	}
 }
