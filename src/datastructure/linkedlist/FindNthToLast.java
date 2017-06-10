@@ -1,7 +1,7 @@
 package datastructure.linkedlist;
 
 // Implement an algorithm to find the nth to last element of a singly linked list
-public class FindNth {
+public class FindNthToLast {
 	/*
 	 * Note: This problem screams recursion, but we’ll do it a different way
 	 * because it’s trickier. In a question like this, expect follow up
@@ -61,7 +61,7 @@ public class FindNth {
 		Node p1 = head;
 		Node p2 = head;
 
-		for (int j = 0; j < n - 1; ++j) { // skip n�?1 steps ahead
+		for (int j = 0; j < n - 1; ++j) { // skip n�?1 steps ahead
 			if (p2 == null) {
 				return null; // not found since list size < n
 			}
