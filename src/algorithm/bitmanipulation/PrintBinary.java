@@ -39,7 +39,7 @@ public class PrintBinary {
 		while (intPart > 0) {
 			int r = intPart % 2;
 			intPart >>= 1;//右移一位
-			int_string = r + int_string;//新来的数确实应该加在左边
+			int_string = r + int_string;// the new number should be added at the left
 		}
 		
 		StringBuffer dec_string = new StringBuffer();
