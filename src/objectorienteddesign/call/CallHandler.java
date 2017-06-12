@@ -1,4 +1,4 @@
-package algorithm.objectorienteddesign.call;
+package objectorienteddesign.call;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

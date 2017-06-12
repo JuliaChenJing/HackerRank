@@ -1,4 +1,4 @@
-package algorithm.objectorienteddesign.call;
+package objectorienteddesign.call;
 
 public class Call {
 	private int rank = 0; // minimal rank of employee who can handle this call

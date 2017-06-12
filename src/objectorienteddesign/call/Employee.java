@@ -1,9 +1,9 @@
-package algorithm.objectorienteddesign.call;
+package objectorienteddesign.call;
 
 public class Employee {
 	
 	
-	// 0â€ fresher, 1 â€ technical lead, 2 â€ product manager
+	// 0â€? fresher, 1 â€? technical lead, 2 â€? product manager
 	int rank;
 	boolean free;
 	CallHandler callHandler;

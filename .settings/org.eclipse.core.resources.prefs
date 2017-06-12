@@ -1,7 +1,5 @@
 eclipse.preferences.version=1
 encoding//src/algorithm/bitmanipulation/PrintBinary.java=UTF-8
-encoding//src/algorithm/objectorienteddesign/call/CallHandler.java=UTF-8
-encoding//src/algorithm/objectorienteddesign/call/Employee.java=UTF-8
 encoding//src/datastructure/array/GetClosestBigger.java=UTF-8
 encoding//src/datastructure/array/LongestDistance.java=UTF-8
 encoding//src/datastructure/array/ReminderMatch.java=UTF-8
@@ -27,3 +25,5 @@ encoding//src/datastructure/tree/ContainsTree.java=UTF-8
 encoding//src/datastructure/tree/DepthLinkedList.java=UTF-8
 encoding//src/datastructure/tree/FindSum.java=UTF-8
 encoding//src/datastructure/tree/InOrderSuccessor.java=UTF-8
+encoding//src/objectorienteddesign/call/CallHandler.java=UTF-8
+encoding//src/objectorienteddesign/call/Employee.java=UTF-8
