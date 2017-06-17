@@ -1,10 +1,8 @@
 package datastructure.tree;
+
 //https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
 public class Insert {
 
-	/*
-	 * Node is defined as : class Node { int data; Node left; Node right; }
-	 */
 
 	// Runtime: O(log n) on a balanced tree.
 	// Space Complexity: O(1)
@@ -37,4 +35,47 @@ public class Insert {
 			}
 		}
 	}
+
+	static TreeNode InsertWithRecurstion(TreeNode root, int value) {
+
+		/* Create new Node */
+		TreeNode newNode = new TreeNode(value);
+	
+
+		/* Special case: empty tree */
+		if (root == null) {
+			return newNode;
+		}
+		TreeNode roottracker = root;
+		helper(root, value);
+
+		return roottracker;
+	}
+
+	static void helper(TreeNode root, int value) {
+
+		TreeNode newNode = new TreeNode(value);
+	
+		/* Iteratively walk tree and insert new Node */
+		TreeNode curr = root;
+
+		if (value <= curr.value) {
+			if (curr.left == null) {
+				curr.left = newNode;
+				return;
+			} else {
+				helper(curr.left, value);
+			}
+		} else {
+			if (curr.right == null) {
+				curr.right = newNode;
+				return;
+			} else {
+				helper(curr.right, value);
+			}
+		}
+
+	}
+
+	
 }
