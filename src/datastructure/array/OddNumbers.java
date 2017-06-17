@@ -1,5 +1,6 @@
 package datastructure.array;
 
+
 public class OddNumbers {
 
 	static int[] oddNumbers(int l, int r) {
