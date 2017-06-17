@@ -1,4 +1,4 @@
-package algorithm.bitmanipulation;
+package algorithm.bitmanipulationAndNumber;
 
 /*
  * Write a program to swap odd and even bits in an integer with as few instructions as

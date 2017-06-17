@@ -1,4 +1,4 @@
-package algorithm.bitmanipulation;
+package algorithm.bitmanipulationAndNumber;
 
 /*
  *  Given a (decimal - e.g. 3.72) number that is passed in as a string, 
@@ -22,8 +22,8 @@ public class PrintBinary {
 	 *  
 	 *  Printing the int part of n is straight-forward (see below). 
 	 *  
-	 *  To print the decimal(小数) part, we can multiple by 2 and check if the 2*n is greater 
-	 *  than or equal to one. This is essentially “shifting” the fractional sum.
+	 *  To print the decimal(�?数) part, we can multiple by 2 and check if the 2*n is greater 
+	 *  than or equal to one. This is essentially “shifting�? the fractional sum.
 	 *  That is: r = 2*n = 2*0.101 = 1*(1 / 2^0) + 0*(1 / 2^1) + 1*(1 / 2^2) = 1.01
 	 *   If r >= 1, then we know that n had a 1 right after the decimal point.
 	 *  By doing this continuously, we can check every digit.
@@ -38,7 +38,7 @@ public class PrintBinary {
 		String int_string = "";
 		while (intPart > 0) {
 			int r = intPart % 2;
-			intPart >>= 1;//右移一位
+			intPart >>= 1;//�?�移一�?
 			int_string = r + int_string;// the new number should be added at the left
 		}
 		

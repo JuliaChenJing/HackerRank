@@ -1,6 +1,6 @@
-package datastructure.array;
 
-public class Sprint {
+
+public class Arrow {
 	
 	public static void main(String [] args)
 	{

@@ -1,4 +1,4 @@
-package algorithm.bitmanipulation;
+package algorithm.bitmanipulationAndNumber;
 
 /*
  * Given an integer, print the next smallest and next largest number that have the same
