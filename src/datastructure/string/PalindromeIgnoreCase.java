@@ -1,3 +1,4 @@
+package datastructure.string;
 
 
 import java.util.Scanner;
