@@ -8,6 +8,24 @@ FOLLOW UP
 How would you solve this problem if a temporary buffer is not allowed?
  */
 public class RemoveDuplicatesFromLinkedlist {
+	
+	//Delete duplicate-value nodes from a sorted linked list
+	
+	Node RemoveDuplicates(Node head) {
+    if (head == null) {
+        return null;
+    }
+    Node n = head;
+    while (n.next != null) {
+        if (n.data == n.next.data) {
+            n.next = n.next.next;
+        } else {
+            n = n.next;
+        }
+    }
+    return head;
+}
+
 
 	// If we can use a buffer, we can keep track of elements in a hashtable and
 	// remove any duplicates
@@ -16,28 +34,28 @@ public class RemoveDuplicatesFromLinkedlist {
 			return;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
 		Node n = head;
-		Node previous = null;// �?存处�?�中的当�?�?置，下一个�?置�?�以放入下一个�?�?�?的数字
+		Node previous = null;// ä¿?å­˜å¤„ç?†ä¸­çš„å½“å‰?ä½?ç½®ï¼Œä¸‹ä¸€ä¸ªä½?ç½®å?¯ä»¥æ”¾å…¥ä¸‹ä¸€ä¸ªä¸?é‡?å¤?çš„æ•°å­—
 		while (n != null) {
 
-			if (!table.containsKey(n.data))// 如果节点的值�?在表中
+			if (!table.containsKey(n.data))// å¦‚æžœèŠ‚ç‚¹çš„å€¼ä¸?åœ¨è¡¨ä¸­
 			{
-				table.put(n.data, true);// 数值放入表中
+				table.put(n.data, true);// æ•°å€¼æ”¾å…¥è¡¨ä¸­
 				previous = n;
 			}
 
-			else // 如果节点的值在表中
+			else // å¦‚æžœèŠ‚ç‚¹çš„å€¼åœ¨è¡¨ä¸­
 			{
-				previous.next = n.next;//把当�?节点去掉
+				previous.next = n.next;//æŠŠå½“å‰?èŠ‚ç‚¹åŽ»æŽ‰
 			}
 
 			n = n.next;
 		}
-		// return head;//直接就改�?�了原�?�的值，所以�?返回head也行
+		// return head;//ç›´æŽ¥å°±æ”¹å?˜äº†åŽŸæ?¥çš„å€¼ï¼Œæ‰€ä»¥ä¸?è¿”å›žheadä¹Ÿè¡Œ
 	}
 
 	/*
-	 * Without a buffer, we can iterate with two pointers: “current�? does a
-	 * normal iteration, while “runner�? iterates through all prior nodes to
+	 * Without a buffer, we can iterate with two pointers: â€œcurrentâ€? does a
+	 * normal iteration, while â€œrunnerâ€? iterates through all prior nodes to
 	 * check for duplicates. Runner will only see one duplicate per node, because if there
 	 * were multiple duplicates they would have been removed already
 	 */
@@ -58,7 +76,7 @@ public class RemoveDuplicatesFromLinkedlist {
 				}
 				runner = runner.next;
 			}
-			if (runner == current) { // current not updated �? update now
+			if (runner == current) { // current not updated â€? update now
 				previous = current;
 				current = current.next;
 			}
