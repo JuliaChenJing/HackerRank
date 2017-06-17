@@ -24,20 +24,23 @@ public class ValueCount {
 			// System.out.println(pair[i]);
 
 			map = add(pair[0], Integer.parseInt(pair[1]));
+		
 			i++;
+		
 		
 		}
 		
-			while (q.peek() != null) {
-				String s = q.poll();
-				System.out.println(s + "," + map.get(s));
-			}
+		while (q.peek() != null) {
+			String s = q.poll();
+			System.out.println(s + "," + map.get(s));
+		}
+			
 		
 
 	}
 
 	public static HashMap<String, Integer> add(String key, int value) {
-		if (map.get(key) == null) {
+		if (!map.containsKey(key)) {
 			map.put(key, value);
 			q.add(key);
 		} else {

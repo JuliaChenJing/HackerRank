@@ -10,7 +10,7 @@ public class PalindromeIgnoreCase {
 
 		while (scan.hasNext()) {
 			String str = scan.nextLine();
-			str = str.replaceAll(" ", "").replaceAll(",", "");
+			str = str.replaceAll(" ", "");
 			StringBuilder a=new StringBuilder();
 			 
 			for(int i=0;i<str.length();i++)
