@@ -61,9 +61,9 @@ public class FindNthToLast {
 		Node p1 = head;
 		Node p2 = head;
 
-		for (int j = 0; j < n - 1; ++j) { // skip n�?1 steps ahead
+		for (int j = 0; j < n - 1; ++j) { 
 			if (p2 == null) {
-				return null; // not found since list size < n
+				return null; //  list size < n
 			}
 			p2 = p2.next;
 		}
