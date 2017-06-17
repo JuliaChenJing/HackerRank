@@ -89,5 +89,22 @@ public class DeleteNode {
 		return trackedHeadNode;
 
 	}
+	
+	//delete a node with a value d
+		Node deleteNode(Node head, int d) {
+			Node n = head;
+			if (n.data == d) {
+				return head.next; /* the value of head is d, just remove the head and return head.next*/
+			}
+			while (n.next != null) {
+				if (n.next.data == d) {
+					n.next = n.next.next;
+					return head; /* head didn’t change */
+				}
+				n = n.next;
+			}
+			//value d does not exist
+			return null;
+		}
 
 }

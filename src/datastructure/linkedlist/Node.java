@@ -1,7 +1,7 @@
 package datastructure.linkedlist;
 
 class Node {
-	
+
 	Node next = null;
 	int data;
 
@@ -9,7 +9,7 @@ class Node {
 		data = d;
 	}
 
-	//add a Node to the tail
+	// add a Node to the tail
 	void appendToTail(int d) {
 		Node end = new Node(d);
 		Node n = this;
@@ -19,11 +19,14 @@ class Node {
 		n.next = end;
 	}
 
-	//delete a node with a value d
+	// delete a node with a value d
 	Node deleteNode(Node head, int d) {
 		Node n = head;
 		if (n.data == d) {
-			return head.next; /* the value of head is d, just remove the head and return head.next*/
+			return head.next; /*
+								 * the value of head is d, just remove the head
+								 * and return head.next
+								 */
 		}
 		while (n.next != null) {
 			if (n.next.data == d) {
@@ -32,7 +35,17 @@ class Node {
 			}
 			n = n.next;
 		}
-		//value d does not exist
+		// value d does not exist
 		return null;
+	}
+
+	public static void print(Node head) {
+
+		while (head != null) {
+			System.out.print(head.data + "--->");
+			head = head.next;
+		}
+		System.out.println();
+
 	}
 }
