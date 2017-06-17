@@ -5,18 +5,6 @@ package datastructure.linkedlist;
  */
 public class InsertNth {
 
-	/*
-	 * Sample Input
-	 * 
-	 * NULL, 
-	 data = 3, position = 0 
-	 data = 4, position = 0
-	 * 
-	 * Sample Output
-	 * 
-	 * 3 --> NULL 4 --> 3 --> NULL
-	 */
-
 	Node insertNth(Node head, int data, int position) {
 		
 		// Will Need to Return Head Node
@@ -46,7 +34,7 @@ public class InsertNth {
 
 		// Inserting a Node in-between a List or at the end of of a List
 		 nodeToInsert.next =  head.next;
-	     head.next = nodeToInsert;
+	         head.next = nodeToInsert;
 	  
 		return trackedHeadNode;
 	}
