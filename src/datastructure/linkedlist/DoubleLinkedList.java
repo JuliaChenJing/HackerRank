@@ -46,8 +46,26 @@ Node SortedInsert(Node head, int data) {
         }
         return head;
     }
-
-	Node header;
+	
+	// Iterative Solution using 3 pointers
+//          Runtime: O(n)
+// Space Complexity: O(1)
+Node Reverse(Node head) {
+    if (head == null && head.next == null) {
+        return head;
+    }
+    Node prev = null;
+    Node curr = head;
+    Node next = null;
+    while (curr != null) {
+        next = curr.next;
+        curr.next = prev; // changes arrow direction
+        prev = curr;
+        curr = next;
+    }
+    return prev;
+}
+Node header;
 
 	
 	public static void main(String[] args) {
