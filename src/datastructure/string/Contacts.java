@@ -9,11 +9,16 @@ public class Contacts {
 	/*
 	 * Sample Input:
 	 * 
-	 * 4 add hack add hackerrank find hac find hak
+	 * 4
+	 add hack
+	 add hackerrank 
+	 find hac 
+	 find hak
 	 * 
 	 * Sample Output:
 	 * 
-	 * 2 0
+	 * 2
+	   0
 	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
