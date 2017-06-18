@@ -3,16 +3,18 @@ package datastructure.array;
 //�?求常数级空间�?�?�度，�?许修改原有数组。
 public class RotateArray {
 
-	// 如果�?许�?外分�?线性空间，那么�?�以错�?�?制原有数组的元素。
-	static int[] rotateK(int[] A, int k) {
+  	static int[] rotateK(int[] A, int k) 
+    {
 		if (A == null || k >= A.length)
 			return A;
 
 		int[] B = new int[A.length];
-		// �?��?�k个�?制到�?�?�
-		System.arraycopy(A, A.length - k, B, 0, k);
-		// �?�?�的a.length-1-k个�?制到�?��?�
-		System.arraycopy(A, 0, B, A.length - k - 1, A.length - k);
+	
+           //  5          
+		System.arraycopy(A, k, B, 0,A.length-k );
+	
+           //1 2 3 4
+		System.arraycopy(A, 0, B, A.length - k , k);
 		return B;
 	}
 	
@@ -44,14 +46,14 @@ public class RotateArray {
 	    
 		public static void main(String[] args) {
 			int a[] = { 1, 2, 3, 4, 5 };
-			int b[] = rotateK(a, 2);
+			int b[] = rotateK(a, 4);
 			for (int i = 0; i < b.length; i++)
 				System.out.print(b[i]);
 			
 			System.out.println();
 			
-			int c[] =  rotateK_2(a,2);
-		        for(int i=0;i<a.length;i++)
+			int c[] =  rotateK_2(a,4);
+		        for(int i=0;i<c.length;i++)
 		        System.out.print(c[i]);
 		}
 }
