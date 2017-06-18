@@ -9,7 +9,27 @@ import java.util.Scanner;
 nodes at each depth (eg, if you have a tree with depth D, you’ll have D linked lists).
  */
 public class DepthLinkedList {
+	
+//https://www.hackerrank.com/challenges/tree-level-order-traversal/problem	
+void levelOrder(Node root) {
+    ArrayDeque<Node> deque = new ArrayDeque<>(); // use deque as a queue
+    if (root != null) {
+        deque.add(root);
+    }
+    while (!deque.isEmpty()) {
+        Node n = deque.remove();
+        System.out.print(n.data + " ");
+        if (n.left != null) {
+            deque.add(n.left);
+        }
+        if (n.right != null) {
+            deque.add(n.right);
+        }
+    }
+}
 
+	
+	
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);
 		root.left = new TreeNode(2);
