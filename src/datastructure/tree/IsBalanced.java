@@ -9,23 +9,23 @@ public class IsBalanced {
 
 	
 	public static void main(String[] args) {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.right = new TreeNode(3);
-		root.right.right = new TreeNode(5);
-		root.right.right.right = new TreeNode(7);
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.right.right = new Node(5);
+		root.right.right.right = new Node(7);
 		System.out.println("Is it a balanced tree? " + isBalanced(root));
 		System.out.println("The max height of the tree is : " + maxDepth(root));
 		System.out.println("The min height of the tree is : " + minDepth(root));
 
 	}
 	
-	public static boolean isBalanced(TreeNode root) {
+	public static boolean isBalanced(Node root) {
 		return (maxDepth(root) - minDepth(root) <= 1);
 	}
 	
 	//calculate the max depth of a tree=the height of the tree
-	public static int maxDepth(TreeNode root) {
+	public static int maxDepth(Node root) {
 		if (root == null) {
 			return 0;
 		}
@@ -33,7 +33,7 @@ public class IsBalanced {
 	}
 	
 	//calculate the min depth of a tree
-	public static int minDepth(TreeNode root) {
+	public static int minDepth(Node root) {
 		if (root == null) {
 			return 0;
 		}

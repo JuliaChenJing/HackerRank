@@ -31,7 +31,7 @@ public class FindCommonAncester_II {
 	static int NO_NODES_FOUND = 0;
 
 	// Checks how many “special” nodes are located under this root
-	int covers(TreeNode root, TreeNode p, TreeNode q) {
+	int covers(Node root, Node p, Node q) {
 		int ret = NO_NODES_FOUND;
 		if (root == null)
 			return ret;
@@ -43,7 +43,7 @@ public class FindCommonAncester_II {
 		return ret + covers(root.right, p, q);
 	}
 
-	TreeNode commonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	Node commonAncestor(Node root, Node p, Node q) {
 		if (q == p && (root.left == q || root.right == q))
 			return root;
 		int nodesFromLeft = covers(root.left, p, q); // Check left side

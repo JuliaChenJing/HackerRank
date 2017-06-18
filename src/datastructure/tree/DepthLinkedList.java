@@ -1,8 +1,8 @@
 package datastructure.tree;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Scanner;
 
 /*
  * Given a binary search tree, design an algorithm which creates a linked list of all the
@@ -18,7 +18,7 @@ void levelOrder(Node root) {
     }
     while (!deque.isEmpty()) {
         Node n = deque.remove();
-        System.out.print(n.data + " ");
+        System.out.print(n.value + " ");
         if (n.left != null) {
             deque.add(n.left);
         }
@@ -31,15 +31,15 @@ void levelOrder(Node root) {
 	
 	
 	public static void main(String[] args) {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.right = new TreeNode(3);
-		root.left.left = new TreeNode(4);
-		root.left.right = new TreeNode(5);
-		root.right.left = new TreeNode(6);
-		root.right.right = new TreeNode(7);
-		root.left.left.left = new TreeNode(8);
-		ArrayList<LinkedList<TreeNode>> re = getDepthLinkedList(root);
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.left.left = new Node(4);
+		root.left.right = new Node(5);
+		root.right.left = new Node(6);
+		root.right.right = new Node(7);
+		root.left.left.left = new Node(8);
+		ArrayList<LinkedList<Node>> re = getDepthLinkedList(root);
 		for (int i = 0; i < re.size(); i++) {
 			System.out.print("depth=" + i + " :");
 			for (int j = 0; j < re.get(i).size(); j++)
@@ -57,15 +57,15 @@ void levelOrder(Node root) {
 	 * level. We thus use a dummy node to indicate when we have finished one
 	 * level and are starting on the next.
 	 */
-	static ArrayList<LinkedList<TreeNode>> getDepthLinkedList(TreeNode root) {
+	static ArrayList<LinkedList<Node>> getDepthLinkedList(Node root) {
 		
 		int level = 0;
 
 		// stores the resultArrayList as a List of LinkedList<TreeNode>
-		ArrayList<LinkedList<TreeNode>> resultArrayList = new ArrayList<LinkedList<TreeNode>>();
+		ArrayList<LinkedList<Node>> resultArrayList = new ArrayList<LinkedList<Node>>();
 		
 		// list initiation
-		LinkedList<TreeNode> list = new LinkedList<TreeNode>();
+		LinkedList<Node> list = new LinkedList<Node>();
 
 		// the level 0 list is just a root node
 		list.add(root);
@@ -74,11 +74,11 @@ void levelOrder(Node root) {
 		//数学归纳法
 		while (true) {
 			// list initiation again
-			list = new LinkedList<TreeNode>();
+			list = new LinkedList<Node>();
 			
 			// for each of the node in the previous list stored in the resultArrayList
 			for (int i = 0; i < resultArrayList.get(level).size(); i++) {
-				TreeNode node = (TreeNode) resultArrayList.get(level).get(i);
+				Node node = (Node) resultArrayList.get(level).get(i);
 
 				if (node != null) {
 

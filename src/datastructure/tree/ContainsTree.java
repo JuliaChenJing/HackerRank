@@ -25,7 +25,7 @@ public class ContainsTree {
 	 * of T2’s root in T1, the worst case runtime can be characterized as O(n +
 	 * k * m).
 	 */
-	boolean containsTree(TreeNode t1, TreeNode t2) {
+	boolean containsTree(Node t1, Node t2) {
 		if (t2 == null)
 			return true; // The empty tree is always a subtree
 		else
@@ -33,7 +33,7 @@ public class ContainsTree {
 	}
 
 	// the helper class with recursion: check if r2 is a subtree of r1
-	boolean subTree(TreeNode r1, TreeNode r2) {
+	boolean subTree(Node r1, Node r2) {
 		if (r1 == null)
 			return false; // big tree empty 
 		if (r1.value == r2.value) {
@@ -44,7 +44,7 @@ public class ContainsTree {
 	}
 
 	// if two trees are all the same
-	boolean matchTree(TreeNode r1, TreeNode r2) {
+	boolean matchTree(Node r1, Node r2) {
 		if (r2 == null && r1 == null)
 			return true; 
 		if (r1 == null || r2 == null)

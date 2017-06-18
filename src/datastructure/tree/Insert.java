@@ -7,9 +7,9 @@ public class Insert {
 	// Runtime: O(log n) on a balanced tree.
 	// Space Complexity: O(1)
 	//return the root of the new tree
-	static TreeNode Insert(TreeNode root, int value) {
+	static Node Insert(Node root, int value) {
 		/* Create new Node */
-		TreeNode newNode = new TreeNode(value);
+		Node newNode = new Node(value);
 
 		/* Special case: empty tree */
 		if (root == null) {
@@ -17,7 +17,7 @@ public class Insert {
 		}
 
 		/* Iteratively walk tree and insert new Node */
-		TreeNode curr = root;
+		Node curr = root;
 		while (true) {
 			if (value <= curr.value) {
 				if (curr.left == null) {
@@ -37,28 +37,28 @@ public class Insert {
 		}
 	}
 
-	static TreeNode InsertWithRecurstion(TreeNode root, int value) {
+	static Node InsertWithRecurstion(Node root, int value) {
 
 		/* Create new Node */
-		TreeNode newNode = new TreeNode(value);
+		Node newNode = new Node(value);
 	
 
 		/* Special case: empty tree */
 		if (root == null) {
 			return newNode;
 		}
-		TreeNode roottracker = root;
+		Node roottracker = root;
 		helper(root, value);
 
 		return roottracker;
 	}
 
-	static void helper(TreeNode root, int value) {
+	static void helper(Node root, int value) {
 
-		TreeNode newNode = new TreeNode(value);
+		Node newNode = new Node(value);
 	
 		/* Iteratively walk tree and insert new Node */
-		TreeNode curr = root;
+		Node curr = root;
 
 		if (value <= curr.value) {
 			if (curr.left == null) {

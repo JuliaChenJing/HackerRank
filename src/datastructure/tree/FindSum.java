@@ -23,7 +23,7 @@ public class FindSum {
 	 * start a path with the sum?,” we ask “does this node complete a path with
 	 * the sum?
 	 */
-	void findSum(TreeNode head, int sum, ArrayList<Integer> buffer, int start) {
+	void findSum(Node head, int sum, ArrayList<Integer> buffer, int start) {
 		if (head == null)
 			return;
 		int tmp = sum;

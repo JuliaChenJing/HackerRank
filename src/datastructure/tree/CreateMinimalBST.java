@@ -19,18 +19,18 @@ public class CreateMinimalBST {
 	 */
 	
     //create minimal binary search tree from a sorted array
-    public static TreeNode createMinimalBST(int array[]) {
+    public static Node createMinimalBST(int array[]) {
         return addToTree(array, 0, array.length - 1);
     }
 
 
     //the helper class
-    public static TreeNode addToTree(int arr[], int start, int end) {
+    public static Node addToTree(int arr[], int start, int end) {
         if (end < start) {
             return null;
         }
         int mid = (start + end) / 2;//they are all the reference in the array
-        TreeNode n = new TreeNode(arr[mid]);
+        Node n = new Node(arr[mid]);
         n.left = addToTree(arr, start, mid - 1);
         n.right = addToTree(arr, mid + 1, end);
         return n;

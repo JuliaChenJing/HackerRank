@@ -4,13 +4,13 @@ import java.util.Scanner;
 public class SearchElementInTree {
 	
 	public static void main(String[] args) {
-		TreeNode root = new TreeNode(20);
-		root.left = new TreeNode(10);
-		root.right = new TreeNode(30);
-		root.left.left = new TreeNode(8);
-		root.left.right = new TreeNode(12);
-		root.right.left = new TreeNode(25);
-		root.right.right = new TreeNode(40);
+		Node root = new Node(20);
+		root.left = new Node(10);
+		root.right = new Node(30);
+		root.left.left = new Node(8);
+		root.left.right = new Node(12);
+		root.right.left = new Node(25);
+		root.right.right = new Node(40);
 
 		System.out.println("which number do you want to search in tree?");
 		Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class SearchElementInTree {
 
 	}
 
-	public static boolean isPresent(TreeNode root, int x) {
+	public static boolean isPresent(Node root, int x) {
 		if (root != null) {
 
 			// check if current TreeNode has the element we are looking for
