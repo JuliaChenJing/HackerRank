@@ -6,6 +6,7 @@ public class Insert {
 
 	// Runtime: O(log n) on a balanced tree.
 	// Space Complexity: O(1)
+	//return the root of the new tree
 	static TreeNode Insert(TreeNode root, int value) {
 		/* Create new Node */
 		TreeNode newNode = new TreeNode(value);
