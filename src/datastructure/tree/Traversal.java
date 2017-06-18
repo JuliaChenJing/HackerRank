@@ -53,3 +53,23 @@ void printRight(Node n) {
         printRight(n.right);
     }
 }
+
+
+	
+//https://www.hackerrank.com/challenges/tree-level-order-traversal/problem	
+void levelOrder(Node root) {
+    ArrayDeque<Node> deque = new ArrayDeque<>(); // use deque as a queue
+    if (root != null) {
+        deque.add(root);
+    }
+    while (!deque.isEmpty()) {
+        Node n = deque.remove();
+        System.out.print(n.data + " ");
+        if (n.left != null) {
+            deque.add(n.left);
+        }
+        if (n.right != null) {
+            deque.add(n.right);
+        }
+    }
+}
