@@ -5,11 +5,10 @@ import java.util.Stack;
 
 public class Braces {
 	public static void main(String[] args) throws IOException {
-		String[] values={"()","([2343])","(}sfas"};
-		for(int i=0;i<values.length;i++)
-			System.out.println("Is " +values[i] + " a balanced String? "+braces(values)[i]);
-	    }
-
+		String[] values = { "()", "([2343])", "(}sfas" };
+		for (int i = 0; i < values.length; i++)
+			System.out.println("Is " + values[i] + " a balanced String? " + braces(values)[i]);
+	}
 
 	static boolean CheckParentesis(String str) {
 		if (str.isEmpty())
@@ -38,20 +37,17 @@ public class Braces {
 		return stack.isEmpty();
 	}
 
-	static String[] braces(String[] values)
-	{
-		String re[] =new String[values.length];
+	static String[] braces(String[] values) {
+		String re[] = new String[values.length];
 
 		if (values.equals(null))
 			return null;
 		for (int i = 0; i < values.length; i++) {
-			if (CheckParentesis(values[i]))
-			{
+			if (CheckParentesis(values[i])) {
 
 				re[i] = "Yes";
-			
-			}
-			else
+
+			} else
 				re[i] = "No";
 		}
 

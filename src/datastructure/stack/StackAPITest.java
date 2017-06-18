@@ -1,11 +1,13 @@
 package datastructure.stack;
+
 import java.util.Stack;;
+
 public class StackAPITest {
 
 	public static void main(String[] args) {
-		
+
 		Stack<Integer> stack = new Stack<Integer>();
-		
+
 		System.out.println("Integer Stack");
 		stack.push(5);
 		stack.push(6);
@@ -26,12 +28,10 @@ public class StackAPITest {
 		s1.pop();
 		s1.pop();
 		System.out.println("Element of s1" + s1);
-		Stack s2 = new Stack();	
+		Stack s2 = new Stack();
 		s2.push(10);
 		s2.push("hello");
 		System.out.println("Element of stack" + s2);
 	}
-	
+
 }
-
-

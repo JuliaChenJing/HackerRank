@@ -25,7 +25,6 @@ public class DequeAPITest {
 			System.out.println(element);
 		}
 
-		
 		System.out.println("Dequeue Queue Elements : " + dequeA);
 	}
 }

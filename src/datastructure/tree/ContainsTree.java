@@ -35,7 +35,7 @@ public class ContainsTree {
 	// the helper class with recursion: check if r2 is a subtree of r1
 	boolean subTree(Node r1, Node r2) {
 		if (r1 == null)
-			return false; // big tree empty 
+			return false; // big tree empty
 		if (r1.value == r2.value) {
 			if (matchTree(r1, r2))
 				return true;
@@ -46,11 +46,11 @@ public class ContainsTree {
 	// if two trees are all the same
 	boolean matchTree(Node r1, Node r2) {
 		if (r2 == null && r1 == null)
-			return true; 
+			return true;
 		if (r1 == null || r2 == null)
-			return false; 
+			return false;
 		if (r1.value != r2.value)
-			return false; 
+			return false;
 		return (matchTree(r1.left, r2.left) && matchTree(r1.right, r2.right));
 	}
 

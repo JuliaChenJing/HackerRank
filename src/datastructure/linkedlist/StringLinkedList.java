@@ -12,57 +12,47 @@ public class StringLinkedList {
 			header = new Node(null, item, null);
 		else {
 			Node n = new Node(null, item, header);
-		    	header.previous = n;
-		    	header = n;
+			header.previous = n;
+			header = n;
 		}
 	}
-
 
 	public void addLast(String item) {
-		
-	}
 
+	}
 
 	// implement the code
-	public void postAddNode(Node n, String value){
-			
-					
+	public void postAddNode(Node n, String value) {
+
 	}
-// implement the code
+	// implement the code
 
-       public int Size(){
-    	   
-    	   return 1;
-       }
+	public int Size() {
 
-// implement code
-    public boolean isEmpty()
-{
-    	return true;
-}  
+		return 1;
+	}
 
- 
+	// implement code
+	public boolean isEmpty() {
+		return true;
+	}
 
-       
-	
-	public void preAddNode(Node n, String value){
+	public void preAddNode(Node n, String value) {
 		Node newNode;
-		if (n == null){
-			//List is empty
+		if (n == null) {
+			// List is empty
 			newNode = new Node(null, value, null);
-		}
-		else if (n.previous == null) {
-			//n is the first node
+		} else if (n.previous == null) {
+			// n is the first node
 			addFront(value);
-		}
-		else {
+		} else {
 			newNode = new Node(n.previous, value, n);
 			n.previous.next = newNode;
 			n.previous = newNode;
-		}	
-					
+		}
+
 	}
-	
+
 	public Node findLast() {
 		if (header == null)
 			return null;
@@ -118,8 +108,8 @@ public class StringLinkedList {
 		}
 
 	}
-	
-	public void deleteList(){
+
+	public void deleteList() {
 		Node tempOne = header;
 		Node tempTwo = header;
 		while (tempOne != null) {
@@ -131,7 +121,7 @@ public class StringLinkedList {
 	}
 
 	public String toString() {
-		String str =""; 
+		String str = "";
 		Node temp = header;
 		while (temp != null) {
 			str = str + "-->[" + temp.value.toString() + "]";
@@ -142,7 +132,7 @@ public class StringLinkedList {
 	}
 
 	public void printReverse() {
-		String str =""; 
+		String str = "";
 		Node temp = findLast();
 		while (temp != null) {
 			str = str + "==>[" + temp.value.toString() + "]";
@@ -151,7 +141,7 @@ public class StringLinkedList {
 		str = str + "==>[" + "NULL" + "]";
 		System.out.println(str);
 	}
-	
+
 	public class Node {
 		String value;
 		Node next;
@@ -199,16 +189,16 @@ public class StringLinkedList {
 		mySL.postAddNode(mySL.findItem("Blueberry Muffin"), "Carrot Cake");
 		System.out.println(mySL);
 		mySL.printReverse();
-		mySL.preAddNode(mySL.findItem("Blueberry Muffin"), "Apple Pie" );
+		mySL.preAddNode(mySL.findItem("Blueberry Muffin"), "Apple Pie");
 		System.out.println(mySL);
 		mySL.printReverse();
-		mySL.postAddNode(mySL.findItem("Carrot Cake"), "Danish Delight" );
+		mySL.postAddNode(mySL.findItem("Carrot Cake"), "Danish Delight");
 		System.out.println(mySL);
 		mySL.printReverse();
-		mySL.preAddNode(mySL.findItem("Orange Juice"), "Mango Smoothie" );
+		mySL.preAddNode(mySL.findItem("Orange Juice"), "Mango Smoothie");
 		System.out.println(mySL);
 		mySL.printReverse();
-		mySL.postAddNode(mySL.findItem("Orange Juice"), "Peach Sauce" );
+		mySL.postAddNode(mySL.findItem("Orange Juice"), "Peach Sauce");
 		System.out.println(mySL);
 		mySL.printReverse();
 		mySL.deleteList();

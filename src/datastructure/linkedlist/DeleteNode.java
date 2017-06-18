@@ -1,23 +1,21 @@
 package datastructure.linkedlist;
 
-
 public class DeleteNode {
-	
-	/*
-	 *  Implement an algorithm to delete a node in the middle of a single linked list, given
-	    only access to that node.
 
-	     EXAMPLE
-	     Input: the node  from the linked list a->b->c->d->e
-	     Result: nothing is returned, but the new linked list looks like a->b->d->e
-	
+	/*
+	 * Implement an algorithm to delete a node in the middle of a single linked
+	 * list, given only access to that node.
+	 * 
+	 * EXAMPLE Input: the node from the linked list a->b->c->d->e Result:
+	 * nothing is returned, but the new linked list looks like a->b->d->e
+	 * 
 	 * The solution to this is to simply copy the data from the next node into
 	 * this node and then delete the next node.
 	 * 
 	 * NOTE: This problem can not be solved if the node to be deleted is the
-	 * last node in the linked list. Your interviewer wants to see
-	 * you point that out. You could consider marking it as dummy in that case.
-	 * This is an issue you should discuss with your interviewer.
+	 * last node in the linked list. Your interviewer wants to see you point
+	 * that out. You could consider marking it as dummy in that case. This is an
+	 * issue you should discuss with your interviewer.
 	 */
 
 	public static boolean deleteNode(Node n) {
@@ -64,7 +62,6 @@ public class DeleteNode {
 	 * Node next; }
 	 */
 
-
 	Node Delete(Node head, int position) {
 		// Complete this method
 		Node trackedHeadNode = head;
@@ -89,22 +86,25 @@ public class DeleteNode {
 		return trackedHeadNode;
 
 	}
-	
-	//delete a node with a value d
-		Node deleteNode(Node head, int d) {
-			Node n = head;
-			if (n.data == d) {
-				return head.next; /* the value of head is d, just remove the head and return head.next*/
-			}
-			while (n.next != null) {
-				if (n.next.data == d) {
-					n.next = n.next.next;
-					return head; /* head didn’t change */
-				}
-				n = n.next;
-			}
-			//value d does not exist
-			return null;
+
+	// delete a node with a value d
+	Node deleteNode(Node head, int d) {
+		Node n = head;
+		if (n.data == d) {
+			return head.next; /*
+								 * the value of head is d, just remove the head
+								 * and return head.next
+								 */
 		}
+		while (n.next != null) {
+			if (n.next.data == d) {
+				n.next = n.next.next;
+				return head; /* head didn’t change */
+			}
+			n = n.next;
+		}
+		// value d does not exist
+		return null;
+	}
 
 }

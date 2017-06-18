@@ -8,24 +8,23 @@ FOLLOW UP
 How would you solve this problem if a temporary buffer is not allowed?
  */
 public class RemoveDuplicatesFromLinkedlist {
-	
-	//Delete duplicate-value nodes from a sorted linked list
-	
-	Node RemoveDuplicates(Node head) {
-    if (head == null) {
-        return null;
-    }
-    Node n = head;
-    while (n.next != null) {
-        if (n.data == n.next.data) {
-            n.next = n.next.next;
-        } else {
-            n = n.next;
-        }
-    }
-    return head;
-}
 
+	// Delete duplicate-value nodes from a sorted linked list
+
+	Node RemoveDuplicates(Node head) {
+		if (head == null) {
+			return null;
+		}
+		Node n = head;
+		while (n.next != null) {
+			if (n.data == n.next.data) {
+				n.next = n.next.next;
+			} else {
+				n = n.next;
+			}
+		}
+		return head;
+	}
 
 	// If we can use a buffer, we can keep track of elements in a hashtable and
 	// remove any duplicates
@@ -45,19 +44,21 @@ public class RemoveDuplicatesFromLinkedlist {
 
 			else // å¦‚æžœèŠ‚ç‚¹çš„å€¼åœ¨è¡¨ä¸­
 			{
-				previous.next = n.next;//æŠŠå½“å‰?èŠ‚ç‚¹åŽ»æŽ‰
+				previous.next = n.next;// æŠŠå½“å‰?èŠ‚ç‚¹åŽ»æŽ‰
 			}
 
 			n = n.next;
 		}
-		// return head;//ç›´æŽ¥å°±æ”¹å?˜äº†åŽŸæ?¥çš„å€¼ï¼Œæ‰€ä»¥ä¸?è¿”å›žheadä¹Ÿè¡Œ
+		// return
+		// head;//ç›´æŽ¥å°±æ”¹å?˜äº†åŽŸæ?¥çš„å€¼ï¼Œæ‰€ä»¥ä¸?è¿”å›žheadä¹Ÿè¡Œ
 	}
 
 	/*
 	 * Without a buffer, we can iterate with two pointers: â€œcurrentâ€? does a
 	 * normal iteration, while â€œrunnerâ€? iterates through all prior nodes to
-	 * check for duplicates. Runner will only see one duplicate per node, because if there
-	 * were multiple duplicates they would have been removed already
+	 * check for duplicates. Runner will only see one duplicate per node,
+	 * because if there were multiple duplicates they would have been removed
+	 * already
 	 */
 
 	public static void deleteduplicates2(Node head) {

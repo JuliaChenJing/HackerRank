@@ -1,14 +1,12 @@
 package datastructure.queue;
 
-
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 //Priority Queue implementation using Comparator Interface
-public class PriorityQueueSale_I
-{
+public class PriorityQueueSale_I {
 	public static void main(String args[]) {
 		Queue<Sale_I> pq = new PriorityQueue<>(idComparator);
 		pq.add(new Sale_I(10, "Pen", 2.5));
@@ -21,7 +19,6 @@ public class PriorityQueueSale_I
 			Sale_I ob = pq.poll();
 			// System.out.println(ob);
 		}
-	
 
 	}
 

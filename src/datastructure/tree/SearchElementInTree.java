@@ -1,8 +1,9 @@
 package datastructure.tree;
+
 import java.util.Scanner;
 
 public class SearchElementInTree {
-	
+
 	public static void main(String[] args) {
 		Node root = new Node(20);
 		root.left = new Node(10);
@@ -14,11 +15,11 @@ public class SearchElementInTree {
 
 		System.out.println("which number do you want to search in tree?");
 		Scanner sc = new Scanner(System.in);
-		int num=sc.nextInt();
-		if(isPresent(root,num ))
-			System.out.println("The number "+num+ " exists in tree.");
+		int num = sc.nextInt();
+		if (isPresent(root, num))
+			System.out.println("The number " + num + " exists in tree.");
 		else
-			System.out.println("The number "+num+ " does't exist in tree.");
+			System.out.println("The number " + num + " does't exist in tree.");
 
 	}
 
@@ -35,6 +36,5 @@ public class SearchElementInTree {
 		}
 		return false;
 	}
-
 
 }

@@ -3,10 +3,9 @@ package datastructure.tree;
 //https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
 public class Insert {
 
-
 	// Runtime: O(log n) on a balanced tree.
 	// Space Complexity: O(1)
-	//return the root of the new tree
+	// return the root of the new tree
 	static Node Insert(Node root, int value) {
 		/* Create new Node */
 		Node newNode = new Node(value);
@@ -41,7 +40,6 @@ public class Insert {
 
 		/* Create new Node */
 		Node newNode = new Node(value);
-	
 
 		/* Special case: empty tree */
 		if (root == null) {
@@ -56,7 +54,7 @@ public class Insert {
 	static void helper(Node root, int value) {
 
 		Node newNode = new Node(value);
-	
+
 		/* Iteratively walk tree and insert new Node */
 		Node curr = root;
 
@@ -78,5 +76,4 @@ public class Insert {
 
 	}
 
-	
 }

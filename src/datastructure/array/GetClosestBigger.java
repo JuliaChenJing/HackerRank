@@ -21,7 +21,6 @@ public class GetClosestBigger {
 
 	}
 
-
 	static int[] getClosestBigger(int[] x, int[] y) {
 		int r = 0;
 		boolean[] isUsed = new boolean[x.length];
@@ -37,8 +36,7 @@ public class GetClosestBigger {
 					isUsed[i] = true;
 					re[r++] = x[i];
 					continue;
-				} 
-				else if (x[i] > y[j]) {
+				} else if (x[i] > y[j]) {
 					isUsed[i] = true;
 					re[r++] = x[i];
 					for (int p = 0; p < x.length; p++)

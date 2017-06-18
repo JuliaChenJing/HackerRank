@@ -11,7 +11,7 @@ public class Card {
 		CLUBS(1), SPADES(2), HEARTS(3), DIAMONDS(4);
 		int value;
 
-		//constructor
+		// constructor
 		private Suit(int v) {
 			value = v;
 		}
@@ -40,7 +40,7 @@ public class Card {
 	 */
 
 	public class BlackJackCard extends Card {
-		
+
 		public BlackJackCard(int r, Suit s) {
 			super(r, s);
 		}

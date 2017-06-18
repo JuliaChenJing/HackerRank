@@ -13,11 +13,11 @@ public class Recursion {
 	 */
 
 	/*
-	 *Recursive solutions, by definition, are built o# solutions
-	 * to sub-problems. Many times, this will mean simply to compute f(n) by
-	 * adding something, removing something, or otherwise changing the solution
-	 * for f(n-1). In other cases, you might have to do something more
-	 * complicated. Regardless, we recommend the following approach:
+	 * Recursive solutions, by definition, are built o# solutions to
+	 * sub-problems. Many times, this will mean simply to compute f(n) by adding
+	 * something, removing something, or otherwise changing the solution for
+	 * f(n-1). In other cases, you might have to do something more complicated.
+	 * Regardless, we recommend the following approach:
 	 * 
 	 * 1. Think about what the sub-problem is. How many sub-problems does f(n)
 	 * depend on? That is, in a recursive binary tree problem, each part will
@@ -33,17 +33,15 @@ public class Recursion {
 	 * That is, understand the exact process of translating the solutions for
 	 * sub-problems into the real solution.
 	 * 
-	 * 5. Generalize for f(n). 
+	 * 5. Generalize for f(n).
 	 * 
-	 * This “bottom-up recursion” is often the most
-	 * straight-forward. Sometimes, though, it can be useful to approach
-	 * problems “top down”, where you essentially jump directly into breaking
-	 * f(n) into its sub-problems.
+	 * This “bottom-up recursion” is often the most straight-forward. Sometimes,
+	 * though, it can be useful to approach problems “top down”, where you
+	 * essentially jump directly into breaking f(n) into its sub-problems.
 	 */
-	 
-	
-	
-	 /* 1. All problems that can be solved recursively can also be solved
+
+	/*
+	 * 1. All problems that can be solved recursively can also be solved
 	 * iteratively (though the code may be much more complicated). Before diving
 	 * into a recursive code, ask yourself how hard it would be to implement
 	 * this algorithm iteratively. Discuss the trade-o#s with your interviewer.

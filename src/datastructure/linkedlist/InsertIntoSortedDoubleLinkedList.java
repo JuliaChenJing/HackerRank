@@ -3,8 +3,8 @@ package datastructure.linkedlist;
 //https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list
 public class InsertIntoSortedDoubleLinkedList {
 	/*
-	 * Given a reference to the head of a doubly-linked list and an integer,data ,
-	 * create a new Node object having data value and insert it into a sorted
+	 * Given a reference to the head of a doubly-linked list and an integer,data
+	 * , create a new Node object having data value and insert it into a sorted
 	 * linked list.
 	 */
 

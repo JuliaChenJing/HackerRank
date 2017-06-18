@@ -1,34 +1,31 @@
 package datastructure.queue;
 
-
 class ArrayQueue {
 
 	private Object a[];
-	private int front, back; 
-	
+	private int front, back;
 
-	public static void main(String[] args)
-	{
-		ArrayQueue s=new ArrayQueue(5);
-		
+	public static void main(String[] args) {
+		ArrayQueue s = new ArrayQueue(5);
+
 		s.enqueue(1);
 		s.enqueue(2);
 		s.enqueue(3);
-		System.out.println(s.toString()+"      count: "+(s.size()));
+		System.out.println(s.toString() + "      count: " + (s.size()));
 		s.dequeue();
-		System.out.println(s.toString()+"      count: "+(s.size()));
+		System.out.println(s.toString() + "      count: " + (s.size()));
 		s.enqueue(4);
 		s.dequeue();
 		s.enqueue(5);
-		System.out.println(s.toString()+"      count: "+(s.size()));
+		System.out.println(s.toString() + "      count: " + (s.size()));
 	}
-	
+
 	public ArrayQueue(int n) // constructor
 	{
 		a = new Object[n]; // create stack array
 		front = -1; // no items in the stack
 		back = -1;
-		
+
 	}
 
 	public void enqueue(Object item) {
@@ -39,7 +36,7 @@ class ArrayQueue {
 			a[0] = item;
 			front++;
 			back++;
-		}else if (front == 0 && back == 0)
+		} else if (front == 0 && back == 0)
 		// queue contains one item; insert second item
 		{
 			a[1] = item;
@@ -59,21 +56,17 @@ class ArrayQueue {
 		if (isEmpty()) {
 			System.out.println("Q is empty");
 			return null;
-		}
-		else
-		{
-			Object temp=a[0];
-			for(int i=0;i<back;i++)
-			{
-				//后移
-				a[i]=a[i+1];
-				
+		} else {
+			Object temp = a[0];
+			for (int i = 0; i < back; i++) {
+				// 后移
+				a[i] = a[i + 1];
+
 			}
 			back--;
 			return temp;
 		}
-		
-		
+
 	}
 
 	public Object peek() {
@@ -81,11 +74,11 @@ class ArrayQueue {
 	}
 
 	public int size() {
-		return  back+1;
+		return back + 1;
 	}
 
 	public boolean isEmpty() {
-		if(back==-1)
+		if (back == -1)
 			return true;
 		else
 			return false;
@@ -93,9 +86,9 @@ class ArrayQueue {
 
 	@Override
 	public String toString() {
-		String re="";
-		for(int i=0;i<back+1;i++)
-			re+="a["+i+"]="+a[i]+"\n";
+		String re = "";
+		for (int i = 0; i < back + 1; i++)
+			re += "a[" + i + "]=" + a[i] + "\n";
 		return re;
 
 	}

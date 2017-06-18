@@ -48,7 +48,7 @@ class ArrayStack implements Stack {
 	{
 		return top + 1;
 	}
-	
+
 	public static void main(String[] args) {
 		ArrayStack stk = new ArrayStack(4); // create stack of size 4
 		Object item;
@@ -56,12 +56,12 @@ class ArrayStack implements Stack {
 		stk.push('B');
 		stk.push('C');
 		stk.push(4);
-		
-		System.out.println("size(): "+ stk.size());
+
+		System.out.println("size(): " + stk.size());
 		item = stk.pop(); // delete item
 		System.out.println(item + " is deleted");
 		stk.push('D'); // add three more items to the stack
-		stk.push('E');//Stack is full
+		stk.push('E');// Stack is full
 		System.out.println(stk.pop() + " is deleted");
 		stk.push('G'); // push one item
 		item = stk.peek(); // get top item from the stack

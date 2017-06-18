@@ -16,16 +16,16 @@ public class PalindromeInStack {
 	}
 
 	/*
-	 *  test if a String is a Palindrome: Strings that read the same from left to right
-	 *   as they do from right to left
+	 * test if a String is a Palindrome: Strings that read the same from left to
+	 * right as they do from right to left
 	 */
 	static public boolean isPalindrome(String s) {
-		if (s==null)
-				return false;
+		if (s == null)
+			return false;
 		int i = 0;
 		boolean re = true;
 		Stack<Character> stack = new Stack<Character>();
-		
+
 		if (s.length() % 2 == 0) {
 
 			for (; i < s.length() / 2; i++)
@@ -39,7 +39,7 @@ public class PalindromeInStack {
 					return false;
 				}
 			}
-			
+
 		} else {
 			for (; i < s.length() / 2; i++)
 

@@ -18,16 +18,16 @@ public class BitSwapRequired {
 	 * 
 	 */
 
-	public static void main(String [] args)
-	{
-		System.out.println(bitSwapRequired(31,14));
+	public static void main(String[] args) {
+		System.out.println(bitSwapRequired(31, 14));
 	}
+
 	public static int bitSwapRequired(int a, int b) {
 		int count = 0;
 		for (int c = a ^ b; c != 0; c = c >> 1) {
 			count += c & 1;
 		}
-		//System.out.println(a ^ b);
+		// System.out.println(a ^ b);
 		return count;
 	}
 }

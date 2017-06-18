@@ -17,7 +17,8 @@ public class OnlineReaderSystem {
 	private Book b;
 	private User u;
 
-	public OnlineReaderSystem(Book b, User u) {  }
+	public OnlineReaderSystem(Book b, User u) {
+	}
 
 	public void listenRequest() {
 	}
@@ -31,9 +32,9 @@ public class OnlineReaderSystem {
 	 * identifier to identify each user uniquely. We can add functionality like
 	 * registering the user, charging a membership amount and monthly / daily
 	 * quota, etc. Next, we have book class where we will keep all the book’s
-	 * information. We would also implement functions like add / delete /
-	 * update books. Finally, we have a manager class for managing the online
-	 * book reader system which would have a listen function to listen for any
+	 * information. We would also implement functions like add / delete / update
+	 * books. Finally, we have a manager class for managing the online book
+	 * reader system which would have a listen function to listen for any
 	 * incoming requests to log in. It also provides book search functionality
 	 * and display functionality. Because the end user interacts through this
 	 * class, search must be implemented here.

@@ -45,17 +45,15 @@ public class FindSum {
 		}
 		System.out.println();
 	}
-	
+
 	/*
-	 * What is the time complexity of this algorithm? Well, if a node is at level r, we do r amount
-of work (that’s in the looking “up” step). We can take a guess at O(n lg n) (n nodes, doing anaverage of lg n amount of work on each step), or we can be super mathematical:
-There are 2^r nodes at level r.
-1*2^1 + 2*2^2 + 3*2^3 + 4*2^4 + ... d * 2^d
-= sum(r * 2^r, r from 0 to depth)
-= 2 (d‐1) * 2^d + 2
-n = 2^d ==> d = lg n
-NOTE: 2^lg(x) = x
-O(2 (lg n ‐ 1) * 2^(lg n) + 2) = O(2 (lg n ‐ 1) * n ) = O(n lg n)
-Following similar logic, our space complexity is O(n lg n).
+	 * What is the time complexity of this algorithm? Well, if a node is at
+	 * level r, we do r amount of work (that’s in the looking “up” step). We can
+	 * take a guess at O(n lg n) (n nodes, doing anaverage of lg n amount of
+	 * work on each step), or we can be super mathematical: There are 2^r nodes
+	 * at level r. 1*2^1 + 2*2^2 + 3*2^3 + 4*2^4 + ... d * 2^d = sum(r * 2^r, r
+	 * from 0 to depth) = 2 (d‐1) * 2^d + 2 n = 2^d ==> d = lg n NOTE: 2^lg(x) =
+	 * x O(2 (lg n ‐ 1) * 2^(lg n) + 2) = O(2 (lg n ‐ 1) * n ) = O(n lg n)
+	 * Following similar logic, our space complexity is O(n lg n).
 	 */
 }

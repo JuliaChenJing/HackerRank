@@ -2,9 +2,6 @@ package datastructure.linkedlist;
 
 public class DoubleLinkedList {
 
-	
-
-
 	Node header;
 
 	public static void main(String[] args) {
@@ -124,8 +121,6 @@ public class DoubleLinkedList {
 		}
 	}
 
-	
-
 	// Iterative Solution using 3 pointers
 	// Runtime: O(n)
 	// Space Complexity: O(1)
@@ -144,6 +139,7 @@ public class DoubleLinkedList {
 		}
 		return prev;
 	}
+
 	// implement the code
 	public void postAddNode(Node n, String value) {
 		Node newNode;

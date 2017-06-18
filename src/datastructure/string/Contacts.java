@@ -9,11 +9,7 @@ public class Contacts {
 	/*
 	 * Sample Input:
 	 * 
-	 * 4 
-	 * add hack 
-	 * add hackerrank 
-	 * find hac 
-	 * find hak 
+	 * 4 add hack add hackerrank find hac find hak
 	 * 
 	 * Sample Output:
 	 * 
@@ -38,7 +34,7 @@ public class Contacts {
 
 /* Based loosely on tutorial video in this problem */
 class TrieNode {
-	
+
 	private HashMap<Character, TrieNode> children = new HashMap<>();
 	public int size;
 
@@ -52,7 +48,7 @@ class TrieNode {
 }
 
 class Trie {
-	
+
 	TrieNode root = new TrieNode();
 
 	Trie() {

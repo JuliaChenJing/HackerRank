@@ -4,8 +4,8 @@ package datastructure.string;
 //column is set to 0.
 public class SetZeros {
 	/*
-       
-	 *At first glance, this problem seems easy: just iterate through the matrix
+	 * 
+	 * At first glance, this problem seems easy: just iterate through the matrix
 	 * and every time we see a 0, set that row and column to 0. There’s one
 	 * problem with that solution though: we will “recognize” those 0s later on
 	 * in our iteration and then set their row and column to zero. Pretty soon,

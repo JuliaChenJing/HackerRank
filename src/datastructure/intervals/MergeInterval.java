@@ -56,7 +56,7 @@ public class MergeInterval {
 
 		Arrays.sort(points);// 排序 ,这样点就不是成组出现的了
 
-		//依次处理每一个点
+		// 依次处理每一个点
 		for (int i = 0; i < points.length; i++) {
 
 			if (points[i].type == 0)// 如果这个点是起点

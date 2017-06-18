@@ -17,14 +17,19 @@ public class Book {
 	public void update() {
 	}
 
-	public static void delete(Book b) { books.remove(b); }
-	public static Book find(long id)
-	{
-	for(Book b:books)
-		if(b.getID()==id)return b;return null;
-}
+	public static void delete(Book b) {
+		books.remove(b);
+	}
+
+	public static Book find(long id) {
+		for (Book b : books)
+			if (b.getID() == id)
+				return b;
+		return null;
+	}
 
 	private long getID() {
-		
+
 		return ID;
-	}}
+	}
+}

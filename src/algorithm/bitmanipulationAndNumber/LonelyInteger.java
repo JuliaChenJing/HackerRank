@@ -1,12 +1,12 @@
-//https://www.hackerrank.com/challenges/lonely-integer/problem
 
+package algorithm.bitmanipulationAndNumber;
 import java.util.Scanner;
-
+//https://www.hackerrank.com/challenges/lonely-integer/problem
 // O(n) runtime. O(1) space. Uses XOR. Keep in mind:
 //   1) x ^ x = 0
 //   2) x ^ 0 = x
 //   3) XOR is commutative and associative
-public class Solution {
+public class LonelyInteger {
     public static void main(String [] args) {
         /* Read input */
         Scanner scan = new Scanner(System.in);
@@ -28,3 +28,4 @@ public class Solution {
         }
         return val;
     }
+}

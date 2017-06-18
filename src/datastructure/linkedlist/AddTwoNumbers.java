@@ -47,20 +47,19 @@ public class AddTwoNumbers {
 		Node a = new Node(3);
 		Node b = new Node(1);
 		Node c = new Node(5);
-		
+
 		Node d = new Node(5);
 		Node e = new Node(9);
 		Node f = new Node(2);
-	
+
 		a.next = b;
 		b.next = c;
-		
+
 		d.next = e;
 		e.next = f;
 
-		
 		Node n = a;
-		
+
 		System.out.println("\nTHE FIRST LINKED LIST: ");
 		while (n != null) {
 			System.out.print(n.data + "--->");

@@ -53,10 +53,6 @@ public class QueueUsingTwoStacks {
 		return s1.size() + s2.size();
 	}
 
-
-
-	
-
 	public static void main(String[] args) {
 		QueueUsingTwoStacks queue = new QueueUsingTwoStacks();
 		queue.enqueue(1);

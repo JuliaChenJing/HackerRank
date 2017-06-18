@@ -27,7 +27,6 @@ public class ReplaceSpace {
 	 * the character as it is in the newly shifted location.
 	 */
 
-
 	public static void main(String[] args) {
 
 		System.out.println(replaceSpace("ab"));
@@ -36,6 +35,5 @@ public class ReplaceSpace {
 		System.out.println(replaceSpace("a b"));
 		System.out.println(replaceSpace(null));
 
-		
 	}
 }

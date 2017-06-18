@@ -25,22 +25,23 @@ public class CallHandler {
 	 * concerned person.
 	 * 
 	 * NOTE: On any object oriented design question, there are many ways to
-	 * design the objects. Discuss the trade-offs of different solutions with your
-	 * interviewer. You should usually design for long term code flexibility and
-	 * maintenance.
+	 * design the objects. Discuss the trade-offs of different solutions with
+	 * your interviewer. You should usually design for long term code
+	 * flexibility and maintenance.
 	 */
 
 	static final int NUM_LEVELS = 3;// we have 3 levels of employees
 	static final int NUM_FRESHERS = 5;
-	ArrayList<Employee>[] employeeLevels = new ArrayList[ NUM_LEVELS];
+	ArrayList<Employee>[] employeeLevels = new ArrayList[NUM_LEVELS];
 	// queues for each employee’s rank
-	Queue<Call>[] callQueues = new LinkedList[ NUM_LEVELS];
+	Queue<Call>[] callQueues = new LinkedList[NUM_LEVELS];
 
-	public CallHandler() {}
+	public CallHandler() {
+	}
 
 	// routes the call to an available employee, or adds to a queue
 	Employee getCallHandler(Call call) {
-		for (int level = call.getRank(); level <  NUM_LEVELS - 1; level++) {
+		for (int level = call.getRank(); level < NUM_LEVELS - 1; level++) {
 			ArrayList<Employee> employeeLevel = employeeLevels[level];
 			for (Employee emp : employeeLevel) {
 				if (emp.free) {
@@ -50,8 +51,6 @@ public class CallHandler {
 		}
 		return null;
 	}
-
-
 
 	void dispatchCall(Call call) {
 		// try to route the call to an employee with minimal rank
@@ -63,10 +62,9 @@ public class CallHandler {
 			callQueues[call.getRank()].add(call);
 		}
 	}
+
 	// look for call based on employee's rank
 	void getNextCall(Employee e) {
 
-	} 
+	}
 }
-
-

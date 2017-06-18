@@ -1,13 +1,11 @@
 package datastructure.queue;
 
-
 //Implementation using Comparable Interfacce
-class Sale_II  implements Comparable 
-{
+class Sale_II implements Comparable {
 	int sid;
 	String item;
 	double price;
-	
+
 	@Override
 	public int compareTo(Object obj) {
 		Sale_II AObj = (Sale_II) obj;
@@ -33,9 +31,7 @@ class Sale_II  implements Comparable
 		this.price = price;
 	}
 
-
-	
-	 public String toString() {
-	        return  "Sid=" + sid + ", Item Name=" + item + ", Item Price=" + price ;
-	    }
+	public String toString() {
+		return "Sid=" + sid + ", Item Name=" + item + ", Item Price=" + price;
+	}
 }

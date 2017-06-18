@@ -29,5 +29,6 @@ public class User {
 		users.add(new User(ID, details, accountType));
 	}
 
-	public User(long iD, String details, int accountType) {  }
+	public User(long iD, String details, int accountType) {
+	}
 }

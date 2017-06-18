@@ -7,7 +7,6 @@ from the root by more than one.
  */
 public class IsBalanced {
 
-	
 	public static void main(String[] args) {
 		Node root = new Node(1);
 		root.left = new Node(2);
@@ -19,28 +18,25 @@ public class IsBalanced {
 		System.out.println("The min height of the tree is : " + minDepth(root));
 
 	}
-	
+
 	public static boolean isBalanced(Node root) {
 		return (maxDepth(root) - minDepth(root) <= 1);
 	}
-	
-	//calculate the max depth of a tree=the height of the tree
+
+	// calculate the max depth of a tree=the height of the tree
 	public static int maxDepth(Node root) {
 		if (root == null) {
 			return 0;
 		}
 		return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 	}
-	
-	//calculate the min depth of a tree
+
+	// calculate the min depth of a tree
 	public static int minDepth(Node root) {
 		if (root == null) {
 			return 0;
 		}
 		return 1 + Math.min(minDepth(root.left), minDepth(root.right));
 	}
-
-	
-
 
 }

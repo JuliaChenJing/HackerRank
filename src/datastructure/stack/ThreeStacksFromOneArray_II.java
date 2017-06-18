@@ -18,9 +18,9 @@ public class ThreeStacksFromOneArray_II {
 	 * insertion, we would delete an entry from the free list.
 	 * 
 	 * In case of deletion, we would simply add the index of the free cell to
-	 * the free list. In this implementation we would be able to have flexibility
-	 * in terms of variable space utilization but we would need to increase the
-	 * space complexity.
+	 * the free list. In this implementation we would be able to have
+	 * flexibility in terms of variable space utilization but we would need to
+	 * increase the space complexity.
 	 */
 	static int STACK_SIZE = 300;
 	int indexUsed = 0;

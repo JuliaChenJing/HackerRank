@@ -22,6 +22,5 @@ class Sale_I {
 	public String toString() {
 		return "\n Sid=" + sid + ", Item Name=" + item + ", Item Price=" + price;
 	}
-	
-	
+
 }

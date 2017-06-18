@@ -1,4 +1,5 @@
 package datastructure.hashtable;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,29 +15,26 @@ public class ValueCount {
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("please enter the number of key-value pairs :");
-		int n=scan.nextInt();
+		int n = scan.nextInt();
 		scan.nextLine();
-		int i=0;
-		while (i<n &&scan.hasNext()) {
-			
+		int i = 0;
+		while (i < n && scan.hasNext()) {
+
 			String str = scan.nextLine();
 			String[] pair = str.split(",");
 			// for (int i = 0; i < pair.length; i++)
 			// System.out.println(pair[i]);
 
 			map = add(pair[0], Integer.parseInt(pair[1]));
-		
+
 			i++;
-		
-		
+
 		}
-		
+
 		while (q.peek() != null) {
 			String s = q.poll();
 			System.out.println(s + "," + map.get(s));
 		}
-			
-		
 
 	}
 

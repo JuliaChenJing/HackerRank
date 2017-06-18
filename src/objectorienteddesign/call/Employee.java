@@ -1,9 +1,8 @@
 package objectorienteddesign.call;
 
 public class Employee {
-	
-	
-	// 0â€? fresher, 1 â€? technical lead, 2 â€? product manager
+
+	// 0ï¿½? fresher, 1 ï¿½? technical lead, 2 ï¿½? product manager
 	int rank;
 	boolean free;
 	CallHandler callHandler;
@@ -16,14 +15,14 @@ public class Employee {
 	}
 
 	void callHandled(Call call) {
-	} 
-	
+	}
+
 	// escalate call
-	void escalateCall(Call call) { 
-		call.setRank (rank + 1);
+	void escalateCall(Call call) {
+		call.setRank(rank + 1);
 		callHandler.dispatchCall(call);
 		free = true;
-		callHandler.getNextCall(this); 
+		callHandler.getNextCall(this);
 	}
 }
 
