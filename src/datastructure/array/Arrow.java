@@ -1,3 +1,4 @@
+package datastructure.array;
 
 
 public class Arrow {
@@ -23,25 +24,25 @@ public class Arrow {
 	 *return an integer denoting most visited position on the trail after performing all a.length-1 sprints.
 	 *If there are multiple such answers, return the smallest one.
 	 */
-	static int mostVisitedPosition(int n, int a[])
+	static int mostVisitedPosition(int n, int sprints[])
 	{
 		int[]  count=new int[n+1];
 		for(int i=0;i<=n;i++)
 			count[i]=0;
 		
-		for(int i=0;i<a.length-1;i++){
+		for(int i=0;i<sprints.length-1;i++){
 			
-			if(a[i]<a[i+1])
+			if(sprints[i]<sprints[i+1])
 			{
 				
-				for(int j=a[i];j<=a[i+1];j++)
+				for(int j=sprints[i];j<=sprints[i+1];j++)
 				{
 					count[j]++;
 				}
 			}
 			else
 			{
-				for(int j=a[i];j>=a[i+1];j--)
+				for(int j=sprints[i];j>=sprints[i+1];j--)
 				{
 					count[j]++;
 				}
