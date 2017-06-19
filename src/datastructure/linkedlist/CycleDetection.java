@@ -26,4 +26,60 @@ public class CycleDetection {
 		}
 		return false;
 	}
+
+	
+	/*
+	 * Given a linked list, return the node where the cycle begins.
+	 *  If there is no cycle, return null.
+
+       Try solving it using constant additional space.
+
+       Example :
+
+         Input : 
+
+                  ______
+                 |     |
+                 \/    |
+        1 -> 2 -> 3 -> 4
+
+       Return the node corresponding to node 3. 
+	 */
+	
+	
+	public Node detectCycle(Node a) 
+	{
+  
+		Node fast = a;
+		Node slow = a;
+		boolean hasCycle = false;
+		while(fast != null && fast.next != null && slow != null)
+		{
+    
+			fast = fast.next.next;
+			slow = slow.next;
+			if(fast == slow){
+     
+				hasCycle = true;
+				break;
+			}
+		}
+
+		if(!hasCycle) return null;
+
+		else{//hasCycle = true;
+			
+    
+			fast = a;
+   
+			while(fast != slow){
+      
+				fast = fast.next;
+      
+				slow = slow.next;
+   
+			}
+			return fast;
+		}
+	}
 }

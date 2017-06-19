@@ -74,8 +74,16 @@ public class BucketSort {
 
 		for (int i = 0; i < N; i++)
 			/*
-			 * The method gives the absolute value of the argument. The argument
-			 * can be int, float, long, double, short, byte.
+			 * 
+			 * The nextInt(int n) method is used to get a pseudorandom,
+			 * uniformly distributed int value between 0 (inclusive) and the
+			 * specified value (exclusive), drawn from this random number
+			 * generator's sequence. 
+			 * 
+			 * 
+			 * The method Math.abs() gives the absolute value of the
+			 * argument. The argument can be int, float, long, double, short,
+			 * byte.
 			 */
 			// sequence[i] = Math.abs(random.nextInt(100));
 			sequence[i] = random.nextInt(100);

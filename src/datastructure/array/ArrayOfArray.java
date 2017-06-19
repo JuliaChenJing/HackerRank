@@ -12,10 +12,11 @@ public class ArrayOfArray {
 			B.add(new ArrayList<Integer>());
 
 			for (int j = 0; j < A.get(i).size(); j++) {
-				B.get(i).add(0);
+				B.get(i).add(0);//initiate the value to 0
 			}
 
 			for (int j = 0; j < A.get(i).size(); j++) {
+				//reverse the value in array A 
 				B.get(i).set(A.get(i).size() - 1 - j, A.get(i).get(j));
 			}
 		}
