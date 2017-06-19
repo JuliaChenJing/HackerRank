@@ -2,7 +2,7 @@ package algorithm.recursion;
 
 import java.util.ArrayList;
 
-// Write a method to compute all permutations of a string [数] 排列；[数] 置换
+// Write a method to compute all permutations  [数] 排列；[数] 置换 of a string
 public class Permutation {
 
 	/*
@@ -22,11 +22,11 @@ public class Permutation {
 	 * This solution takes O(n!) time, since there are n! permutations.
 	 */
 
-	public static ArrayList<String> getPerms(String s) {
+	public static ArrayList<String> getPermutations(String s) {
 		
 		ArrayList<String> permutations = new ArrayList<String>();
 		
-		if (s == null) { 
+		if (s == null) { // null case
 			return null;
 		} else if (s.length() == 0) { // base case
 			permutations.add("");
@@ -36,7 +36,7 @@ public class Permutation {
 		char first=s.charAt(0);//get the first char
 		String remainder=s.substring(1);//remove the first letter
 
-		ArrayList<String> words = getPerms(remainder);
+		ArrayList<String> words = getPermutations(remainder);
 		for (String word : words) {
 			for (int j = 0; j <= word.length(); j++) {
 
@@ -47,8 +47,12 @@ public class Permutation {
 	}
 
 	public static String insertCharAt(String word, char c, int i) {
+		// public String substring(int beginIndex, int endIndex)
 		String start = word.substring(0, i);
+		
+		// public String substring(int beginIndex)
 		String end = word.substring(i);
+		
 		return start + c + end;
 	}
 	
@@ -56,7 +60,7 @@ public class Permutation {
 	{
 		String a="AbC";
 		System.out.print(a.length()+"!=");
-		ArrayList<String> re=getPerms("AbC");
+		ArrayList<String> re=getPermutations("AbC");
 		
 		// This solution takes O(n!) time, since there are n! permutations.
 		System.out.println(re.size());
