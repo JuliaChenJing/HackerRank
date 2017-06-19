@@ -16,18 +16,18 @@ public class MergeSort {
 		this.numbers = values;
 		number = values.length;
 		this.helper = new int[number];
-		mergesort(0, number - 1);
+		mergeSortHelper(0, number - 1);
 	}
 
-	private void mergesort(int low, int high) {
+	private void mergeSortHelper(int low, int high) {
 		// check if low is smaller than high, if not then the array is sorted
 		if (low < high) {
 			// Get the index of the element which is in the middle
 			int middle = low + (high - low) / 2;
 			// Sort the left side of the array
-			mergesort(low, middle);
+			mergeSortHelper(low, middle);
 			// Sort the right side of the array
-			mergesort(middle + 1, high);
+			mergeSortHelper(middle + 1, high);
 			// Combine them both
 			merge(low, middle, high);
 		}
