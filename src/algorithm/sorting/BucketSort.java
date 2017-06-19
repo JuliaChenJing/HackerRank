@@ -11,11 +11,11 @@ public class BucketSort {
 	 * particularly well.
 	 * 
 	 * 
-	 * Example: You have a very large array of ‘Person’ objects. Sort the people
-	 * in increasing order of age. We’re given two interesting bits of knowledge
+	 * Example: You have a very large array of â€˜Personâ€™ objects. Sort the people
+	 * in increasing order of age. Weâ€™re given two interesting bits of knowledge
 	 * here: 
 	 * 
-	 * (1) It’s a large array, so efficiency is very important. 
+	 * (1) Itâ€™s a large array, so efficiency is very important. 
 	 * (2) We are sorting based on ages, so we know the values are in a small range.
 	 * 
 	 *  By scanning through the various sorting algorithms, we might notice that
@@ -30,22 +30,28 @@ public class BucketSort {
 	 * of items and m is the number of distinct items.
 	 */
 	
-	 static int[] bucketsort(int[] sequence, int maxValue) 
-	    {
-	        
-	        int[] Bucket = new int[maxValue + 1];
-	        int[] sorted_sequence = new int[sequence.length];
-	 
-	        for (int i = 0; i < sequence.length; i++)
-	            Bucket[sequence[i]]++;
-	 
-	        int outPos = 0;
-	        for (int i = 0; i < Bucket.length; i++)
-	            for (int j = 0; j < Bucket[i]; j++)
-	                sorted_sequence[outPos++] = i;
-	 
-	        return sorted_sequence;
-	    }
+ 
+   public static void bucketsort(int[] a, int maxVal) {
+      int [] bucket=new int[maxVal+1];
+ 
+      for (int i=0; i<bucket.length; i++) {
+         bucket[i]=0;
+      }
+ 
+      for (int i=0; i<a.length; i++) {
+         bucket[a[i]]++;
+      }
+ 
+      int outPos=0;
+      for (int i=0; i<bucket.length; i++) {
+         for (int j=0; j<bucket[i]; j++) {
+            a[outPos++]=i;
+         }
+      }
+   }
+ 
+ 
+   
 	 
 	    static void printSequence(int[] sorted_sequence) 
 	    {
