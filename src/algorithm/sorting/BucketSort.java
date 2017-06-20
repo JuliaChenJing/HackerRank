@@ -4,33 +4,7 @@ import java.util.Random;
 
 public class BucketSort {
 	
-	http://www.growingwiththeweb.com/2015/06/bucket-sort.html
-	/*
-	 * Understanding the common sorting algorithms is incredibly valuable, as
-	 * many sorting or searching solutions require tweaks of known sorting
-	 * algorithms. A good approach when you are given a question like this is to
-	 * run through the different sorting algorithms and see if one applies
-	 * particularly well.
-	 * 
-	 * 
-	 * Example: You have a very large array of ‘Person’ objects. Sort the
-	 * people in increasing order of age. We’re given two interesting bits of
-	 * knowledge here:
-	 * 
-	 * (1) It’s a large array, so efficiency is very important. (2) We are
-	 * sorting based on ages, so we know the values are in a small range.
-	 * 
-	 * By scanning through the various sorting algorithms, we might notice that
-	 * bucket sort would be a perfect candidate for this algorithm. In fact, we
-	 * can make the buckets small (just 1 year each) and get O(n) running time.
-	 * 
-	 * 
-	 */
-	/*
-	 * Partition the array into a finite number of buckets, and then sort each
-	 * bucket individually. This gives a time of O(n + m), where n is the number
-	 * of items and m is the number of distinct items.
-	 */
+	
 
 	public static int[] bucketsort(int[] a, int maxVal) {
 		int[] bucket = new int[maxVal + 1];
@@ -75,20 +49,9 @@ public class BucketSort {
 		int[] sequence = new int[N];
 
 		for (int i = 0; i < N; i++)
-			/*
-			 * 
-			 * The nextInt(int n) method is used to get a pseudorandom,
-			 * uniformly distributed int value between 0 (inclusive) and the
-			 * specified value (exclusive), drawn from this random number
-			 * generator's sequence. 
-			 * 
-			 * 
-			 * The method Math.abs() gives the absolute value of the
-			 * argument. The argument can be int, float, long, double, short,
-			 * byte.
-			 */
-			// sequence[i] = Math.abs(random.nextInt(100));
-			sequence[i] = random.nextInt(100);
+		
+			 sequence[i] = Math.abs(random.nextInt(100));
+			
 
 		int maxValue = maxValue(sequence);
 
@@ -100,5 +63,7 @@ public class BucketSort {
 		System.out.println("\nSorted Sequence: ");
 		printer(bucketsort(sequence, maxValue));
 	}
+	
+	//http://www.growingwiththeweb.com/2015/06/bucket-sort.html
 
 }

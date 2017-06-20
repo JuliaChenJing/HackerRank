@@ -2,7 +2,7 @@ package algorithm.sorting;
 
 public class MergeBintoA {
 	
-	change the name
+
 	public static void main(String array[]) {
 		int[] a ={ 9, 14, 43, 58,0,0,0 };
 		System.out.println("array a");
@@ -19,7 +19,7 @@ public class MergeBintoA {
 		
 		System.out.println();
 		
-		//int [] re=merge( a, b, b.length,a.length);
+		//int [] re=merge( a, b, a.length,b.length);
 
 		System.out.println("After Merge");
 		//for (int i : re) {
@@ -35,10 +35,10 @@ public class MergeBintoA {
 	 * merge A and B from the back, by comparing each element.
 	 */
 
-	public static int []  merge(int[] a, int[] b, int n, int m) {
-		int k = m + n - 1; // Index of last location of array b
-		int i = n - 1; // Index of last element in array b
-		int j = m - 1; // Index of last element in array a
+	public static int []  merge(int[] a, int[] b, int lengthOfA,int lengthOfB ) {
+		int k = lengthOfA + lengthOfB - 1; // Index of last location of array b
+		int i = lengthOfB - 1; // Index of last element in array b
+		int j = lengthOfA - 1; // Index of last element in array a
 
 		// Start comparing from the last element and merge a and b
 		while (i >= 0 && j >= 0) {
@@ -56,7 +56,7 @@ public class MergeBintoA {
 	}
 
 	/*
-	 * Note: You don’t need to copy the contents of a after running out of b’s.
+	 * Note: You don't need to copy the contents of a after running out of b’s.
 	 * They are already in place.
 	 */
 	

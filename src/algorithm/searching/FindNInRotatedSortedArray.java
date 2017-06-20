@@ -1,6 +1,6 @@
 package algorithm.searching;
 
-public class FindNinRotatedSortedArray {
+public class FindNInRotatedSortedArray {
 
 	/*
 	 * Given a sorted array of n integers that has been rotated an unknown
@@ -15,42 +15,44 @@ public class FindNinRotatedSortedArray {
 	 * 
 	 * Output: 8 (the index of 5 in the array)
 	 */
-change name
+
 	public static int search(int a[], int x) {
 		return search(a, 0, a.length - 1, x);
 	}
 
 	// We can do this with a modification of binary search.
-	public static int search(int a[], int l, int u, int x) {
-		while (l <= u) {
-			int m = (l + u) / 2;
+	public static int search(int a[], int low, int high, int x) {
+		while (low <= high) {
+			int m = (low + high) / 2;
 			if (x == a[m]) {
 				return m;
-			} else if (a[l] <= a[m]) {
+			} else if (a[low] <= a[m])
+			{
+
 				if (x > a[m]) {
-					l = m + 1;
-				} else if (x >= a[l]) {
-					u = m - 1;
+					low = m + 1;
+				} else if (x >= a[low]) {
+					high = m - 1;
 				} else {
-					l = m + 1;
+					low = m + 1;
 				}
 			} else if (x < a[m])
-				u = m - 1;
-			else if (x <= a[u])
-				l = m + 1;
+				high = m - 1;
+			else if (x <= a[high])
+				low = m + 1;
 			else
-				u = m - 1;
+				high = m - 1;
 		}
 		return -1;
 	}
 
 	/*
-	 * What about duplicates? You may observe that the above function doesn’t
+	 * What about duplicates? You may observe that the above function doesn't
 	 * give you an efficient result in case of duplicate elements. However, if
-	 * your array has duplicate entries then we can’t do better than O(n) which
-	 * is as good as linear search. For example, if the array is
-	 * [2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2], there is no way to find element 3
-	 * until you do a linear search.
+	 * your array has duplicate entries then we cannot do better than O(n)
+	 * which is as good as linear search. For example, if the array is
+	 * [2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2], there is no way to find element
+	 * 3 until you do a linear search.
 	 */
 
 }

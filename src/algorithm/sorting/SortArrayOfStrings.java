@@ -1,11 +1,10 @@
 package algorithm.sorting;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
 //Write a method to sort an array of strings so that all the anagrams (abccba) are next to each other
-public class SortArray {
+public class SortArrayOfStrings {
 
 	// just sort the arrays, using this compareTo method instead of the usual
 	// one
@@ -53,7 +52,7 @@ public class SortArray {
 
 	/*
 	 * The basic idea is to implement a normal sorting algorithm where you
-	 * override the compareTo method to compare the “signature” of each string.
+	 * override the compareTo method to compare the â€œsignatureâ€� of each string.
 	 * In this case, the signature is the alphabetically sorted string.
 	 */
 
