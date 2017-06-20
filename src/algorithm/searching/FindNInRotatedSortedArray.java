@@ -45,9 +45,9 @@ public class FindNinRotatedSortedArray {
 	}
 
 	/*
-	 * What about duplicates? You may observe that the above function doesn’t
+	 * What about duplicates? You may observe that the above function doesnâ€™t
 	 * give you an efficient result in case of duplicate elements. However, if
-	 * your array has duplicate entries then we can’t do better than O(n) which
+	 * your array has duplicate entries then we canâ€™t do better than O(n) which
 	 * is as good as linear search. For example, if the array is
 	 * [2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2], there is no way to find element 3
 	 * until you do a linear search.
