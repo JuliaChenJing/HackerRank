@@ -15,7 +15,7 @@ public class FindNinRotatedSortedArray {
 	 * 
 	 * Output: 8 (the index of 5 in the array)
 	 */
-
+change name
 	public static int search(int a[], int x) {
 		return search(a, 0, a.length - 1, x);
 	}
