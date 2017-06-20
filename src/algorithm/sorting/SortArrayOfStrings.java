@@ -53,7 +53,7 @@ public class SortArray {
 
 	/*
 	 * The basic idea is to implement a normal sorting algorithm where you
-	 * override the compareTo method to compare the ìsignatureî of each string.
+	 * override the compareTo method to compare the ‚Äúsignature‚Äù of each string.
 	 * In this case, the signature is the alphabetically sorted string.
 	 */
 
