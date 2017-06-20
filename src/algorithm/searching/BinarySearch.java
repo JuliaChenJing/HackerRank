@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class BinarySearch {
 
-   
+    change name
     public static int binarySearch(int[] a, int key) {
         int lo = 0;
         int hi = a.length - 1;
