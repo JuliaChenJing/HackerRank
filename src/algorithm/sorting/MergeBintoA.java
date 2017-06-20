@@ -1,6 +1,33 @@
 package algorithm.sorting;
 
 public class MergeBintoA {
+	
+	
+	public static void main(String array[]) {
+		int[] a ={ 9, 14, 43, 58,0,0,0 };
+		System.out.println("array a");
+		for (int i : a) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		
+		int[] b = { 1, 3, 24 };
+		System.out.println("array b");
+		for (int i : b) {
+			System.out.print(i + " ");
+		}
+		
+		System.out.println();
+		
+		//int [] re=merge( a, b, b.length,a.length);
+
+		System.out.println("After Merge");
+		//for (int i : re) {
+		//	System.out.print(i + " ");
+		//}
+	}
+	
+	
 	/*
 	 * 9.1 p185 You are given two sorted arrays, A and B, and A has a large
 	 * enough buffer at the end to hold B. Write a method to merge B into A in
@@ -32,29 +59,7 @@ public class MergeBintoA {
 	 * Note: You don’t need to copy the contents of a after running out of b’s.
 	 * They are already in place.
 	 */
-	public static void main(String array[]) {
-		int[] a ={ 9, 14, 43, 58,0,0,0 };
-		System.out.println("array a");
-		for (int i : a) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-		
-		int[] b = { 1, 3, 24 };
-		System.out.println("array b");
-		for (int i : b) {
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();
-		
-		//int [] re=merge( a, b, b.length,a.length);
-
-		System.out.println("After Merge");
-		//for (int i : re) {
-		//	System.out.print(i + " ");
-		//}
-	}
+	
 	
 
 }

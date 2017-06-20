@@ -33,24 +33,24 @@ public class RemoveDuplicatesFromLinkedlist {
 			return;
 		Hashtable<Integer, Boolean> table = new Hashtable<Integer, Boolean>();
 		Node n = head;
-		Node previous = null;// ä¿?å­˜å¤„ç?†ä¸­çš„å½“å‰?ä½?ç½®ï¼Œä¸‹ä¸€ä¸ªä½?ç½®å?¯ä»¥æ”¾å…¥ä¸‹ä¸€ä¸ªä¸?é‡?å¤?çš„æ•°å­—
+		Node previous = null;
 		while (n != null) {
 
-			if (!table.containsKey(n.data))// å¦‚æžœèŠ‚ç‚¹çš„å€¼ä¸?åœ¨è¡¨ä¸­
+			if (!table.containsKey(n.data))
 			{
-				table.put(n.data, true);// æ•°å€¼æ”¾å…¥è¡¨ä¸­
+				table.put(n.data, true);
 				previous = n;
 			}
 
-			else // å¦‚æžœèŠ‚ç‚¹çš„å€¼åœ¨è¡¨ä¸­
+			else 
 			{
-				previous.next = n.next;// æŠŠå½“å‰?èŠ‚ç‚¹åŽ»æŽ‰
+				previous.next = n.next;
 			}
 
 			n = n.next;
 		}
-		// return
-		// head;//ç›´æŽ¥å°±æ”¹å?˜äº†åŽŸæ?¥çš„å€¼ï¼Œæ‰€ä»¥ä¸?è¿”å›žheadä¹Ÿè¡Œ
+		
+	
 	}
 
 	/*

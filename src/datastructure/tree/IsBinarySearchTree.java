@@ -11,13 +11,7 @@ public class IsBinarySearchTree {
 	boolean checkBST(Node node, int min, int max) {
 		if (node == null) {
 			return true;
-		} else if (node.value < min || node.value > max) { // we
-															// assume
-															// BST
-															// cannot
-															// have
-															// duplicate
-															// values
+		} else if (node.value < min || node.value > max) { //we assume BST cannot have duplicate values
 			return false;
 		} else {
 			return checkBST(node.left, min, node.value - 1) && checkBST(node.right, node.value + 1, max);

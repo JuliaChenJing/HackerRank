@@ -24,10 +24,14 @@ public class BitSwapRequired {
 
 	public static int bitSwapRequired(int a, int b) {
 		int count = 0;
-		for (int c = a ^ b; c != 0; c = c >> 1) {
+		int c = a ^ b;
+		
+		while(c != 0)
+		{
 			count += c & 1;
+			c = c >> 1;
 		}
-		// System.out.println(a ^ b);
+		
 		return count;
 	}
 }
