@@ -2,9 +2,7 @@ package algorithm.sorting;
 
 import java.util.Random;
 
-public class BucketSort {
-	
-	
+public class BucketSort_I {
 
 	public static int[] bucketsort(int[] a, int maxVal) {
 		int[] bucket = new int[maxVal + 1];
@@ -49,9 +47,8 @@ public class BucketSort {
 		int[] sequence = new int[N];
 
 		for (int i = 0; i < N; i++)
-		
-			 sequence[i] = Math.abs(random.nextInt(100));
-			
+
+			sequence[i] = Math.abs(random.nextInt(100));
 
 		int maxValue = maxValue(sequence);
 
@@ -63,7 +60,7 @@ public class BucketSort {
 		System.out.println("\nSorted Sequence: ");
 		printer(bucketsort(sequence, maxValue));
 	}
-	
-	//http://www.growingwiththeweb.com/2015/06/bucket-sort.html
+
+	// http://www.growingwiththeweb.com/2015/06/bucket-sort.html
 
 }
