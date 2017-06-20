@@ -4,7 +4,9 @@ public class SelectionSort {
 	/*
 	 * Find the smallest element using a linear scan and move it to the front.
 	 * Then, find the second smallest and move it, again doing a linear scan.
-	 * Continue doing this until all the elements are in place. O(n^2).
+	 * Continue doing this until all the elements are in place. 
+	 
+	 O(n^2).
 	 */
 
 	/*
@@ -21,6 +23,7 @@ public class SelectionSort {
 					index = j;// searching for lowest index
 				}
 			}
+			//switch
 			int smallerNumber = arr[index];
 			arr[index] = arr[i];
 			arr[i] = smallerNumber;
