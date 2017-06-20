@@ -3,6 +3,8 @@ package algorithm.sorting;
 import java.util.Random;
 
 public class BucketSort {
+	
+	http://www.growingwiththeweb.com/2015/06/bucket-sort.html
 	/*
 	 * Understanding the common sorting algorithms is incredibly valuable, as
 	 * many sorting or searching solutions require tweaks of known sorting
