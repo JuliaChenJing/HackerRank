@@ -1,6 +1,6 @@
 package algorithm.bitmanipulationAndNumber;
 
-public class GCD {
+public class GreatestCommonDivisor {
 	/*
 	 * 算最大公约数 Given 2 non negative integers m and n, find gcd(m, n)
 	 * 
@@ -14,6 +14,8 @@ public class GCD {
 	 * 
 	 * GCD(m, n) : 3
 	 */
+	
+
 	public static int gcd(int a, int b) {
 
 		int temp, r;
