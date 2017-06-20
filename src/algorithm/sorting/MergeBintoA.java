@@ -2,7 +2,7 @@ package algorithm.sorting;
 
 public class MergeBintoA {
 	
-	
+	change the name
 	public static void main(String array[]) {
 		int[] a ={ 9, 14, 43, 58,0,0,0 };
 		System.out.println("array a");
@@ -56,7 +56,7 @@ public class MergeBintoA {
 	}
 
 	/*
-	 * Note: You don’t need to copy the contents of a after running out of b’s.
+	 * Note: You donâ€™t need to copy the contents of a after running out of bâ€™s.
 	 * They are already in place.
 	 */
 	
