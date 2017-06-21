@@ -24,6 +24,7 @@ public class Arrow {
 	 * performing all a.length-1 sprints. If there are multiple such answers,
 	 * return the smallest one.
 	 */
+	
 	static int mostVisitedPosition(int n, int sprints[]) {
 		int[] count = new int[n + 1];
 		for (int i = 0; i <= n; i++)
@@ -44,7 +45,7 @@ public class Arrow {
 		}
 
 		int max = count[1], re = 1;
-		;
+		
 		for (int i = 1; i <= n; i++) {
 			System.out.println(i + " : " + count[i]);
 			if (max < count[i]) {

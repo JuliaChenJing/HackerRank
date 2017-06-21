@@ -58,7 +58,7 @@ public class Brackets {
 				str[count] = '(';
 				printPar(l - 1, r, str, count + 1);
 			}
-			if (r > l) { // try a right paren, if there’s a matching left
+			if (r > l) { // try a right paren, if there a matching left
 				str[count] = ')';
 				printPar(l, r - 1, str, count + 1);
 			}

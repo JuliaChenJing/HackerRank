@@ -3,6 +3,7 @@ package algorithm.bitmanipulationAndNumber;
 public class Coins {
 
 	public static void main(String args[]) {
+		
 		String money = "1.25";
 		System.out.println("the num of coins needed for money " + calculateChange(money));//3
 
@@ -11,7 +12,9 @@ public class Coins {
 	}
 
 	// count the num of coins needed for money
+	
 	static int calculateChange(String money) {
+		
 		int penny = 1, nickel = 5, dime = 10, quarter = 25, fiftyCent = 50;
 
 		double amount = (Double.parseDouble(money)) * 100;
@@ -80,5 +83,4 @@ public class Coins {
 		}
 		return ways;
 	}
-
 }
