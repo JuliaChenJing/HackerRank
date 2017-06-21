@@ -15,12 +15,21 @@ public class GetFood {
 	 * 
 	 * Example 1:
 	 * 
-	 * Input: XXXXXX X*OOOX XOO#OX XXXXXX Output: 3 Explanation: There is only
+	 * Input: XXXXXX
+	 *        X*OOOX 
+	 *        XOO#OX 
+	 *        XXXXXX 
+	 *        
+	 *  Output: 3 Explanation: There is only
 	 * one path to get the food.
 	 * 
 	 * Example 2:
 	 * 
-	 * Input: XXXXX X*XOX XOX#X XXXXX Output: -1 Explanation: We cannot find a
+	 * Input: XXXXX 
+	 *        X*XOX 
+	 *        XOX#X 
+	 *        XXXXX 
+	 *  Output: -1 Explanation: We cannot find a
 	 * path to get the food.
 	 */
 
