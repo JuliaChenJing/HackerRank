@@ -1,4 +1,4 @@
-public class Regex {
+public class RegEx {
 
 	/*
 	 * Implement a regular expression function isMatch that supports the '.' and
@@ -32,9 +32,12 @@ public class Regex {
 
 	public static void main(String[] args) {
 
-		String str = "aabbcc";
-		String pattern = "a*c";
-		System.out.println(isMatch(str, pattern));
+		System.out.println(isMatch("", "*"));
+		System.out.println(isMatch("abc", "ab*"));
+		System.out.println(isMatch("c", "*"));
+		System.out.println(isMatch("abc", "a.c"));
+		System.out.println(isMatch("abc", "*"));
+		System.out.println(isMatch("abc", ".b*"));
 
 	}
 
@@ -46,8 +49,8 @@ public class Regex {
 
 	static boolean isMatchHelper(String text, String pattern, int textIndex, int patIndex) {
 		// base cases - one of the indexes reached the end of text or pattern
-		if (patIndex >= pattern.length()) {
-			if (textIndex >= text.length())
+		if (textIndex >= text.length()){
+			if (patIndex >= pattern.length())
 				return true;
 			else {
 				if ((patIndex + 1 < pattern.length()) && (pattern.charAt(patIndex + 1) == '*'))
@@ -57,6 +60,8 @@ public class Regex {
 			}
 		}
 
+		else if ((patIndex >= pattern.length()) && (textIndex < text.length()))
+	        return false;
 
 		// string matching for '.'
 		else if (pattern.charAt(patIndex) == '.') {
@@ -68,10 +73,9 @@ public class Regex {
 
 		}
 
-		// letter
+		// string matching for letter
 
-		else if (pattern.charAt(textIndex) == text.charAt(textIndex))
-
+		else if (pattern.charAt(patIndex) == text.charAt(textIndex))
 		{
 
 			textIndex++;
