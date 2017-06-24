@@ -41,6 +41,7 @@ output: {
 	}
 
 	static HashMap<String, String> flattenDictionary(HashMap<String, Object> dict) {
+		
 		HashMap<String, String> flatDictionary = new HashMap<String, String>();
 
 		flattenDictionaryHelper("", dict, flatDictionary);
@@ -76,7 +77,7 @@ output: {
 		return flatDictionary;
 	}
 
-	//
+
 
 	// test if the value is of a String of integer
 	private static boolean isDictionary(Object value) {
@@ -87,4 +88,46 @@ output: {
 	   return false;
 	}
 
+	
+	/*//javascript answer:
+	 * 
+	 * const newDict = {};
+
+function flattenDictionary(dict, keys = []) { // ['key2', 'a']
+  let topKeys = Object.keys(dict);
+  
+  topKeys.forEach(key => { //'a'
+    if (typeof dict[key] === 'object') {
+      return flattenDictionary(dict[key], keys.concat(key));
+    }
+    
+    if (typeof dict[key] === 'string') {
+      
+      let keyName = keys.length ? keys.concat(key).join('.') : key; //'a'
+      //console.log(typeof dict[key], key, dict[key], keyName);
+      return newDict[keyName] = dict[key];
+    }
+  }) 
+  
+}
+
+function wrapper(dict) {
+  flattenDictionary(dict);
+  console.log(newDict);
+}
+
+let dict = {
+            "Key1" : "1",
+            "Key2" : {
+                "a" : "2",
+                "b" : "3",
+                "c" : {
+                    "d" : "3",
+                    "e" : "1"
+                }
+            }
+        }
+
+wrapper(dict);
+	 */
 }
