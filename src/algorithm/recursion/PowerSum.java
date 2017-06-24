@@ -42,10 +42,15 @@ This is the only way in which  can be expressed as the sum of unique squares.
 
 	static int findPowerSum(int total, int power, int num)
 	{
+		//Math.pow(7, 2);    // 49
 	    int value = (int) (total - Math.pow(num, power));
 	    
-	    if(value < 0) return 0;
-	    else if(value == 0) return 1;
+	    if(value < 0)
+	    	return 0;
+	    
+	    else if(value == 0) 
+	    	return 1;
+	    
 	    else return findPowerSum(value , power, num + 1) +
 	    			findPowerSum(total, power, num+1);
 	}

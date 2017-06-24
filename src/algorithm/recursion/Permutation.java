@@ -22,6 +22,19 @@ public class Permutation {
 	 * This solution takes O(n!) time, since there are n! permutations.
 	 */
 
+	
+	public static void main(String [] args)
+	{
+		String a="AbC";
+		System.out.print(a.length()+"!=");
+		
+		ArrayList<String> re=getPermutations("AbC");
+		System.out.println(re.size());
+		System.out.println(re);
+	}
+	
+	
+	// This solution takes O(n!) time, since there are n! permutations.
 	public static ArrayList<String> getPermutations(String s) {
 		
 		ArrayList<String> permutations = new ArrayList<String>();
@@ -46,24 +59,16 @@ public class Permutation {
 		return permutations;
 	}
 
-	public static String insertCharAt(String word, char c, int i) {
+	public static String insertCharAt(String word, char c, int location) {
+		
 		// public String substring(int beginIndex, int endIndex)
-		String start = word.substring(0, i);
+		String start = word.substring(0, location);
 		
 		// public String substring(int beginIndex)
-		String end = word.substring(i);
+		String end = word.substring(location);
 		
 		return start + c + end;
 	}
 	
-	public static void main(String [] args)
-	{
-		String a="AbC";
-		System.out.print(a.length()+"!=");
-		ArrayList<String> re=getPermutations("AbC");
-		
-		// This solution takes O(n!) time, since there are n! permutations.
-		System.out.println(re.size());
-		System.out.println(re);
-	}
+	
 }

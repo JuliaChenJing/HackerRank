@@ -25,6 +25,20 @@ output: {
             "Key2.c.e" : "1"
         }
 	 */
+	
+	public static void main(String [] args)
+	{
+		HashMap<String, Object> dict=new HashMap <String, Object>();
+		dict.put("Key1", "1");
+		HashMap <String, Object> key2=new HashMap  <String, Object>();
+		key2.put("a","2");
+		key2.put("b","3");
+		dict.put("Key2", key2);
+		
+		System.out.println(dict);
+		System.out.println(flattenDictionary(dict));
+		
+	}
 
 	static HashMap<String, String> flattenDictionary(HashMap<String, Object> dict) {
 		HashMap<String, String> flatDictionary = new HashMap<String, String>();
