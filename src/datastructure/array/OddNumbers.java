@@ -2,7 +2,9 @@ package datastructure.array;
 
 public class OddNumbers {
 
+	//find all odd numbers between [l,r ]
 	static int[] oddNumbers(int l, int r) {
+		
 		int length;
 
 		if (l % 2 == 0 && r % 2 == 0)// 0 0

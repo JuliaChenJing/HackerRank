@@ -1,6 +1,6 @@
 package datastructure.array;
 
-public class FindMin {
+public class FindMinInSortedButRotatedArray {
 
 	// Find minimum element K in an sorted but rotated array
 	public static int findMin(int[] data) {
