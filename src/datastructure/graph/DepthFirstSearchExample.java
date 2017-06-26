@@ -12,8 +12,8 @@ public class DepthFirstSearchExample {
 	 * node, until you have no choice, then you backtrack until you have another
 	 * choice to pick a node, if not, you select another un-visited node.
 	 */
-	
-		static ArrayList nodes = new ArrayList();
+
+	static ArrayList nodes = new ArrayList();
 
 	static class Node {
 		int data;
@@ -64,8 +64,6 @@ public class DepthFirstSearchExample {
 		dfsExample.dfs(adjacency_matrix, node40);
 
 	}
-
-
 
 	// find neighbors of node using adjacency matrix
 	// if adjacency_matrix[i][j]==1, then nodes at index i and index j are
