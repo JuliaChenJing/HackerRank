@@ -12,6 +12,18 @@ public class DepthFirstSearchExample {
 	 * node, until you have no choice, then you backtrack until you have another
 	 * choice to pick a node, if not, you select another un-visited node.
 	 */
+	
+		static ArrayList nodes = new ArrayList();
+
+	static class Node {
+		int data;
+		public boolean visited;
+
+		Node(int data) {
+			this.data = data;
+
+		}
+	}
 
 	public static void main(String arg[]) {
 
@@ -53,17 +65,7 @@ public class DepthFirstSearchExample {
 
 	}
 
-	static ArrayList nodes = new ArrayList();
 
-	static class Node {
-		int data;
-		public boolean visited;
-
-		Node(int data) {
-			this.data = data;
-
-		}
-	}
 
 	// find neighbors of node using adjacency matrix
 	// if adjacency_matrix[i][j]==1, then nodes at index i and index j are
