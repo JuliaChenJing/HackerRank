@@ -53,7 +53,13 @@ public class DifferentSmallestNumber {
 		int i = 0;
 		for (; i < arr.length; i++) {
 
-			if (pq.poll() != i)
+			int poll=pq.poll();
+			if(poll==i-1)
+			{
+				i++;
+				continue;
+			}
+			else if (poll!= i)
 				return i;
 		}
 
