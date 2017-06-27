@@ -27,8 +27,7 @@ public class Path {
 		System.out.println(uniquePathsWithDFS(4,4));
 		System.out.println(uniquePathsWithDFSWithRestriction(4,4));
 		System.out.println(uniquePathsWithDynamicProgramming(4,4));
-		
-		
+	
 		System.out.println(numberOfPaths_I(4,4));
 	}
 	
