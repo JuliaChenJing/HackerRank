@@ -1,6 +1,3 @@
-import java.awt.Point;
-import java.util.ArrayList;
-
 public class Path {
 	
 	//http://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/

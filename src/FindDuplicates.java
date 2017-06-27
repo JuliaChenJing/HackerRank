@@ -1,28 +1,39 @@
 import java.util.ArrayList;
 
 public class FindDuplicates {
-	
+
 	public static void main(String[] args) {
 
-		int [] arr={8,20};
+		int[] arr = { 8, 20 };
 		int[] arr1 = { 1, 2, 3, 5, 6, 7 };
 		int[] arr2 = { 3, 6, 7, 8, 20 };
-	
+
 		int[] re = findDuplicates(arr1, arr2);
 		int[] re_BinarySearch = findDuplicatesWithBinarySearch(arr, arr2);
 
 		for (int i = 0; i < re.length; i++)
-			System.out.print(re[i]+" ");
-		
+			System.out.print(re[i] + " ");
+
 		System.out.println();
-		
+
 		for (int i = 0; i < re_BinarySearch.length; i++)
-			System.out.print( re_BinarySearch[i]+" ");
+			System.out.print(re_BinarySearch[i] + " ");
 
 	}
-	
 
 	// when length of arr1 and arr2 are almost the same
+
+	/*
+	 * Time Complexity: O(N+M) since in the worst case scenario we traverse both
+	 * arrays once. Note that O(N+M) is a linear time complexity because the
+	 * input size is O(N+M) as well.
+	 * 
+	 * Space Complexity: the variable duplicates is the only dynamic auxiliary
+	 * space we’re using in the algorithm. In the worst case scenario, the size
+	 * of duplicates is going to be as big as big as the smaller input array.
+	 * For instance, when the smaller array is fully contained within the bigger
+	 * one. The space complexity is therefore O(N), where N ≤ M.
+	 */
 
 	static int[] findDuplicates(int[] arr1, int[] arr2) {
 
@@ -61,6 +72,22 @@ public class FindDuplicates {
 	 * when length of arr1 and arr2 are of big difference, try to find each
 	 * element from the short array in the big array using binary search since
 	 * the array is sorted originally
+	 * 
+	 * 
+	 * Time Complexity: we running a binary search on arr2 N times. Hence the
+	 * time complexity is O(N⋅log(M)). So why is this algorithm better than the
+	 * previous one when M ≫ N? To demonstrate that let’s analyze the case that
+	 * M = N^C, where C is a constant such that C 2. In this case, the time
+	 * complexity of the second algorithm is: O(N⋅log(M)) = O(N⋅log(N^C)) =
+	 * O(C⋅N⋅log(N)) = O(N⋅log(N)) And the time complexity of the first
+	 * algorithm is: O(N + M) = O(N + N^C) = O(N^C) As we all know O(N^C) >
+	 * O(N⋅log(N)).
+	 * 
+	 * Space Complexity: the variable duplicates is the only dynamic auxiliary
+	 * space we’re using in the algorithm. In the worst case scenario, the size
+	 * of duplicates is going to be as big as big as the smaller input array.
+	 * For instance, when the smaller array is fully contained within the bigger
+	 * one. The space complexity is therefore O(N), where N ≤ M.
 	 * 
 	 */
 	static int[] findDuplicatesWithBinarySearch(int[] arr1, int[] arr2) {
@@ -101,5 +128,4 @@ public class FindDuplicates {
 		return -1;
 	}
 
-	
 }
