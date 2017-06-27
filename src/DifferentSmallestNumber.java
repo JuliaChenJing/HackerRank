@@ -32,21 +32,24 @@ public class DifferentSmallestNumber {
 	 * output: 4 #
 	 */
 	public static void main(String[] args) {
-		int arr[] = { 0, 1, 2, 3, 5 };
+		int arr[] = { 0, 1, 2, 3,3,4, 5 };
 		System.out.println(getDifferentNumber_I(arr));
 		System.out.println(getDifferentNumber_II(arr));
 	}
 
-
+	
+		  
 	//method one
 	static int getDifferentNumber_I(int[] arr) {
 
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 
 		for (int i = 0; i < arr.length; i++) {
+			
 			pq.offer(arr[i]);
 		}
 
+		//System.out.println(pq);
 		int i = 0;
 		for (; i < arr.length; i++) {
 
@@ -57,7 +60,8 @@ public class DifferentSmallestNumber {
 		return i + 1;
 	}
 
-	//method 2
+	//method 2 , worst case will be consuming
+
 	static int getDifferentNumber_II(int[] arr) {
 		if (!find(0, arr))
 			return 0;
