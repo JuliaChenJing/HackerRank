@@ -9,7 +9,7 @@ public class QuickSort {
 	 O(n log n) expected,
 	 * O(n^2) worst case.
 	 */
-	  private int[] numbers;
+	   private int[] numbers;
 	    private int number;
 
 	    public void sort(int[] values) {

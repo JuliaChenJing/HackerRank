@@ -37,8 +37,8 @@ public class DifferentSmallestNumber {
 		System.out.println(getDifferentNumber_II(arr));
 	}
 
-	String s = "abc";
 
+	//method one
 	static int getDifferentNumber_I(int[] arr) {
 
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
@@ -57,6 +57,7 @@ public class DifferentSmallestNumber {
 		return i + 1;
 	}
 
+	//method 2
 	static int getDifferentNumber_II(int[] arr) {
 		if (!find(0, arr))
 			return 0;
