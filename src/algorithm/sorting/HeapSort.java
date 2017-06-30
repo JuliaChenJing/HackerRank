@@ -22,6 +22,7 @@ public class HeapSort {
 	 * Java program is successfully compiled and run on a Windows system. The
 	 * program output is also shown below.
 	 */
+	
 	private static int N;
 
 	/* Sort Function */
