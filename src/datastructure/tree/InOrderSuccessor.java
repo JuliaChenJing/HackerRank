@@ -40,7 +40,7 @@ public class InOrderSuccessor {
 
 		TreeNode p;
 
-		// 1 Found right children ‐> return 1st inorder node on right
+		// 1 Found right children ‐> return 1st in-order node on right
 		if (e.parent == null || e.right != null) {
 			p = leftMostChild(e.right);
 		} else {
