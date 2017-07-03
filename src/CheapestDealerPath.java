@@ -1,6 +1,5 @@
 class CheapestDealerPath {
 
-
 	/*
 	 * 
 	 * https://www.pramp.com/question/15oxrQx6LjtQj9JK9XqA
@@ -11,10 +10,34 @@ class CheapestDealerPath {
 	 * from the parent node and ships them to its children nodes. The leaf nodes
 	 * are car dealerships that sell cars direct to consumers. In addition,
 	 * every node holds an integer that is the cost of shipping a car to it.
+	 * 
+	 * 
 	 */
+
+	static int getCheapestCost(Node rootNode) {
+
+		if (rootNode == null)
+			return 0;
+
+		if (rootNode.children == null || rootNode.children.length == 0)
+			return rootNode.key;
+		else {
+			// initialize minCost to the largest integer in the system
+			int minCost = Integer.MAX_VALUE;
+			for (int i = 0; i < rootNode.children.length; i++) {
+				int tempCost = getCheapestCost(rootNode.children[i]);
+				if (tempCost < minCost)
+					minCost = tempCost;
+			}
+
+			return minCost + rootNode.key;
+		}
+
+	}
+
 	static int minSum = Integer.MAX_VALUE;
 
-	int getCheapestCost(Node rootNode) {
+	int getCheapestCostWithRecurtion(Node rootNode) {
 		if (rootNode == null)
 			return 0;
 

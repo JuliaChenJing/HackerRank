@@ -9,6 +9,24 @@ public class Braces {
 		for (int i = 0; i < values.length; i++)
 			System.out.println("Is " + values[i] + " a balanced String? " + braces(values)[i]);
 	}
+	
+	static String[] braces(String[] values) {
+		String re[] = new String[values.length];
+
+		if (values.equals(null))
+			return null;
+		for (int i = 0; i < values.length; i++) {
+			if (CheckParentesis(values[i])) {
+
+				re[i] = "Yes";
+
+			} else
+				re[i] = "No";
+		}
+
+		return re;
+
+	}
 
 	static boolean CheckParentesis(String str) {
 		if (str.isEmpty())
@@ -37,22 +55,6 @@ public class Braces {
 		return stack.isEmpty();
 	}
 
-	static String[] braces(String[] values) {
-		String re[] = new String[values.length];
-
-		if (values.equals(null))
-			return null;
-		for (int i = 0; i < values.length; i++) {
-			if (CheckParentesis(values[i])) {
-
-				re[i] = "Yes";
-
-			} else
-				re[i] = "No";
-		}
-
-		return re;
-
-	}
+	
 
 }
