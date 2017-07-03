@@ -1,5 +1,3 @@
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
@@ -34,7 +32,7 @@ public class DifferentSmallestNumber {
 	 * output: 4 #
 	 */
 	public static void main(String[] args) {
-		int arr[] = { 0, 1, 2, 3, 3, 4, 5 };
+		int arr[] = { 0,1,1,2, 3, 3, 4,5,6 };
 		System.out.println(getDifferentNumberWithProrityQueue(arr));
 		System.out.println(getDifferentNumberWithFind(arr));
 		System.out.println(differentNumWithSort(arr));
@@ -50,7 +48,7 @@ public class DifferentSmallestNumber {
 			if(arr[i]==arr[i-1])
 				continue;
 			if (arr[i] != arr[i-1]+1) {
-				return arr[i];
+				return arr[i-1]+1;
 			}
 
 		}
@@ -70,17 +68,19 @@ public class DifferentSmallestNumber {
 
 		// System.out.println(pq);
 		int i = 0;
+		int j=0;
 		for (; i < arr.length; i++) {
 
 			int poll = pq.poll();
-			if (poll == i - 1) {
-				i++;
+			if (poll == j - 1) {
+			   
 				continue;
-			} else if (poll != i)
-				return i;
+			} else if (poll != j)
+				return j;
+			else j++;
 		}
 
-		return i + 1;
+		return j ;
 	}
 
 	// method 2 , worst case will be consuming
@@ -90,7 +90,7 @@ public class DifferentSmallestNumber {
 			return 0;
 		int max = max(arr);
 
-		for (int i = 0; i <= max + 1; i++) {
+		for (int i = 0; i <= max ; i++) {
 
 			if (!find(i, arr))
 				return i;
