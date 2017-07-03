@@ -1,4 +1,6 @@
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class DifferentSmallestNumber {
@@ -32,43 +34,58 @@ public class DifferentSmallestNumber {
 	 * output: 4 #
 	 */
 	public static void main(String[] args) {
-		int arr[] = { 0, 1, 2, 3,3,4, 5 };
-		System.out.println(getDifferentNumber_I(arr));
-		System.out.println(getDifferentNumber_II(arr));
+		int arr[] = { 0, 1, 2, 3, 3, 4, 5 };
+		System.out.println(getDifferentNumberWithProrityQueue(arr));
+		System.out.println(getDifferentNumberWithFind(arr));
+		System.out.println(differentNumWithSort(arr));
 	}
 
-	
-		  
-	//method one
-	static int getDifferentNumber_I(int[] arr) {
+	static int differentNumWithSort(int[] arr) {
+
+		Arrays.sort(arr);
+		int i;
+		if(arr[0]!=0)
+			return 0;
+		for (i = 1; i < arr.length; i++) {
+			if(arr[i]==arr[i-1])
+				continue;
+			if (arr[i] != arr[i-1]+1) {
+				return arr[i];
+			}
+
+		}
+
+		return arr[i-1] + 1;
+	}
+
+	// method one
+	static int getDifferentNumberWithProrityQueue(int[] arr) {
 
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
 
 		for (int i = 0; i < arr.length; i++) {
-			
+
 			pq.offer(arr[i]);
 		}
 
-		//System.out.println(pq);
+		// System.out.println(pq);
 		int i = 0;
 		for (; i < arr.length; i++) {
 
-			int poll=pq.poll();
-			if(poll==i-1)
-			{
+			int poll = pq.poll();
+			if (poll == i - 1) {
 				i++;
 				continue;
-			}
-			else if (poll!= i)
+			} else if (poll != i)
 				return i;
 		}
 
 		return i + 1;
 	}
 
-	//method 2 , worst case will be consuming
+	// method 2 , worst case will be consuming
 
-	static int getDifferentNumber_II(int[] arr) {
+	static int getDifferentNumberWithFind(int[] arr) {
 		if (!find(0, arr))
 			return 0;
 		int max = max(arr);
