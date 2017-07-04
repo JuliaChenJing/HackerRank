@@ -1,5 +1,6 @@
 public class BinarySearchTree {
 
+	Node root;
 	public static void main(String[] args) {
 
 		Node test = null, succ = null;
@@ -28,7 +29,7 @@ public class BinarySearchTree {
 		}
 	}
 
-	Node root;
+	
 
 	Node findInOrderSuccessor(Node inputNode) {
 
