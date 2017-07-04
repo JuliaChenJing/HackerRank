@@ -40,18 +40,15 @@ public class LargestSmallerBSTKey {
 			if (root == null)
 				return -1;
 
-			if (root.key > num) { // result is in the left branch ,find the max
-									// value of the left branch
-
-				return findHelper(root.left, num);
-
-			} else {// num > root.key result might be root or
-
-				while (root.right != null)
+			int result = 0;
+			while (root != null) {
+				if (root.key < num) {
+					result = root.key;
 					root = root.right;
-				return root.key;
+				} else
+					root = root.left;
 			}
-
+			return result;
 		}
 
 		// inserts a new node with the given number in the
@@ -108,13 +105,12 @@ public class LargestSmallerBSTKey {
 		bst.insert(11);
 		bst.insert(14);
 
-		System.out.println("Largest smaller number bigger than4 is " +  bst.findLargestSmallerKey(4));
-		System.out.println("Largest smaller number bigger than 5 is " +  bst.findLargestSmallerKey(5));
-		System.out.println("Largest smaller number bigger than 8 is " +  bst.findLargestSmallerKey(8));
-		System.out.println("Largest smaller number bigger than 10 is " +  bst.findLargestSmallerKey(10));
-		System.out.println("Largest smaller number bigger than 17 is " +  bst.findLargestSmallerKey(17));
-		System.out.println("Largest smaller number bigger than 21 is " +  bst.findLargestSmallerKey(21));
-		System.out.println("Largest smaller number bigger than 26 is " +  bst.findLargestSmallerKey(26));
+		System.out.println("Largest smaller number bigger than 4 is " + bst.findLargestSmallerKey(4));
+		System.out.println("Largest smaller number bigger than 8 is " + bst.findLargestSmallerKey(8));
+		System.out.println("Largest smaller number bigger than 10 is " + bst.findLargestSmallerKey(10));
+		System.out.println("Largest smaller number bigger than 17 is " + bst.findLargestSmallerKey(17));
+		System.out.println("Largest smaller number bigger than 21 is " + bst.findLargestSmallerKey(21));
+		System.out.println("Largest smaller number bigger than 26 is " + bst.findLargestSmallerKey(26));
 
 	}
 }
