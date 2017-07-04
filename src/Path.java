@@ -30,7 +30,7 @@ public class Path {
 		System.out.println(uniquePathsWithDFSAndRestriction(4, 4));// 5
 
 		System.out.println(uniquePathsWithDynamicProgramming(4, 4));// 20
-		System.out.println(uniquePathsWithDynamicProgrammingAndRestriction(4, 4));// 20
+		System.out.println(uniquePathsWithDynamicProgrammingAndRestriction(4, 4));// 7
 
 	}
 
