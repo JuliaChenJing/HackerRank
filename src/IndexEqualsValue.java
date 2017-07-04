@@ -1,7 +1,7 @@
 
 public class IndexEqualsValue {
 	static int indexEqualsValueSearch(int[] arr) {
-		// your code goes here
+	
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == i)
 				return i;
@@ -11,7 +11,7 @@ public class IndexEqualsValue {
 	}
 
 	static int indexEqualsValueSearchWithBinarySearch(int[] arr) {
-		// your code goes here
+		
 		if (arr == null)
 			return -1;
 
