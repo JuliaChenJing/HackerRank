@@ -25,9 +25,9 @@ public class TimeSlotAvailable {
 			// j=0
 			if (j + 1 < slotsB.length && slotsA[i][1] > slotsB[j + 1][0])
 				i--;
-			if (i + 1 < slotsA.length && slotsB[i][1] > slotsA[i + 1][0])
+			else
+				if (i + 1 < slotsA.length && slotsB[j][1] > slotsA[i + 1][0])
 				j--;
-
 			i++;
 			j++;
 
@@ -42,14 +42,18 @@ public class TimeSlotAvailable {
 			return result;
 		}
 		// if not found
-		else
-			return null;
+		else{
+			result[0] = -1;
+			result[1] = -1;
+			return result;
+		}
+		
 
 	}
 
 	public static void main(String[] args) {
-		int[][] slotsA = { { 10, 50 }, { 60, 120 }, { 140, 210 } };
-		int[][] slotsB = { { 0, 15 }, { 60, 70 } };
+		int[][] slotsA = { { 10, 70 }, { 80, 120 }, { 140, 210 } };
+		int[][] slotsB = { { 0, 15 }, { 62, 70 } };
 
 		int[] result = meetingPlanner(slotsA, slotsB, 8);
 		System.out.println(result[0]);

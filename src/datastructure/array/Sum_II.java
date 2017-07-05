@@ -10,8 +10,8 @@ import java.util.HashMap;
 public class Sum_II {
 	public static void main(String[] args) {
 		int[] a = twoSum(new int[] { 1, 2, 5, 3, 4 }, 4);// 1+3=4
-		System.out.println("下标:" + a[0]);// 输出下标1
-		System.out.println("下标:" + a[1]);// 输出下标2
+		System.out.println("下标:" + a[0]);// 输出下标3
+		System.out.println("下标:" + a[1]);// 输出下标0
 	}
 
 	/*
@@ -32,10 +32,14 @@ public class Sum_II {
 		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
 		// 给新哈希表赋�?值
 		for (int i = 0; i < A.length; i++) {
-			// 扫�??一�??，存储值与下标
+			if(hm.containsKey(target-A[i])){
+				res[0] = i;
+				res[1] = hm.get(target - A[i]);
+			}
+			else
 			hm.put(A[i], i);// 键是数组的值，值是数组的下标
 		}
-
+/*
 		for (int i = 0; i < A.length; i++) {
 			if (hm.containsKey(target - A[i]) && target != 2 * A[i]) {
 				// 获�?�结果的两个下标
@@ -44,6 +48,7 @@ public class Sum_II {
 				break;
 			}
 		}
+		*/
 		return res;
 	}
 }

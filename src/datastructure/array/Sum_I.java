@@ -2,27 +2,12 @@ package datastructure.array;
 
 import java.util.*;
 
-//给定一个整形数组，是�?�能找出其中的两个数使其和为�?个指定的值？
-/*
-  输入数组是有�?的�?�？
-你�?�以�?�定是无�?的。
- */
+//给定一个整形数组，是否能找出其中的两个数使其和为一个指定的值
+
 public class Sum_I {
-	public static void main(String[] args) {
-		System.out.println(hasSum(new int[] { 3, 4, 1, 2, 9 }, 4));
-	}
 
 	/*
-	 * 举例 输入数组为{1,5,7,3}以�?�指定的目标值为10，我们�?�以从中找出两个数3和7，和为10. �?考
-	 * 一�?�?�常直观的办法就是使用两个循环，从组里�??�?�一个数，然�?�在该数之�?�的部分找出�?�外一个数，计算这两个数之和，看看是�?�
-	 * 等于指定的值。 这�?暴力破解的方法显然�?是�?�试官想�?的。那么，能�?��?低暴力破解O（n*n）的时间�?�?�度呢？
-	 * 
-	 * �?试先把该数组排�?，排�?之�?�，从首�?两端移动，一次移动一端的指针，直至相�?�或找出两个数的和为指定的值为止。
-	 * �?�设当�?首�?指针分别为i和j，其中i<j,如果A[i]与A[j]之和大于指定的值，那么�?找的两个数一定在j的左侧，因此，尾指针j往�?
-	 * 移动一步。 如果A[i]与A[j]之和�?于指定的值，那么�?找的两个数一定在i的�?�侧，所以首指针i往�?�移动一步。
-	 * 
-	 * 通过排�?，使得时间�?�?�度�?至O(nlogn)。在while循环里，至多扫�??一�??数组就�?�以得出结果。能�?�继续�?低时间�?
-	 * �?�度呢？ 如果�?许使用�?外的存储空间，那么答案是�?�以，详�?“两数之和II�?。
+	
 	 */
 	static boolean hasSum(int[] A, int N) {
 		boolean res = false;
@@ -44,5 +29,40 @@ public class Sum_I {
 			}
 		}
 		return res;
+	}
+	
+	static int[] getIndicesOfItemWights(int[] arr, int limit) {
+		// your code goes here
+		Arrays.sort(arr);
+		int start = 0;
+		int end = arr.length-1;
+		int[] result = new int[2];
+
+		while (start < end) {
+			if (arr[start] + arr[end] == limit) {
+				result[0] = start;
+				result[1] = end;
+				return result;
+			} else if (arr[start] + arr[end] < limit)
+				start++;
+			else
+				end--;
+		}
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+		
+		System.out.println(hasSum(new int[] { 3, 4, 1, 2, 9 }, 4));
+		int[] arr = { 4, 6, 10, 15, 16 };
+		int[] result = getIndicesOfItemWights(arr, 21);
+		if (result == null)
+			System.out.println("null");
+		else {
+			System.out.println(result[0]);
+			System.out.println(result[1]);
+		}
 	}
 }
