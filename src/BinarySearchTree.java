@@ -3,7 +3,7 @@ public class BinarySearchTree {
 	Node root;
 	public static void main(String[] args) {
 
-		Node test = null, succ = null;
+		Node testNode = null, succ = null;
 
 		// Create a Binary Search Tree
 		BinarySearchTree tree = new BinarySearchTree();
@@ -16,14 +16,14 @@ public class BinarySearchTree {
 		tree.insert(14);
 
 		// Get a reference to the node whose key is 9
-		test = tree.getNodeByKey(14);
+		testNode = tree.getNodeByKey(14);
 
 		// Find the in order successor of test
-		succ = tree.findInOrderSuccessor(test);
+		succ = tree.findInOrderSuccessor(testNode);
 
 		// Print the key of the successor node
 		if (succ != null) {
-			System.out.println("Inorder successor of " + test.key + " is " + succ.key);
+			System.out.println("Inorder successor of " + testNode.key + " is " + succ.key);
 		} else {
 			System.out.println("Inorder successor does not exist");
 		}
@@ -39,7 +39,9 @@ public class BinarySearchTree {
 			while (node.left != null)
 				node = node.left;
 			return node;
-		} else {// right node is null
+		}
+		
+		else {// right node is null
 			Node parent = inputNode.parent;
 			Node node = inputNode;
 
