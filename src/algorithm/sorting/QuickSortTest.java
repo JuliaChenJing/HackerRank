@@ -27,13 +27,13 @@ public class QuickSortTest {
 	@Test
 	public void testNull() {
 		QuickSort sorter = new QuickSort();
-		sorter.sort(null);
+		sorter.quickSort(null);
 	}
 
 	@Test
 	public void testEmpty() {
 		QuickSort sorter = new QuickSort();
-		sorter.sort(new int[0]);
+		sorter.quickSort(new int[0]);
 	}
 
 	@Test
@@ -41,14 +41,14 @@ public class QuickSortTest {
 		QuickSort sorter = new QuickSort();
 		int[] test = new int[1];
 		test[0] = 5;
-		sorter.sort(test);
+		sorter.quickSort(test);
 	}
 
 	@Test
 	public void testSpecial() {
 		QuickSort sorter = new QuickSort();
 		int[] test = { 5, 5, 6, 6, 4, 4, 5, 5, 4, 4, 6, 6, 5, 5 };
-		sorter.sort(test);
+		sorter.quickSort(test);
 		if (!validate(test)) {
 			fail("Should not happen");
 		}
@@ -63,7 +63,7 @@ public class QuickSortTest {
 		long startTime = System.currentTimeMillis();
 
 		QuickSort sorter = new QuickSort();
-		sorter.sort(numbers);
+		sorter.quickSort(numbers);
 
 		long stopTime = System.currentTimeMillis();
 		long elapsedTime = stopTime - startTime;
