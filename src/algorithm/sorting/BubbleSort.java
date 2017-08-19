@@ -6,7 +6,7 @@ public class BubbleSort {
 	 * first is bigger than the second. Go to the next pair, etc, continuously
 	 * making sweeps of the array until sorted. 
 	 
-	 O(n^2).
+	 O(n^2). expected and worst
 	 */
 	
 	static void bubbleSort(int[] arr) {  
