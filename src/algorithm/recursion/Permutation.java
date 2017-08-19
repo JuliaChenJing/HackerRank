@@ -12,9 +12,15 @@ public class Permutation {
 	 * can “push” A1 into each possible position. For example, if our string is
 	 * “abc”, we would do the following:
 	 * 
-	 * 1. Let first = “a” and let remainder =“bc” 2. Let list = permute(bc) =
-	 * {“bc”, “cd”} 3. Push “a” into each location of “bc” (--> “abc”, “bac”,
-	 * “bca”) and “cb” (--> “acb”, “cab”, “cba”) 4. Return our new list Now, the
+	 * 1. Let first = “a” and let remainder =“bc” 
+	 * 
+	 * 2. Let list = permute(bc) =
+	 * {“bc”, “cd”} 
+	 * 
+	 * 3. Push “a” into each location of “bc” (--> “abc”, “bac”,
+	 * “bca”) and “cb” (--> “acb”, “cab”, “cba”) 
+	 * 
+	 * 4. Return our new list Now, the
 	 * code to do this:
 	 * 
 	 * This solution takes O(n!) time, since there are n! permutations.
