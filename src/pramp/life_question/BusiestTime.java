@@ -1,4 +1,5 @@
 package pramp.life_question;
+
 public class BusiestTime {
 
 	/*
@@ -34,7 +35,7 @@ public class BusiestTime {
 			if (data[i][2] == 1) {
 				num += data[i][1];
 				if (max < num) {
-					if (i < data.length - 1 && data[i][0] == data[i + 1][0])
+					if (i+1 < data.length && data[i][0] == data[i + 1][0])
 						continue;
 					max = num;
 					time = data[i][0];
@@ -44,7 +45,6 @@ public class BusiestTime {
 			}
 
 			else {
-
 				num -= data[i][1];
 			}
 
@@ -55,9 +55,9 @@ public class BusiestTime {
 
 	public static void main(String[] args) {
 
-		int[][] data = 
-			{ { 1487799425, 14, 1 }, // 8 8
-				{ 1487799425, 4, 0 },
+		int[][] data =
+			 { { 1487799425, 14, 1 }, // 8 8
+				{ 1487799425, 4, 0 }, 
 				{ 1487799425, 2, 0 },
 
 				{ 1487800378, 10, 1 }, // 10 18
