@@ -1,4 +1,4 @@
-package objectorienteddesign.onlinereadersystem;
+package object_oriented_design.onlinereadersystem;
 
 import java.util.Set;
 

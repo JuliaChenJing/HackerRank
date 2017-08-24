@@ -1,4 +1,4 @@
-package algorithm.bitmanipulationAndNumber;
+package algorithm.bit_manipulation_and_number;
 
 /*
  * You are given two 32-bit numbers, N and M, and two bit positions, i and j. Write a

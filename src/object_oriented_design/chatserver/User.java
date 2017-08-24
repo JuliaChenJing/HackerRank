@@ -1,4 +1,4 @@
-package objectorienteddesign.chatserver;
+package object_oriented_design.chatserver;
 
 class User {
 	String username;

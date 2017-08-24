@@ -1,4 +1,4 @@
-package algorithm.bitmanipulationAndNumber;
+package algorithm.bit_manipulation_and_number;
 
 public class LeastCommonMultiple {
 
@@ -31,7 +31,7 @@ public class LeastCommonMultiple {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("最小公倍数数： " + lcm(6, 72));
+		System.out.println("最�?公�?数数： " + lcm(6, 72));
 
 	}
 

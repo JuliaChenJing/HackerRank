@@ -1,4 +1,4 @@
-package algorithm.bitmanipulationAndNumber;
+package algorithm.bit_manipulation_and_number;
 
 public class Num1Bits {
 	/*

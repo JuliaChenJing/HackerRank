@@ -1,4 +1,4 @@
-package objectorienteddesign.onlinereadersystem;
+package object_oriented_design.onlinereadersystem;
 
 /*
  * Design the data structures for an online book reader system.

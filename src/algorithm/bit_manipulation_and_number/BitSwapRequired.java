@@ -1,4 +1,4 @@
-package algorithm.bitmanipulationAndNumber;
+package algorithm.bit_manipulation_and_number;
 
 /*
  * Write a function to determine the number of bits required to convert integer A to

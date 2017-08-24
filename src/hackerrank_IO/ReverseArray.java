@@ -1,4 +1,4 @@
-package hackerrankIO;
+package hackerrank_IO;
 
 import java.io.*;
 import java.util.*;

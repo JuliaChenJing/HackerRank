@@ -1,4 +1,4 @@
-package algorithm.bitmanipulationAndNumber;
+package algorithm.bit_manipulation_and_number;
 
 /*
  *  Given a (decimal - e.g. 3.72) number that is passed in as a string, 

@@ -1,4 +1,4 @@
-package objectorienteddesign.chatserver;
+package object_oriented_design.chatserver;
 
 /*
  * Explain how you would design a chat server. In particular, provide details about the
