@@ -1,4 +1,4 @@
-package pramp;
+package pramp.life_question;
 import java.util.Arrays;
 
 public class MaxTickets {

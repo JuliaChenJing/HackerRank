@@ -1,4 +1,4 @@
-package pramp;
+package pramp.dynamic_programming;
 public class Path {
 
 	// http://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/

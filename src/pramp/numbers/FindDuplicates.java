@@ -1,18 +1,24 @@
-package pramp;
+package pramp.numbers;
+
 import java.util.ArrayList;
 
 public class FindDuplicates {
 
 	public static void main(String[] args) {
 
-		
 		int[] arr1 = { 1, 2, 3, 5, 6, 7 };
 		int[] arr2 = { 3, 6, 7, 8, 20 };
 		int[] arr3 = { 8, 20 };
 
+		// when length of arr1 and arr2 are almost the same
 		int[] re = findDuplicates(arr1, arr2);
-		int[] re_BinarySearch = findDuplicatesWithBinarySearch(arr2, arr3);
 
+		/*
+		 * when length of arr1 and arr2 are of big difference, try to find each
+		 * element from the short array in the big array using binary search
+		 * since the array is sorted originally
+		 */
+		int[] re_BinarySearch = findDuplicatesWithBinarySearch(arr2, arr3);
 		for (int i = 0; i < re.length; i++)
 			System.out.print(re[i] + " ");
 

@@ -1,4 +1,4 @@
-package pramp;
+package pramp.dynamic_programming;
 import java.util.HashMap;
 
 public class SmallestSubstringOfAllChars {

@@ -1,4 +1,4 @@
-package pramp;
+package pramp.numbers;
 import java.util.Arrays;
 
 public class FourSum {

@@ -19,8 +19,12 @@ public class IslandCount {
 		int[][] binaryMatrix = { { 1, 1 }, { 0, 1 }, { 0, 1 } };
 		System.out.println(getNumberOfIslands(binaryMatrix));
 
-		int[][] sea = new int[][] { new int[] { 0, 1, 0, 1, 0 }, new int[] { 0, 0, 1, 1, 1 },
-				new int[] { 1, 0, 0, 1, 0 }, new int[] { 0, 1, 1, 0, 0 }, new int[] { 1, 0, 1, 0, 1 } };
+		int[][] sea = new int[][] {
+			new int[] { 0, 1, 0, 1, 0 }, 
+			new int[] { 0, 0, 1, 1, 1 },
+			new int[] { 1, 0, 0, 1, 0 },
+			new int[] { 0, 1, 1, 0, 0 },
+			new int[] { 1, 0, 1, 0, 1 } };
 
 		int numOfIslands = IslandCount.countIslands(sea);
 		System.out.println("Number of islands is " + numOfIslands);

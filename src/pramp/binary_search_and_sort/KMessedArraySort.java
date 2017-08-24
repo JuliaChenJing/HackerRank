@@ -1,4 +1,4 @@
-package pramp;
+package pramp.binary_search_and_sort;
 
 public class KMessedArraySort {
 

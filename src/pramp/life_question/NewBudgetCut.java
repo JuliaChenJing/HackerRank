@@ -1,4 +1,4 @@
-package pramp;
+package pramp.life_question;
 
 public class NewBudgetCut {
 

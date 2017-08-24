@@ -1,4 +1,4 @@
-package pramp;
+package pramp.numbers;
 public class MatrixSpiralCopy {
 
 	/*

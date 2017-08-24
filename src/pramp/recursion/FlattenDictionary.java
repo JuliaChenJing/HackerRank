@@ -1,4 +1,4 @@
-package pramp;
+package pramp.recursion;
 
 
 import java.util.HashMap;

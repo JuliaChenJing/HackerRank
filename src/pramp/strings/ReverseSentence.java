@@ -1,4 +1,4 @@
-package pramp;
+package pramp.strings;
 public class ReverseSentence {
 
 	/*

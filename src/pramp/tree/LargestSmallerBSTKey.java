@@ -1,4 +1,4 @@
-package pramp;
+package pramp.tree;
 
 public class LargestSmallerBSTKey {
 
