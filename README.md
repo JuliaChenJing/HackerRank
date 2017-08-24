@@ -1,2 +1,2 @@
 # HackerRank
-Cracking the Code Interviews +Hackerrank questions and answers,sorted by type
+Cracking the Code Interview +Hackerrank + Pramp questions and answers,sorted by type
