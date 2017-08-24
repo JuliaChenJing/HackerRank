@@ -43,8 +43,9 @@ public class WordCountEngine {
 		String[][] results = new String[queue.size()][2];
 		int index = 0;
 		while (!queue.isEmpty()) {
-			results[index][0] = queue.poll().getKey();
-			results[index][1] = KeyValuePair.getValueToString(queue.poll().getValue());
+			KeyValuePair pair=queue.poll();
+			results[index][0] =pair .getKey();
+			results[index][1] = KeyValuePair.getValueToString(pair.getValue());
 			index++;
 		}
 		System.out.println("-----------------String [][]--------------\n" + queue);
