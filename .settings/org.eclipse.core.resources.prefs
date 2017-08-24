@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-encoding//src/FindDuplicates.java=UTF-8
-encoding//src/MatrixSpiralCopy.java=UTF-8
-encoding//src/Path.java=UTF-8
+encoding//src/Pramp/FindDuplicates.java=UTF-8
+encoding//src/Pramp/MatrixSpiralCopy.java=UTF-8
+encoding//src/Pramp/Path.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/GreatestCommonDivisor.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/LeastCommonMultiple.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/PrintBinary.java=UTF-8
