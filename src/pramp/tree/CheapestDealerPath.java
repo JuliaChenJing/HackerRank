@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.tree;
 class CheapestDealerPath {
 
 	/*

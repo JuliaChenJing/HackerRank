@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.life_question;
 
 public class Decription {
 

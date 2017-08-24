@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.life_question;
 
 public class Bracket {
 
@@ -46,7 +46,5 @@ public class Bracket {
 		System.out.println(bracketMatch("())"));// 1
 		System.out.println(bracketMatch("()"));// 0
 	}
-	
-	
 	
 }

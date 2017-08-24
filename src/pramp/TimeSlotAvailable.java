@@ -1,4 +1,4 @@
-package Pramp;
+package pramp;
 public class TimeSlotAvailable {
 
 	static int[] meetingPlanner(int[][] slotsA, int[][] slotsB, int dur) {

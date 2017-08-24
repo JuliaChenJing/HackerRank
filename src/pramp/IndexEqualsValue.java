@@ -1,4 +1,4 @@
-package Pramp;
+package pramp;
 
 public class IndexEqualsValue {
 	static int indexEqualsValueSearch(int[] arr) {

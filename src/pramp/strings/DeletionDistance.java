@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.strings;
 public class DeletionDistance {
 
 	

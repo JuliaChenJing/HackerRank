@@ -1,4 +1,4 @@
-package Pramp;
+package pramp;
 
 
 import java.util.HashMap;

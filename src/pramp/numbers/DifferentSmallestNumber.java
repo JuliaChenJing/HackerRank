@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.numbers;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 

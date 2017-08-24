@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.tree;
 public class BinarySearchTree {
 
 	Node root;

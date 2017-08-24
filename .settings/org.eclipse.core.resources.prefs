@@ -1,7 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/Pramp/FindDuplicates.java=UTF-8
-encoding//src/Pramp/MatrixSpiralCopy.java=UTF-8
-encoding//src/Pramp/Path.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/GreatestCommonDivisor.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/LeastCommonMultiple.java=UTF-8
 encoding//src/algorithm/bitmanipulationAndNumber/PrintBinary.java=UTF-8
@@ -36,3 +33,6 @@ encoding//src/datastructure/tree/FindSum.java=UTF-8
 encoding//src/datastructure/tree/InOrderSuccessor.java=UTF-8
 encoding//src/objectorienteddesign/call/CallHandler.java=UTF-8
 encoding//src/objectorienteddesign/call/Employee.java=UTF-8
+encoding//src/pramp/FindDuplicates.java=UTF-8
+encoding//src/pramp/MatrixSpiralCopy.java=UTF-8
+encoding//src/pramp/Path.java=UTF-8

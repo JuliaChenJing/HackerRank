@@ -1,4 +1,4 @@
-package Pramp;
+package pramp.numbers;
 
 public class ArrayProducts {
 	  
