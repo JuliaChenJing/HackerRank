@@ -8,12 +8,11 @@ public class WordCountEngine {
 		String str = "Practice makes perfect, but practice is tiring.";
 
 		wordCountEngine(str);
-		
 
 	}
 
 	static void wordCountEngine(String document) {
-	
+
 		document.toLowerCase();
 
 		String[] splitedStrings = document.toLowerCase().replace(",", "").replace(".", "").split(" ");
@@ -27,21 +26,20 @@ public class WordCountEngine {
 				map.put(s, 1);
 			}
 		}
-	     System.out.println("-----------------HashMap--------------\n"+map);
-	     
-        List< KeyValuePair> list = new ArrayList< KeyValuePair>();
-        for( String key : map.keySet() ) {
-            list.add( new  KeyValuePair( key, map.get(key) ) );
-        }
-        Collections.sort(list);
-        System.out.println("-----------------List--------------\n"+list);
-        
-		
+		System.out.println("-----------------HashMap--------------\n" + map);
+
+		List<KeyValuePair> list = new ArrayList<KeyValuePair>();
+		for (String key : map.keySet()) {
+			list.add(new KeyValuePair(key, map.get(key)));
+		}
+		Collections.sort(list);
+		System.out.println("-----------------List--------------\n" + list);
+
 		for (String key : map.keySet()) {
 			queue.add(new KeyValuePair(key, map.get(key)));
 		}
-		System.out.println("-----------------PriorityQueue--------------\n"+queue);
-		
+		System.out.println("-----------------PriorityQueue--------------\n" + queue);
+
 		String[][] results = new String[queue.size()][2];
 		int index = 0;
 		while (!queue.isEmpty()) {
@@ -49,9 +47,9 @@ public class WordCountEngine {
 			results[index][1] = KeyValuePair.getValueToString(queue.poll().getValue());
 			index++;
 		}
-		System.out.println("-----------------String [][]--------------\n"+queue);
-		for(int i=0;i<results.length;i++)
-			System.out.println(results[i][0]+":"+results[i][1]);
+		System.out.println("-----------------String [][]--------------\n" + queue);
+		for (int i = 0; i < results.length; i++)
+			System.out.println(results[i][0] + ":" + results[i][1]);
 
 	}
 
@@ -83,9 +81,9 @@ class KeyValuePair implements Comparable<KeyValuePair> {
 	public int compareTo(KeyValuePair that) {
 		return that.value - this.value;
 	}
-	
+
 	@Override
-	public String toString(){
-		return "\n"+key+":"+value;
+	public String toString() {
+		return "\n" + key + ":" + value;
 	}
 }
