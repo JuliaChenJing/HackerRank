@@ -4,11 +4,11 @@ public class BusiestTime {
 
 	/*
 	 * The Westfield Mall management is trying to figure out what the busiest
-	 * moment at the mall was last year. You’re given data extracted from the
-	 * mall’s door detectors. Each data point is represented as an integer array
+	 * moment at the mall was last year. Youâ€™re given data extracted from the
+	 * mallâ€™s door detectors. Each data point is represented as an integer array
 	 * whose size is 3. The values at indices 0, 1 and 2 are the timestamp, the
 	 * count of visitors, and whether the visitors entered or exited the mall (0
-	 * for exit and 1 for entrance), respectively. Here’s an example of a data
+	 * for exit and 1 for entrance), respectively. Hereâ€™s an example of a data
 	 * point: [ 1440084737, 4, 0 ].
 	 * 
 	 * Note that time is given in a Unix format called Epoch, which is a
