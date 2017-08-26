@@ -10,8 +10,27 @@ public class NumberMinusPair {
 	// https://en.wikipedia.org/wiki/Timsort
 	// Time:O(nlogn) Space:O(n)
 	// O(nlogn), O(1)
+
+	/*
+	 * Given an array arr of distinct integers and a nonnegative integer k,
+	 * write a function findPairsWithGivenDifference that returns an array of
+	 * all pairs [x,y] in arr, such that x - y = k. If no such pairs exist,
+	 * return an empty array.
+	 * 
+	 * In your solution, try to reduce the memory usage while maintaining time
+	 * efficiency. Prove the correctness of your solution and analyze its time
+	 * and space complexities.
+	 * 
+	 * Note: the order of the pairs in the output array doesn’t matter.
+	 * 
+	 * Examples:
+	 * 
+	 * input: arr = [0, -1, -2, 2, 1], k = 1 output: [[0, -1], [-1, -2], [2, 1],
+	 * [1, 0]]
+	 * 
+	 * input: arr = [1, 7, 5, 3, 32, 17, 12], k = 17 output: []
+	 */
 	static int[][] findPairsWithGivenDifference(int[] arr, int k) {
-		// your code goes here
 		List<int[]> list = new ArrayList<int[]>();
 		Arrays.sort(arr);
 
@@ -21,15 +40,6 @@ public class NumberMinusPair {
 				continue;
 			else
 				list.add(new int[] { arr[i], arr[i] + k });
-
-			/*
-			 * if( arr[i] + k == arr[middle]) list.add(new int { arr[i],
-			 * arr[middle]}); else if( arr[i]+ k< arr[middle]) { middle=(start
-			 * +end)/2;
-			 * 
-			 * 
-			 * }
-			 */
 
 		}
 		int[][] result = new int[list.size()][2];
@@ -47,12 +57,11 @@ public class NumberMinusPair {
 
 		int[] arr = { 0, -1, -2, 2, 1 };
 		int[][] result = findPairsWithGivenDifference(arr, 1);
-		for (int i = 0; i < result.length; i++){
+		for (int i = 0; i < result.length; i++) {
 			for (int j = 0; j < result[0].length; j++)
-				System.out.print(result[i][j]+" ");
+				System.out.print(result[i][j] + " ");
 			System.out.println();
 		}
-			
 
 	}
 
