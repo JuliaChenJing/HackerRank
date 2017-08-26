@@ -1,8 +1,8 @@
-package datastructure.array.sums;
+package datastructure.array.sortedArrays;
 
 import java.util.*;
 
-//给定一个整形数组，是否能找出其中的两个数使其和为一个指定的值
+//给定一个整形数组，是�?�能找出其中的两个数使其和为一个指定的值
 
 public class Sum_I {
 

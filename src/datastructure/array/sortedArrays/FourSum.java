@@ -1,4 +1,4 @@
-package datastructure.array.sums;
+package datastructure.array.sortedArrays;
 import java.util.Arrays;
 
 public class FourSum {
