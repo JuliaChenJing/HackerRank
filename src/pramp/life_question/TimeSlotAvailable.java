@@ -4,7 +4,7 @@ public class TimeSlotAvailable {
 
 	static int[] meetingPlanner(int[][] slotsA, int[][] slotsB, int dur) {
 
-		int[] result = new int[2];
+		//int[] result = new int[2];
 		int start = 0;
 
 		int i = 0;

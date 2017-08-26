@@ -1,4 +1,4 @@
-package datastructure.array;
+package datastructure.array.sums;
 
 import java.util.*;
 
@@ -6,15 +6,13 @@ import java.util.*;
 
 public class Sum_I {
 
-	/*
-	
-	 */
+	// if the array is sorted
 	static boolean hasSum(int[] A, int N) {
 		boolean res = false;
 		if (A == null || A.length < 2)
 			return res;
 
-		Arrays.sort(A);// 注�?： �?�以调用系统自带的排�?算法
+		Arrays.sort(A);
 
 		int i = 0;
 		int j = A.length - 1;
@@ -23,19 +21,21 @@ public class Sum_I {
 				res = true;
 				break;
 			} else if (A[i] + A[j] > N) {
-				j--;// 目标值过�?，则�?��?移动尾部指针，�?�?两数和
+				j--;
 			} else {
-				i++;// 目标值过大，则�?��?�移动首部指针，增加两数和
+				i++;
 			}
 		}
 		return res;
 	}
-	
+
+	// if the array is not sorted, you can not do this way. because index will
+	// be wrong
 	static int[] getIndicesOfItemWights(int[] arr, int limit) {
 		// your code goes here
 		Arrays.sort(arr);
 		int start = 0;
-		int end = arr.length-1;
+		int end = arr.length - 1;
 		int[] result = new int[2];
 
 		while (start < end) {
@@ -54,7 +54,6 @@ public class Sum_I {
 
 	public static void main(String[] args) {
 
-		
 		System.out.println(hasSum(new int[] { 3, 4, 1, 2, 9 }, 4));
 		int[] arr = { 4, 6, 10, 15, 16 };
 		int[] result = getIndicesOfItemWights(arr, 21);
