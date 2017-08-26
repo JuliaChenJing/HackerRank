@@ -9,6 +9,8 @@ EXAMPLE
 Input: (3 -> 1 -> 5), (5 -> 9 -> 2)
 Output: 8 -> 0 -> 8
  */
+
+//https://leetcode.com/problems/add-two-numbers/
 public class AddTwoNumbers {
 
 	public static Node addTwoNumbers(Node head1, Node head2) {
@@ -37,23 +39,45 @@ public class AddTwoNumbers {
 				n.next = new Node(sum % 10);
 				n = n.next;
 			}
-			return head;
+
+			while (a.next != null) {
+				a = a.next;
+				sum = a.data + carry;
+				carry = sum / 10;
+				n.next = new Node(sum % 10);
+				n = n.next;
+			}
+
+			while (b.next != null) {
+				b = b.next;
+				sum = b.data + carry;
+				carry = sum / 10;
+				n.next = new Node(sum % 10);
+				n = n.next;
+			}
+
+			if (carry != 0)
+				n.next = new Node(carry);
 		}
-		return null;
+		return head;
 
 	}
 
 	public static void main(String[] args) {
 		Node a = new Node(3);
 		Node b = new Node(1);
-		Node c = new Node(5);
+		Node c = new Node(3);
+		Node g = new Node(2);
+		Node h=new Node(1);
 
-		Node d = new Node(5);
+		Node d = new Node(7);
 		Node e = new Node(9);
-		Node f = new Node(2);
+		Node f = new Node(6);
 
 		a.next = b;
 		b.next = c;
+		c.next = g;
+		g.next=h;
 
 		d.next = e;
 		e.next = f;
