@@ -1,4 +1,5 @@
 package datastructure.array.sortedArrays;
+
 //https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 public class MedianofTwoSortedArrays {
 
@@ -33,7 +34,7 @@ public class MedianofTwoSortedArrays {
 	 * 
 	 * the same solution can be applied to find kth element of 2 sorted arrays.
 	 */
-	public static  double findMedianSortedArrays(int A[], int B[]) {
+	public static double findMedianSortedArrays(int A[], int B[]) {
 		int n = A.length;
 		int m = B.length;
 		// the following call is to make sure len(A) <= len(B).
@@ -44,7 +45,8 @@ public class MedianofTwoSortedArrays {
 
 		// now, do binary search
 		int k = (n + m - 1) / 2;
-		int l = 0, r = Math.min(k, n); // r is n, NOT n-1, this is important!!
+		int l = 0;
+		int r = Math.min(k, n); // r is n, NOT n-1, this is important!!
 		while (l < r) {
 			int midA = (l + r) / 2;
 			int midB = k - midA;
@@ -55,8 +57,7 @@ public class MedianofTwoSortedArrays {
 		}
 
 		// after binary search, we almost get the median because it must be
-		// between
-		// these 4 numbers: A[l-1], A[l], B[k-l], and B[k-l+1]
+		// between these 4 numbers: A[l-1], A[l], B[k-l], and B[k-l+1]
 
 		// if (n+m) is odd, the median is the larger one between A[l-1] and
 		// B[k-l].
@@ -71,10 +72,10 @@ public class MedianofTwoSortedArrays {
 		int b = Math.min(l < n ? A[l] : Integer.MAX_VALUE, k - l + 1 < m ? B[k - l + 1] : Integer.MAX_VALUE);
 		return (a + b) / 2.0;
 	}
-	
-	public static void main(String [] args){
-		int [] A={  1,  5,     8,     23};
-		int [] B={0  ,2  ,  7,      9,   34, 2346};
-		System.out.println(findMedianSortedArrays(A,B));
+
+	public static void main(String[] args) {
+		int[] A = { 1, 5, 8, 23 };
+		int[] B = { 0, 2, 7, 9, 34, 2346 };
+		System.out.println(findMedianSortedArrays(A, B));
 	}
 }
