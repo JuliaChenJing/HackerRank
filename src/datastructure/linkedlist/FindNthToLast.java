@@ -8,8 +8,46 @@ public class FindNthToLast {
 	 * questions about the advantages of recursion vs iteration.
 	 */
 
+	public static void main(String[] args) {
+		Node a = new Node(1);
+		Node b = new Node(2);
+		Node c = new Node(3);
+		Node d = new Node(4);
+		Node e = new Node(5);
+		Node f = new Node(6);
+		a.next = b;
+		b.next = c;
+		c.next = d;
+		d.next = e;
+		e.next = f;
+		Node n = a;
+
+		System.out.println("BEFORE: ");
+		while (n != null) {
+			System.out.print(n.data + "--->");
+			n = n.next;
+		}
+
+		System.out.println();
+		System.out.println("the value of the 2th to last: ");
+		// Node re = findNthFromEnd(a, 2);
+		Node re = nthToLast(a, 2);
+
+		System.out.println(re.data);
+
+		System.out.println("AFTER remove the 2th to last element: ");
+		// re=removeNthFromEnd(a,2);
+		re = removeNthToLast(a, 2);
+		n = re;
+		while (n != null) {
+			System.out.print(n.data + "--->");
+			n = n.next;
+		}
+
+	}
+
 	// 我自己想的
-	public static Node findNth(Node head, int N) {
+	public static Node findNthFromEnd(Node head, int N) {
 
 		if (head == null)
 			return null;
@@ -22,7 +60,7 @@ public class FindNthToLast {
 
 		}
 
-		System.out.println("length=" + length);
+		// System.out.println("length=" + length);
 
 		if (length < N)
 			return null;
@@ -35,6 +73,27 @@ public class FindNthToLast {
 		}
 
 		return re;
+	}
+
+	public static Node removeNthFromEnd(Node head, int n) {
+		if (head == null)
+			return null;
+		Node node = head;
+		Node next = node.next;
+		int length = 0;
+		while (node != null) {
+			length++;
+			node = node.next;
+		}
+		node = head;
+
+		for (int i = 1; i < length - n; i++) {
+			node = node.next;
+		}
+		next = node.next;
+		node.next = next.next;
+		return head;
+
 	}
 
 	/*
@@ -75,61 +134,25 @@ public class FindNthToLast {
 		return p1;
 	}
 
-	public static void main(String[] args) {
-		Node a = new Node(1);
-		Node b = new Node(2);
-		Node c = new Node(3);
-		Node d = new Node(4);
-		Node e = new Node(5);
-		Node f = new Node(6);
-		a.next = b;
-		b.next = c;
-		c.next = d;
-		d.next = e;
-		e.next = f;
-		Node n = a;
-		System.out.println("BEFORE: ");
-		while (n != null) {
-			System.out.print(n.data + "--->");
-			n = n.next;
+	public static Node removeNthToLast(Node head, int n) {
+
+		Node start = new Node(0);
+		Node slow = start, fast = start;
+		slow.next = head;
+
+		// Move fast in front so that the gap between slow and fast becomes n
+		for (int i = 1; i <= n + 1; i++) {
+			fast = fast.next;
 		}
-
-		System.out.println();
-
-		Node re = findNth(a, 2);
-
-		System.out.println(re.data);
-
-		Node re_2 = nthToLast(a, 2);
-
-		System.out.println(re_2.data);
-	}
-	// HackerRank: hackerrank.com/rshaghoulian
-
-	/*
-	 * Get Nth element from the end in a linked list of integers Number of
-	 * elements in the list will always be greater than N. Node is defined as
-	 * class Node { int data; Node next; }
-	 */
-
-	// Time Complexity: O(n)
-	// Space Complexity: O(1)
-	int GetNode(Node head, int k) {
-		Node curr = head;
-		Node runner = head;
-
-		/* Move runner into the list by k elements */
-		for (int i = 0; i < k; i++) {
-			runner = runner.next;
+		// Move fast to the end, maintaining the gap
+		while (fast != null) {
+			slow = slow.next;
+			fast = fast.next;
 		}
+		// Skip the desired node
+		slow.next = slow.next.next;
+		return start.next;
 
-		/* Move both pointers */
-		while (runner.next != null) {
-			curr = curr.next;
-			runner = runner.next;
-		}
-
-		return curr.data;
 	}
 
 }
