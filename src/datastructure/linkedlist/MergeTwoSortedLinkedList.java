@@ -8,6 +8,42 @@ public class MergeTwoSortedLinkedList {
 	 * list Node is defined as class Node { int data; Node next; }
 	 */
 
+	
+	public static void main(String[] args) {
+		Node a = new Node(1);
+		Node b = new Node(2);
+		Node c = new Node(5);
+		
+		Node d = new Node(0);
+		Node e = new Node(3);
+		Node f = new Node(8);
+		a.next = b;
+		b.next = c;
+	
+		d.next = e;
+		e.next = f;
+		Node n = a;
+		System.out.println("BEFORE: ");
+		while (n != null) {
+			System.out.print(n.data + "--->");
+			n = n.next;
+		}
+		System.out.println();
+	    n = d;
+		while (n != null) {
+			System.out.print(n.data + "--->");
+			n = n.next;
+		}
+
+		n=mergeLists(a,d);
+
+		System.out.println("\nAFTER: ");
+		while (n != null) {
+			System.out.print(n.data + "--->");
+			n = n.next;
+		}
+
+	}
 	static Node mergeLists(Node currA, Node currB) {
 
 		if (currA == null) {
