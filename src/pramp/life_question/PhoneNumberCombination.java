@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 //https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
-public class PhoneNumber {
+public class PhoneNumberCombination {
 
 	/*
 	 * Given a digit string, return all possible letter combinations that the
