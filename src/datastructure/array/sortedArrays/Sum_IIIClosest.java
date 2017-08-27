@@ -27,6 +27,8 @@ public class Sum_IIIClosest {
 
 	}
 
+	
+
 	public int threeSumClosest_perfect(int[] num, int target) {
 		int result = num[0] + num[1] + num[num.length - 1];
 		Arrays.sort(num);
