@@ -1,8 +1,22 @@
 package datastructure.array.sortedArrays;
+
 import java.util.Arrays;
 
 public class FourSum {
 
+	
+	public static void main(String[] args) {
+
+		int[] arr = { 2, 7, 4, 0, 9, 5, 1, 3 };
+		int[] result_1 = fourSum(arr, 20);//slow but easy to understand
+		int[] result_2 =findArrayQuadruplet(arr, 20);//good
+		for (int i = 0; i < 4; i++)
+			System.out.print(result_1[i]);
+		System.out.println();
+		for (int i = 0; i < 4; i++)
+			System.out.print(result_2[i]);
+	}
+	
 	static int third = 0;
 	static int fourth = 0;
 
@@ -54,11 +68,26 @@ public class FourSum {
 
 	}
 
-	public static void main(String[] args) {
-
-		int[] arr = { 2, 7, 4, 0, 9, 5, 1, 3 };
-		int[] result = findArrayQuadruplet(arr, 20);
-		for (int i = 0; i < 4; i++)
-			System.out.println(result[i]);
+	public static int[] fourSum(int[] a, int sum) {
+		int n = a.length;
+		int[] result = new int[4];
+		for (int i = 0; i < n; i++) {
+			for (int j = i + 1; j < n; j++) {
+				for (int k = j + 1; k < n; k++) {
+					for (int l = k + 1; l < n; l++) {
+						if (a[i] + a[j] + a[k] + a[l] == sum) {
+							result[0] = a[i];
+							result[1] = a[j];
+							result[2] = a[k];
+							result[3] = a[l];
+						}
+					}
+				}
+			}
+		}
+		Arrays.sort(result);
+		return result;
 	}
+
+	
 }

@@ -2,7 +2,6 @@ package datastructure.array.sortedArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,6 +24,7 @@ public class ThreeSum {
 		int[] nums = { -1, 0, 1, 2, -1, -4 };
 		System.out.println(threeSum_almostRight(nums));
 		System.out.println(threeSum_perfect(nums));
+		System.out.println(threeSum_easyButSlow(nums,0));
 	}
 
 	/*
@@ -96,5 +96,21 @@ public class ThreeSum {
 		}
 		return resultList;
 
+	}
+
+	public static  List<List<Integer>> threeSum_easyButSlow(int[] a, int sum) {
+		List<List<Integer>> resultList = new ArrayList<List<Integer>>();
+		int n = a.length;
+		for (int i = 0; i < n; i++) {
+			for (int j = i + 1; j < n; j++) {
+				for (int k = j + 1; k < n; k++) {
+					if (a[i] + a[j] + a[k] == sum) {
+						resultList.add(Arrays.asList(a[i], a[j], a[k]));
+
+					}
+				}
+			}
+		}
+		return resultList;
 	}
 }
