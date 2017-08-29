@@ -7,6 +7,11 @@ public class StrStr {
 	}
 
 	public static int strStr(String haystack, String needle) {
+		if (haystack.equals(needle))
+			return 0;
+		if (haystack.length() < needle.length())
+			return -1;
+
 		for (int i = 0; i < haystack.length(); i++) {
 			if (concludes(haystack, needle, i))
 				return i;
