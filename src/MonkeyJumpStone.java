@@ -5,11 +5,14 @@ public class MonkeyJumpStone {
 		System.out.println(solution(new int[] { 1, -1, 0, 2, 3, 5 }, 3));// 2
 		System.out.println(solution(new int[] { 3, 2, 1 }, 1));// 3
 		System.out.println(solution(new int[] { 1, 2, 3, 4, -1, -1, -1 }, 3));// -1
-		System.out.println(jumpleAble(new boolean[] { false, false, true }, 3));// true
+
 		System.out.println(jumpleAble(new boolean[] { false, false, true }, 2));// false
-		System.out.println(jumpleAble(new boolean[] { false, false }, 3));// true
+		System.out.println(jumpleAble(new boolean[] { false,false, true,false, false, false }, 3));// false
 		System.out.println(jumpleAble(new boolean[] { false, false, false }, 2));// false
 		System.out.println(jumpleAble(new boolean[] { true, true, true }, 1));// true
+
+		System.out.println(jumpleAble(new boolean[] { false, false, true }, 3));// true
+		System.out.println(jumpleAble(new boolean[] { false, false }, 3));// true
 	}
 
 	public static int solution(int[] A, int D) {
@@ -17,13 +20,15 @@ public class MonkeyJumpStone {
 
 		boolean[] stones = new boolean[A.length];
 
-		for (int i = 0; i < A.length; i++) {
-			stones[i] = false;
+		for (int i = 0; i < A.length+1; i++) {
+			
+			
 			for (int j = 0; j < A.length; j++) {
+				stones[j] = false;
 				if (A[j] == -1)
 					continue;
-				if (A[j] <= i)
-					stones[i] = true;
+				else if (A[j] <= i)
+					stones[j] = true;
 			}
 			if (jumpleAble(stones, D)){
 				
@@ -37,8 +42,6 @@ public class MonkeyJumpStone {
 	private static boolean jumpleAble(boolean[] stones, int D) {
 		int left = -1;
 		int right = 0;
-		// for (boolean b : stones)
-		// System.out.print(b+" : ");
 		while (right < stones.length) {
 			if (stones[right]) {
 				if (right - left > D)
@@ -53,7 +56,11 @@ public class MonkeyJumpStone {
 
 		}
 
-		if (!stones[right - 2])
+		right--;
+		left--;
+		System.out.print("---"+left);
+		System.out.println("---"+right);
+		if (!stones[right-1])
 			return stones.length - left > D ? false : true;
 		return true;
 	}
