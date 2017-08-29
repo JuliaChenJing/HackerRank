@@ -1,7 +1,7 @@
 
 public class MonkeyJumpStone {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		System.out.println(solution(new int[] { 1, -1, 0, 2, 3, 5 }, 3));// 2
 		System.out.println(solution(new int[] { 3, 2, 1 }, 1));// 3
@@ -16,6 +16,8 @@ public class MonkeyJumpStone {
 		System.out.println(jumpleAble(new boolean[] { false, false, true, false, false, false }, 3));//false
 		
 		System.out.println(jumpleAble(new boolean[] { false, false }, 3));// true
+		
+		System.out.println(jumpleAble(new boolean[] {true,false ,true,true, false, false }, 3));// true
 	}
 
 	public static int solution(int[] A, int D) {
@@ -59,7 +61,7 @@ public class MonkeyJumpStone {
 
 		//System.out.println(left);
 		//System.out.println(right);
-		if (!stones[right - 2]){
+		if (!stones[right -2]){
 			if(left==-1)
 				return stones.length<D;
 			return stones.length - left+1 < D ;
