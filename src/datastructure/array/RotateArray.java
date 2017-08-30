@@ -25,16 +25,15 @@ public class RotateArray {
 	static int[] rotateK_2(int[] A, int k) {
 		if (A == null || k >= A.length)
 			return A;
-		reverse(A, 0, A.length - 1);// �??转整个数组
-		reverse(A, 0, k - 1);// �??转�?k个数
-		reverse(A, k, A.length - 1);// �??转剩下的数
+		reverse(A, 0, A.length - 1);// reverse the whole
+		reverse(A, 0, k - 1);// reverse the first k
+		reverse(A, k, A.length - 1);// reverse the rest
 		return A;
 	}
 
 	// the helper class , reverse the number from start to end
 	static void reverse(int[] A, int start, int end) {
 		while (start < end) {
-			// 交�?�A[start]和A[end]两个数
 			int temp = A[start];
 			A[start] = A[end];
 			A[end] = temp;
