@@ -1,4 +1,4 @@
-
+package pramp.life_question;
 public class MonkeyJumpStone {
 
 public static void main(String[] args) {
