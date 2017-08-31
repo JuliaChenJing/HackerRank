@@ -21,8 +21,8 @@ public class FindMinInSortedButRotatedArray {
 
 				if (data[left] < min)
 					min = data[left];
-				left = right + 1;
-				right = data.length - 1;
+				left = right + 1;//go find it from the right side
+				right = data.length - 1;//cannot be deleted,otherwise can not jump out of the while loop
 
 			}
 			// if the left one is not the smallest one ,then the right one might
