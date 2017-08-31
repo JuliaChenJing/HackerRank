@@ -13,7 +13,7 @@ public class FindKInSortedButRotatedArray {
 		int left = 0;
 		int right = data.length - 1;
 
-		while (right != left && right < data.length && left < data.length) {
+		while (right > left) {
 
 			if (data[left] < data[right]) // the left one is the smallest
 											// one,the right one is the biggest
@@ -44,9 +44,9 @@ public class FindKInSortedButRotatedArray {
 			}
 
 		}
-		if(left<data.length&&data[left]==k)
+		if (left < data.length && data[left] == k)
 			return true;
-		if(right<data.length&&data[right]==k)
+		if (right < data.length && data[right] == k)
 			return true;
 		return false;
 
@@ -67,12 +67,12 @@ public class FindKInSortedButRotatedArray {
 		if (data.length == 0 || data == null)
 			return -1;
 		if (data.length == 1)
-			return (k == data[0])? 0:-1;
+			return (k == data[0]) ? 0 : -1;
 
 		int left = 0;
 		int right = data.length - 1;
 
-		while (right != left && right < data.length && left < data.length) {
+		while (right > left) {
 
 			if (data[left] < data[right]) // the left one is the smallest
 											// one,the right one is the biggest
@@ -83,7 +83,7 @@ public class FindKInSortedButRotatedArray {
 					return -1;
 
 				if (data[left] == k || data[right] == k)
-					return left==k? left:right;
+					return data[left] == k ? left : right;
 				else {
 					left++;
 					right--;
@@ -95,7 +95,7 @@ public class FindKInSortedButRotatedArray {
 			{
 
 				if (data[left] == k || data[right] == k)
-					return left==k? left:right;
+					return data[left] == k ? left : right;
 				else {
 					left++;
 					right--;
@@ -103,23 +103,22 @@ public class FindKInSortedButRotatedArray {
 			}
 
 		}
-		if(left<data.length&&data[left]==k)
+		if (data[left] == k)
 			return left;
-		if(right<data.length&&data[right]==k)
-			return right;
+
 		return -1;
 	}
 
 	public static void main(String[] args) {
-		int[] data = { 3, 4, 5, 6, 7, 1, 2 };
+		int[] data = { 1, 3 };
 		int[] data_2 = { 1, 2, 3, 4, 5, 6, 7 };
-		
+
 		System.out.println(findK(6, data));
 		System.out.println(findK(6, data_2));
 		System.out.println(findK(8, data));
 		System.out.println(findK(8, data_2));
-		
-		System.out.println(search(6, data));
+
+		System.out.println(search(1, data));
 		System.out.println(search(6, data_2));
 		System.out.println(search(8, data));
 		System.out.println(search(8, data_2));
