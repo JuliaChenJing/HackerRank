@@ -1,6 +1,6 @@
-package datastructure.array;
+package datastructure.array.sortedArrays;
 
-public class KExists {
+public class FindKInSortedButRotatedArray {
 
 	// Find an element K in an sorted but rotated array
 	public static boolean findK(int k, int[] data) {

@@ -35,19 +35,6 @@ public class SortArrayOfStrings {
 
 			System.out.print(array[i] + "-->");
 
-		/*
-		 *1 original value
-         apple-->banana-->orange-->ant-->
-
-          2 sort chars value
-          aelpp-->aaabnn-->aegnor-->ant-->
- 
-         3 Arrays.sort(array)
-         ant-->apple-->banana-->orange-->
-
-          4 Arrays.sort(array, new AnagramComparator())
-          banana-->orange-->apple-->ant-->
-		 */
 	}
 
 	/*

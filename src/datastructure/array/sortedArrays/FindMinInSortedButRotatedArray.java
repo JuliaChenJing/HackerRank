@@ -1,4 +1,4 @@
-package datastructure.array;
+package datastructure.array.sortedArrays;
 
 public class FindMinInSortedButRotatedArray {
 
@@ -10,7 +10,7 @@ public class FindMinInSortedButRotatedArray {
 		if (data.length == 1)
 			return data[0];
 
-		int min = 100;
+		int min = Integer.MAX_VALUE;
 		int left = 0;
 		int right = data.length - 1;
 

@@ -10,7 +10,8 @@ public class Braces {
 		String[] values = { "()", "([2343])", "(}sfas" };
 		for (int i = 0; i < values.length; i++)
 			System.out.println("Is " + values[i] + " a balanced String? " + braces(values)[i]);
-		
+
+		System.out.println();
 		System.out.println(generateParenthesis(3));
 	}
 
@@ -76,6 +77,60 @@ public class Braces {
 			backtrack(list, str + "(", left + 1, right, max);
 		if (right < left)
 			backtrack(list, str + ")", left, right + 1, max);
+	}
+
+	public static int longestValidParentheses(String s) {
+		for (int i = s.length() - 1; i > 0; i++) {
+			if (isParentheses(s, i))
+				return i + 1;
+			break;
+		}
+		return 0;
+	}
+
+	/*
+	 * Given a string containing just the characters '(' and ')', find the
+	 * length of the longest valid (well-formed) parentheses substring.
+	 * 
+	 * For "())", the longest valid parentheses substring is "()", which has
+	 * length = 2.
+	 * 
+	 * Another example is ")()())", where the longest valid parentheses
+	 * substring is "()()", which has length = 4.
+	 */
+	public static boolean isParentheses(String s, int end) {
+		int flag = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(')
+				flag++;
+			else if (s.charAt(i) == ')')
+				flag--;
+			if (flag < 0)
+				return false;
+		}
+		return flag == 0;
+	}
+
+	public int longestValidParentheses_perfect(String s) {
+		Stack<Integer> stack = new Stack<Integer>();
+		int max = 0;
+		int left = -1;
+		for (int j = 0; j < s.length(); j++) {
+			if (s.charAt(j) == '(')
+				stack.push(j);//push the index of '('
+			else {
+				if (stack.isEmpty())
+					left = j;
+				else {
+					stack.pop();
+					if (stack.isEmpty())
+						max = Math.max(max, j - left);
+					else
+						max = Math.max(max, j - stack.peek());
+				}
+			}
+		}
+		return max;
 	}
 
 }
