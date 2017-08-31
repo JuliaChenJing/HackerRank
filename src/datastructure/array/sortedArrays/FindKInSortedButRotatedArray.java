@@ -44,9 +44,9 @@ public class FindKInSortedButRotatedArray {
 			}
 
 		}
-		if (left < data.length && data[left] == k)
+		if (data[left] == k)
 			return true;
-		if (right < data.length && data[right] == k)
+		if (data[right] == k)
 			return true;
 		return false;
 
@@ -113,7 +113,7 @@ public class FindKInSortedButRotatedArray {
 		int[] data = { 1, 3 };
 		int[] data_2 = { 1, 2, 3, 4, 5, 6, 7 };
 
-		System.out.println(findK(6, data));
+		System.out.println(findK(1, data));
 		System.out.println(findK(6, data_2));
 		System.out.println(findK(8, data));
 		System.out.println(findK(8, data_2));
