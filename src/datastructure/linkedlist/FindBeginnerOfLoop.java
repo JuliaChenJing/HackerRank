@@ -4,7 +4,6 @@ import java.util.HashSet;
 
 /*
  * Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
-
 DEFINITION
 Circular linked list: A (corrupt) linked list in which a node’s next pointer points to an
 earlier node, so as to make a loop in the linked list.
@@ -30,7 +29,7 @@ public class FindBeginnerOfLoop {
 
 	}
 
-	// 书上的答案，一个追�?�一个什么的
+	// 书上的答案，一个追另一个什么的
 	/*
 	 * If we move two pointers, one with speed 1 and another with speed 2, they
 	 * will end up meeting if the linked list has a loop. Why? Think about two
@@ -63,11 +62,11 @@ public class FindBeginnerOfLoop {
 			n1 = n1.next;
 			n2 = n2.next.next;// n2 跳两步，n1跳一步
 			if (n1 == n2) {
-				break;// 如果n1 n2相�?�就跳出循环
+				break;// 如果n1 n2相遇就跳出循环
 			}
 		}
 
-		// Error check �? there is no meeting point, and therefore no loop
+		// Error check ‐ there is no meeting point, and therefore no loop
 		if (n2.next == null) {// n2跑的比较快，测试n2
 			return null;
 		}
@@ -77,7 +76,7 @@ public class FindBeginnerOfLoop {
 		 * the Loop Start. If they move at the same pace, they must meet at Loop
 		 * Start.
 		 */
-		n1 = head;// 把n1�?新调回head
+		n1 = head;// 把n1重新调回head
 		while (n1 != n2) {
 			n1 = n1.next;
 			n2 = n2.next;
@@ -108,7 +107,7 @@ public class FindBeginnerOfLoop {
 		}
 
 		Node re = findBeginnerOfLoop(a);
-		// Node re = FindBeginning(a);//也对，就是�?好�?�解
+		// Node re = FindBeginning(a);//也对，就是不好理解
 		System.out.println("\nthe beginner of the loop is :" + re.data);
 	}
 }
