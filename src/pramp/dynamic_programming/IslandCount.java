@@ -1,6 +1,6 @@
 package pramp.dynamic_programming;
 
-
+//请在文件开头注释里说明一下为什么选择这段代码作为例子。确保文件公开可见，然后贴链接作为回复：solution is easy to understand and beautiful.
 public class IslandCount {
 	
 	/*
