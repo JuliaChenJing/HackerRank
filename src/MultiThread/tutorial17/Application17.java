@@ -1,6 +1,7 @@
-package MultiThread;
+package MultiThread.tutorial17;
 
-public class Application {
+//https://www.youtube.com/watch?v=F-CkaU8aQZI
+public class Application17 {
 
 	/*
 	 * In this Java Video Tutorial I cover how to use Java threads.

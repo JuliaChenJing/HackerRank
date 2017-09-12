@@ -1,4 +1,4 @@
-package MultiThread;
+package MultiThread.tutorial17;
 
 //By using threads you can execute multiple blocks
 //of code at the same time. This program will output 
@@ -35,6 +35,7 @@ public class GetTime20 extends Thread {
 			rightNow = new Date();
 
 			// Locale defines time formats depending on location
+			//http://kirste.userpage.fu-berlin.de/diverse/doc/ISO_3166.html
 			currentLocale = new Locale("en", "US");
 
 			// DateFormat allows you to define dates / times using predefined
