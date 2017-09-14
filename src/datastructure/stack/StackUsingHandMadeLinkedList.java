@@ -1,12 +1,12 @@
 package datastructure.stack;
 
-public class LinkedListStack implements Stack {
+public class StackUsingHandMadeLinkedList implements Stack {
 	Node top;
 
 	public static void main(String[] args) {
 		Node t = new Node(1);
 
-		LinkedListStack s = new LinkedListStack();
+		StackUsingHandMadeLinkedList s = new StackUsingHandMadeLinkedList();
 		s.top = t;
 		s.push(2);
 		s.push(3);
