@@ -1,4 +1,4 @@
-package algorithm.bit_manipulation_and_number;
+package algorithm.number;
 
 //https://leetcode.com/problems/next-permutation/description/
 public class NextPermutation {

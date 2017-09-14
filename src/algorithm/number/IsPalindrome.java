@@ -1,4 +1,4 @@
-package algorithm.bit_manipulation_and_number;
+package algorithm.number;
 
 public class IsPalindrome {
 	// Determine whether an integer is a palindrome. Do this without extra space.

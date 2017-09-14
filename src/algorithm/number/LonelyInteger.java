@@ -1,5 +1,5 @@
 
-package algorithm.bit_manipulation_and_number;
+package algorithm.number;
 import java.util.Scanner;
 //https://www.hackerrank.com/challenges/lonely-integer/problem
 // O(n) runtime. O(1) space. Uses XOR. Keep in mind:
