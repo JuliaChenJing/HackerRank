@@ -1,4 +1,5 @@
 package pramp.numbers;
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
@@ -33,28 +34,44 @@ public class DifferentSmallestNumber {
 	 * output: 4 #
 	 */
 	public static void main(String[] args) {
-		int arr[] = { 0,1,1,2, 3, 3, 4,5,6 };
+		int arr[] = { 0, 1, 1, 2, 3, 3, 4, 5, 6 };
 		System.out.println(getDifferentNumberWithProrityQueue(arr));
 		System.out.println(getDifferentNumberWithFind(arr));
 		System.out.println(differentNumWithSort(arr));
+	}
+
+	public int firstMissingPositive(int[] nums) {
+		Arrays.sort(nums);
+		int i = 1;
+		for (int num : nums) {
+			if (num > 0) {
+				if (num == i - 1)
+					continue;
+				if (num != i)
+					return i;
+				i++;
+			}
+		}
+
+		return i;
 	}
 
 	static int differentNumWithSort(int[] arr) {
 
 		Arrays.sort(arr);
 		int i;
-		if(arr[0]!=0)
+		if (arr[0] != 0)
 			return 0;
 		for (i = 1; i < arr.length; i++) {
-			if(arr[i]==arr[i-1])
+			if (arr[i] == arr[i - 1])
 				continue;
-			if (arr[i] != arr[i-1]+1) {
-				return arr[i-1]+1;
+			if (arr[i] != arr[i - 1] + 1) {
+				return arr[i - 1] + 1;
 			}
 
 		}
 
-		return arr[i-1] + 1;
+		return arr[i - 1] + 1;
 	}
 
 	// method one
@@ -69,19 +86,20 @@ public class DifferentSmallestNumber {
 
 		// System.out.println(pq);
 		int i = 0;
-		int j=0;
+		int j = 0;
 		for (; i < arr.length; i++) {
 
 			int poll = pq.poll();
 			if (poll == j - 1) {
-			   
+
 				continue;
 			} else if (poll != j)
 				return j;
-			else j++;
+			else
+				j++;
 		}
 
-		return j ;
+		return j;
 	}
 
 	// method 2 , worst case will be consuming
@@ -91,7 +109,7 @@ public class DifferentSmallestNumber {
 			return 0;
 		int max = max(arr);
 
-		for (int i = 0; i <= max ; i++) {
+		for (int i = 0; i <= max; i++) {
 
 			if (!find(i, arr))
 				return i;
