@@ -28,10 +28,10 @@ public class RouteBetweenNodes {
 
 		// set all nodes in graph Unvisited
 		for (Node u : graph.getNodes()) {
-			u.state = State.Unvisited;
+			u.setState(State.Unvisited);
 		}
 
-		from.state = State.Visiting;
+		from.setState(State.Visiting);
 		returnlist.add(from);// add the first node to the returnlist
 
 		Node u;
@@ -40,16 +40,17 @@ public class RouteBetweenNodes {
 											// linkedlist
 			if (u != null) {
 				for (Node v : u.getAdjacent()) {
-					if (v.state == State.Unvisited) {
+					if (v.getState() == State.Unvisited) {
 						if (v == to) {
 							return true;
 						} else {
-							v.state = State.Visiting;
+							v.setState(State.Visiting);
 							returnlist.add(v);
 						}
 					}
 				}
-				u.state = State.Visited;
+
+				u.setState(State.Visited);
 			}
 		}
 		return false;
@@ -64,11 +65,23 @@ public class RouteBetweenNodes {
 	}
 
 	class Node {
-		State state;
+		private State state;
 
 		public Node[] getAdjacent() {
 			// TODO Auto-generated method stub
 			return null;
 		}
+
+		public State getState() {
+			// TODO Auto-generated method stub
+			return state;
+		}
+
+		public void setState(State visited) {
+
+			state = visited;
+
+		}
+
 	}
 }
