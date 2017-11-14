@@ -15,6 +15,7 @@ public class PlalindromeInStack {
 		System.out.println(isPlalindrome(null));
 
 		int num;
+		@SuppressWarnings("resource")
 		Scanner keyboard = new Scanner(System.in);
 
 		while (true) {
