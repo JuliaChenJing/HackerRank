@@ -3,7 +3,7 @@ package datastructure.queue;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class PriorityQueueAPITest {
+public class PriorityQueueAPI {
 
 	static class PQsort implements Comparator<Integer> {
 
@@ -23,8 +23,8 @@ public class PriorityQueueAPITest {
 
 		System.out.println("pq1: " + pq1);
 
-		PQsort pqs = new PQsort();
-		PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(10, pqs);
+		PQsort pqsort = new PQsort();
+		PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(10, pqsort);
 		// In this particular case, we can simply use Collections.reverseOrder()
 		// instead of self-defined comparator
 		for (int x : array) {
