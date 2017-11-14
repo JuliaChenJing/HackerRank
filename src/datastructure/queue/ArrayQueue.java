@@ -18,6 +18,9 @@ class ArrayQueue {
 		s.dequeue();
 		s.enqueue(5);
 		System.out.println(s.toString() + "      count: " + (s.size()));
+		
+		
+		
 	}
 
 	public ArrayQueue(int n) // constructor

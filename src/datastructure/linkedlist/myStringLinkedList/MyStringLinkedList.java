@@ -1,9 +1,8 @@
-package datastructure.linkedlist;
-
-public class StringLinkedList {
+package datastructure.linkedlist.myStringLinkedList;
+public class MyStringLinkedList {
 	Node header;
 
-	StringLinkedList() {
+	MyStringLinkedList() {
 		header = null;
 	}
 
@@ -12,47 +11,90 @@ public class StringLinkedList {
 			header = new Node(null, item, null);
 		else {
 			Node n = new Node(null, item, header);
-			header.previous = n;
-			header = n;
+		    	header.previous = n;
+		    	header = n;
 		}
 	}
 
+// Implement the code
+
 	public void addLast(String item) {
-
+		if (header == null)
+			header = new Node(null, item, null);
+		else {
+			Node n = new Node(findLast(), item, null);
+			findLast().next=n;
+		}
 	}
+
 
 	// implement the code
-	public void postAddNode(Node n, String value) {
-
-	}
-	// implement the code
-
-	public int Size() {
-
-		return 1;
-	}
-
-	// implement code
-	public boolean isEmpty() {
-		return true;
-	}
-
-	public void preAddNode(Node n, String value) {
+	public void postAddNode(Node n, String value){
 		Node newNode;
-		if (n == null) {
-			// List is empty
+		if (n == null){
+			//List is empty
 			newNode = new Node(null, value, null);
-		} else if (n.previous == null) {
-			// n is the first node
+		}
+		else if (n.next == null) {
+			//n is the first node
+			addLast(value);
+		}
+		else {
+			newNode = new Node(n, value, n.next);
+			n.next.previous = newNode;
+			n.next = newNode;
+		}	
+					
+					
+	}
+// implement the code
+	public int Size(){	   
+		if (header == null)
+    	    	
+       		return 0;
+       	else
+       		{
+       		int num=0;
+       		Node temp = header;
+			while (temp != null)
+			{
+				num++;
+				temp=temp.next;
+			}
+			return  num;
+       		}
+       }
+
+// implement code
+    public boolean isEmpty()
+{
+    	if (header == null)
+    	
+    		return true;
+    	else
+    		return false;
+}  
+
+  
+	
+	public void preAddNode(Node n, String value){
+		Node newNode;
+		if (n == null){
+			//List is empty
+			newNode = new Node(null, value, null);
+		}
+		else if (n.previous == null) {
+			//n is the first node
 			addFront(value);
-		} else {
+		}
+		else {
 			newNode = new Node(n.previous, value, n);
 			n.previous.next = newNode;
 			n.previous = newNode;
-		}
-
+		}	
+					
 	}
-
+	
 	public Node findLast() {
 		if (header == null)
 			return null;
@@ -108,8 +150,8 @@ public class StringLinkedList {
 		}
 
 	}
-
-	public void deleteList() {
+	
+	public void deleteList(){
 		Node tempOne = header;
 		Node tempTwo = header;
 		while (tempOne != null) {
@@ -121,7 +163,7 @@ public class StringLinkedList {
 	}
 
 	public String toString() {
-		String str = "";
+		String str =""; 
 		Node temp = header;
 		while (temp != null) {
 			str = str + "-->[" + temp.value.toString() + "]";
@@ -132,7 +174,7 @@ public class StringLinkedList {
 	}
 
 	public void printReverse() {
-		String str = "";
+		String str =""; 
 		Node temp = findLast();
 		while (temp != null) {
 			str = str + "==>[" + temp.value.toString() + "]";
@@ -141,7 +183,7 @@ public class StringLinkedList {
 		str = str + "==>[" + "NULL" + "]";
 		System.out.println(str);
 	}
-
+	
 	public class Node {
 		String value;
 		Node next;
@@ -158,52 +200,70 @@ public class StringLinkedList {
 		}
 	}
 
-	public static void main(String[] args) {
-		StringLinkedList mySL = new StringLinkedList();
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.addFront("Carrot Cake");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.addFront("Blueberry Muffin");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.addFront("Apple Pie");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.addLast("Orange Juice");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.addLast("Peach Sauce");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.deleteNode(mySL.findItem("Apple Pie"));
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.deleteNode(mySL.findItem("Peach Sauce"));
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.deleteNode(mySL.findItem("Carrot Cake"));
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.postAddNode(mySL.findItem("Blueberry Muffin"), "Carrot Cake");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.preAddNode(mySL.findItem("Blueberry Muffin"), "Apple Pie");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.postAddNode(mySL.findItem("Carrot Cake"), "Danish Delight");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.preAddNode(mySL.findItem("Orange Juice"), "Mango Smoothie");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.postAddNode(mySL.findItem("Orange Juice"), "Peach Sauce");
-		System.out.println(mySL);
-		mySL.printReverse();
-		mySL.deleteList();
-		System.out.println(mySL);
-		mySL.printReverse();
+	public Object getLast() {
+		if (header == null)
+			return null;
+		else {
+			Node temp = header;
+			while (temp.next != null)
+				temp = temp.next;
+			return temp;
+		}
 	}
 
+	public Object getFirst() {
+		if (header == null)
+			return null;
+		else
+			return header;
+		
+	}
+	
+	public void removeFirst() {
+		if (header != null ) {
+			if (header.next == null ) {
+				// only one node
+				header = null;
+
+			} else 
+
+			{
+				// remove first node
+				header = header.next;
+				header.previous=null;
+			}
+
+		}
+
+	}
+	
+	public void removeLast() {
+		if (header != null ) {
+			if (header.next == null ) {
+				// only one node
+				header = null;
+
+			} else 
+
+			{
+				// remove last node
+				findLast().previous.next= null;
+			}
+
+		}
+
+	}
+
+	//Write a recursive print method to display the elements in the list. 
+	//Start with the First Node(Head)
+	public void print(Node n)
+	{
+		if(n!=null){
+			if(n.next==null)
+				System.out.println(n);
+			else
+				System.out.println(n);
+				print(n.next);
+		}
+	}
 }
