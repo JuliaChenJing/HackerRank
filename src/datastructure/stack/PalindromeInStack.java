@@ -1,6 +1,7 @@
 package datastructure.stack;
 
-import java.util.Stack;;
+import java.util.Stack;
+import java.util.Scanner;
 
 public class PalindromeInStack {
 
@@ -12,6 +13,26 @@ public class PalindromeInStack {
 		System.out.println(isPalindrome("abdsfeba"));
 		System.out.println(isPalindrome(""));
 		System.out.println(isPalindrome(null));
+
+		int num;
+		Scanner keyboard = new Scanner(System.in);
+
+		while (true) {
+			System.out.print("Input a five-digit integer: ");
+			num = keyboard.nextInt();
+			if (num < 10000 || num > 99999) {
+				System.out.printf("Are you sure this is a five-digit integer?");
+
+			} else
+				break;
+		}
+		String str = String.format("%03d", num);
+		if (str.charAt(0) == str.charAt(4) && str.charAt(1) == str.charAt(3))
+
+			System.out.printf("\n The num %d is a leap num", num);
+
+		else
+			System.out.printf("\n The num %d is not a leap num", num);
 
 	}
 
