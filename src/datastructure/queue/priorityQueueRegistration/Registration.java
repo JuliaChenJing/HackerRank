@@ -1,6 +1,6 @@
 package datastructure.queue.priorityQueueRegistration;
 
-class Registration implements Comparable {
+class Registration implements Comparable<Object> {
 	private int regno; // Registration number
 	private String cname; // Name of the Course
 	private String sname; // Name of the student

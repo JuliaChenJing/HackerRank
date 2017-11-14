@@ -18,7 +18,7 @@ public class PriorityQueueRegistration {
 		
 		System.out.println("1 The peek object is:"+pq.peek());
 		System.out.println("2 The size of the queue is:"+pq.size());
-		Iterator it = pq.iterator();
+		Iterator<Registration> it = pq.iterator();
 		System.out.println("3 List of Elements :");
 		
 		while(it.hasNext())
