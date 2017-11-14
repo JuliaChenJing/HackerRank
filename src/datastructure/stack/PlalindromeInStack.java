@@ -3,16 +3,16 @@ package datastructure.stack;
 import java.util.Stack;
 import java.util.Scanner;
 
-public class PalindromeInStack {
+public class PlalindromeInStack {
 
 	public static void main(String[] args) {
-		System.out.println(isPalindrome("1221"));
-		System.out.println(isPalindrome("abccba"));
-		System.out.println(isPalindrome("asbccba"));
-		System.out.println(isPalindrome("abeba"));
-		System.out.println(isPalindrome("abdsfeba"));
-		System.out.println(isPalindrome(""));
-		System.out.println(isPalindrome(null));
+		System.out.println(isPlalindrome("1221"));
+		System.out.println(isPlalindrome("abccba"));
+		System.out.println(isPlalindrome("asbccba"));
+		System.out.println(isPlalindrome("abeba"));
+		System.out.println(isPlalindrome("abdsfeba"));
+		System.out.println(isPlalindrome(""));
+		System.out.println(isPlalindrome(null));
 
 		int num;
 		Scanner keyboard = new Scanner(System.in);
@@ -37,10 +37,10 @@ public class PalindromeInStack {
 	}
 
 	/*
-	 * test if a String is a Palindrome: Strings that read the same from left to
+	 * test if a String is a Plalindrome: Strings that read the same from left to
 	 * right as they do from right to left
 	 */
-	static public boolean isPalindrome(String s) {
+	static public boolean isPlalindrome(String s) {
 		if (s == null)
 			return false;
 		int i = 0;
