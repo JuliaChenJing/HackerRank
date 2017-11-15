@@ -1,4 +1,4 @@
-package datastructure.hashtable.myTable;
+package datastructure.hashtable.myLetterMap;
 public class DriverClass {
 	 public static  void main(String[] args){
 	        MyTable t = new MyTable();

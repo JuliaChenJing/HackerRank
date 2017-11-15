@@ -1,4 +1,4 @@
-package datastructure.hashtable.myTable;
+package datastructure.hashtable.myLetterMap;
 public class MyTable {
 	Entry[] entries=new Entry[26];
 	public MyTable()
