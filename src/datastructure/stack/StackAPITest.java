@@ -28,7 +28,7 @@ public class StackAPITest {
 		s1.pop();
 		s1.pop();
 		System.out.println("Element of s1" + s1);
-		Stack s2 = new Stack();
+		Stack<Object> s2 = new Stack<Object>();
 		s2.push(10);
 		s2.push("hello");
 		System.out.println("Element of stack" + s2);
