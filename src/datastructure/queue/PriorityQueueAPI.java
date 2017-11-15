@@ -43,6 +43,12 @@ public class PriorityQueueAPI {
 		System.out.println("poll: " + pq2.poll());
 		// print size
 		System.out.println("size: " + pq2.size());
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+		pq.add(3);
+		pq.add(1);
+		pq.add(2);
+		System.out.println("Priority Queue Elements : " + pq);
 
 	}
 }

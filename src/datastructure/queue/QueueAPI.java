@@ -12,7 +12,7 @@ public class QueueAPI {
 		queue.offer("DotNet");
 		queue.offer("PHP");
 		queue.offer("HTML");
-		Iterator i = queue.iterator();
+		Iterator<String> i = queue.iterator();
 		System.out.println(i.next());
 		System.out.println(i.next());
 		System.out.println("Top Element: " + queue.element());
