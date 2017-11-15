@@ -77,17 +77,38 @@ class Empl {
 }
 
 /*
- * 0all the values: THIRD INSERTED SECOND INSERTED FIRST INSERTED
- * 
- * 1 My Hashtable content: {3=THIRD INSERTED, 2=SECOND INSERTED, 1=FIRST
- * INSERTED}
- * 
- * 2 The Hashtable contains key 1
- * 
- * 5 The Hashtable contains value SECOND INSERTED
- * 
- * 7 Clearing Hashtable:
- * 
- * 8 Content After clear: {}
- * 
+ * 0all the values:
+THIRD INSERTED
+SECOND INSERTED
+FIRST INSERTED
+
+1 My Hashtable content:
+{3=THIRD INSERTED, 2=SECOND INSERTED, 1=FIRST INSERTED}
+
+2  The Hashtable contains key 1
+
+5 The Hashtable contains value SECOND INSERTED
+
+7 Clearing Hashtable:
+
+8 Content After clear:
+{}
+Hashtable entries:
+
+4 ==> 512
+Tom
+2400
+
+15 ==> 235
+Jony
+6000
+
+23 ==> 876
+Crish
+2000
+
+1 ==> 134
+Ramu
+3000
  */
+

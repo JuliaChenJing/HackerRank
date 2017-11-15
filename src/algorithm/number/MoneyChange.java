@@ -1,4 +1,4 @@
-package pramp.life_question;
+package algorithm.number;
 
 import java.util.Scanner;
 
