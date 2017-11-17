@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class NumberComplement {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			System.out.println("\n which number do you want to trnasform in complement?");

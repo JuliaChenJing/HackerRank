@@ -3,6 +3,8 @@ package datastructure.graph;
 import java.util.ArrayList;
 import java.util.Stack;
 
+
+
 public class DepthFirstSearchExample {
 
 	/*
@@ -13,7 +15,7 @@ public class DepthFirstSearchExample {
 	 * choice to pick a node, if not, you select another un-visited node.
 	 */
 
-	static ArrayList nodes = new ArrayList();
+	static ArrayList<Node> nodes = new ArrayList<Node>();
 
 	static class Node {
 		int data;
@@ -68,10 +70,10 @@ public class DepthFirstSearchExample {
 	// find neighbors of node using adjacency matrix
 	// if adjacency_matrix[i][j]==1, then nodes at index i and index j are
 	// connected
-	public ArrayList findNeighbours(int adjacency_matrix[][], Node x) {
+	public ArrayList<Node> findNeighbours(int adjacency_matrix[][], Node x) {
 		int nodeIndex = -1;
 
-		ArrayList neighbours = new ArrayList();
+		ArrayList<Node> neighbours = new ArrayList<Node>();
 		for (int i = 0; i < nodes.size(); i++) {
 			if (nodes.get(i).equals(x)) {
 				nodeIndex = i;
@@ -93,7 +95,7 @@ public class DepthFirstSearchExample {
 	public void dfs(int adjacency_matrix[][], Node node) {
 
 		System.out.print(node.data + "t");
-		ArrayList neighbours = findNeighbours(adjacency_matrix, node);
+		ArrayList<Node> neighbours = findNeighbours(adjacency_matrix, node);
 		for (int i = 0; i < neighbours.size(); i++) {
 			Node n = (Node) neighbours.get(i);
 			if (n != null && !n.visited) {
@@ -106,14 +108,14 @@ public class DepthFirstSearchExample {
 
 	// Iterative DFS using stack
 	public void dfsUsingStack(int adjacency_matrix[][], Node node) {
-		Stack stack = new Stack();
+		Stack<Node> stack = new Stack<Node>();
 		stack.add(node);
 		node.visited = true;
 		while (!stack.isEmpty()) {
 			Node element = (Node) stack.pop();
 			System.out.print(element.data + "t");
 
-			ArrayList neighbours = findNeighbours(adjacency_matrix, element);
+			ArrayList<?> neighbours = findNeighbours(adjacency_matrix, element);
 			for (int i = 0; i < neighbours.size(); i++) {
 				Node n = (Node) neighbours.get(i);
 				if (n != null && !n.visited) {

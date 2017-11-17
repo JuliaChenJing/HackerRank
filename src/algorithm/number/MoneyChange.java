@@ -11,6 +11,7 @@ public class MoneyChange {
 		public static void main(String[] args) {
 			
 			double dollar=0, quater=0,dime=0,nickle=0,pennie=0;
+			@SuppressWarnings("resource")
 			Scanner keyboard = new Scanner(System.in);
 
 				System.out.print("How much money: ");

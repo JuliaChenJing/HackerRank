@@ -1,6 +1,5 @@
 package algorithm.searching;
 
-import datastructure.tree.Node;
 
 //BinarySearchTree class
 //
