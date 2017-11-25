@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class PalindromeIgnoreCase {
 	public static void main(String[] args) {
 		/* Read input */
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 
 		while (scan.hasNext()) {
