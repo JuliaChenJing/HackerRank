@@ -5,10 +5,8 @@ import java.util.*;
 public class WordCountEngine {
 
 	public static void main(String[] args) {
-		String str = "Practice makes perfect, but practice is tiring.";
-
+		String str = " Practice makes perfect, which is true, and perfect is good, but practice is tiring.";
 		wordCountEngine(str);
-
 	}
 
 	static void wordCountEngine(String document) {
@@ -18,7 +16,6 @@ public class WordCountEngine {
 		String[] splitedStrings = document.toLowerCase().replace(",", "").replace(".", "").split(" ");
 
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		PriorityQueue<KeyValuePair> queue = new PriorityQueue<KeyValuePair>();
 		for (String s : splitedStrings) {
 			if (map.containsKey(s)) {
 				map.put(s, map.get(s) + 1);
@@ -35,6 +32,7 @@ public class WordCountEngine {
 		Collections.sort(list);
 		System.out.println("-----------------List--------------\n" + list);
 
+		PriorityQueue<KeyValuePair> queue = new PriorityQueue<KeyValuePair>();
 		for (String key : map.keySet()) {
 			queue.add(new KeyValuePair(key, map.get(key)));
 		}
@@ -43,17 +41,15 @@ public class WordCountEngine {
 		String[][] results = new String[queue.size()][2];
 		int index = 0;
 		while (!queue.isEmpty()) {
-			KeyValuePair pair=queue.poll();
-			results[index][0] =pair .getKey();
+			KeyValuePair pair = queue.poll();
+			results[index][0] = pair.getKey();
 			results[index][1] = KeyValuePair.getValueToString(pair.getValue());
 			index++;
 		}
-		System.out.println("-----------------String [][]--------------\n" + queue);
+		System.out.println("-----------------String--------------");
 		for (int i = 0; i < results.length; i++)
 			System.out.println(results[i][0] + ":" + results[i][1]);
-
 	}
-
 }
 
 class KeyValuePair implements Comparable<KeyValuePair> {
