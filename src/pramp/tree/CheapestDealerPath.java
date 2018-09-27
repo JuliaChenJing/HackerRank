@@ -1,4 +1,5 @@
 package pramp.tree;
+
 class CheapestDealerPath {
 
 	/*
@@ -15,11 +16,10 @@ class CheapestDealerPath {
 	 * 
 	 */
 
+	//method 1
 	static int getCheapestCost(Node rootNode) {
-
 		if (rootNode == null)
 			return 0;
-
 		if (rootNode.children == null || rootNode.children.length == 0)
 			return rootNode.key;
 		else {
@@ -30,41 +30,33 @@ class CheapestDealerPath {
 				if (tempCost < minCost)
 					minCost = tempCost;
 			}
-
 			return minCost + rootNode.key;
 		}
-
 	}
 
+	//method 2
 	static int minSum = Integer.MAX_VALUE;
 
 	int getCheapestCostWithRecurtion(Node rootNode) {
 		if (rootNode == null)
 			return 0;
-
 		getCheapestCostHelper(rootNode, 0);
-
 		return minSum;
 	}
 
 	static void getCheapestCostHelper(Node rootNode, int sum) {
-
 		if (rootNode == null)
 			return;
-
 		if (rootNode.children == null) {// leaf node
 			if (minSum > sum)
 				minSum = sum;
 		}
-
 		for (Node node : rootNode.children) {
 			getCheapestCostHelper(node, node.key + sum);
 		}
-
 	}
 
 	static class Node {
-
 		int key;
 		Node[] children;
 		Node parent;
