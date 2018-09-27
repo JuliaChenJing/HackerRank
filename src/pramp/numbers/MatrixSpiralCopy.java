@@ -1,4 +1,5 @@
 package pramp.numbers;
+
 public class MatrixSpiralCopy {
 
 	/*
@@ -42,10 +43,6 @@ leftCol - index of the leftmost column to be copied, starting from 0 and increme
 rightCol - index of the the rightmost column to be copied, starting from numCols-1 and 
 decrementing.
 
-
-
-
-
 	 * Pseudocode:
 
   function spiralCopy(inputMatrix):
@@ -83,9 +80,6 @@ decrementing.
 
     return result
     
-    
-    
-    
 Time Complexity: iterating over N∙M cells, where N is the number of rows and M the 
 number of columns, and copying them into any array takes O(N∙M). Note that this is
  a linear time complexity since the size of the input is O(N∙M).
@@ -93,8 +87,6 @@ number of columns, and copying them into any array takes O(N∙M). Note that thi
 Space Complexity: we used an auxiliary array of size N∙M as a return value, hence 
 the space complexity is O(N∙M). This is a linear space complexity since the size 
 of the input is O(N∙M) as well.
-
-
 	 */
 	static int[] spiralCopy(int[][] inputMatrix) {
 		int sizeOfX = inputMatrix.length;
@@ -124,5 +116,4 @@ of the input is O(N∙M) as well.
 	public static void main(String[] args) {
 
 	}
-
 }

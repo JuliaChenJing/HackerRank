@@ -2,17 +2,14 @@ package pramp.numbers;
 
 import java.util.ArrayList;
 
-public class FindDuplicates {
+public class FindDuplicatesInTwoSortedArray {
 
 	public static void main(String[] args) {
-
 		int[] arr1 = { 1, 2, 3, 5, 6, 7 };
 		int[] arr2 = { 3, 6, 7, 8, 20 };
 		int[] arr3 = { 8, 20 };
-
 		// when length of arr1 and arr2 are almost the same
 		int[] re = findDuplicates(arr1, arr2);
-
 		/*
 		 * when length of arr1 and arr2 are of big difference, try to find each
 		 * element from the short array in the big array using binary search
@@ -21,16 +18,12 @@ public class FindDuplicates {
 		int[] re_BinarySearch = findDuplicatesWithBinarySearch(arr2, arr3);
 		for (int i = 0; i < re.length; i++)
 			System.out.print(re[i] + " ");
-
 		System.out.println();
-
 		for (int i = 0; i < re_BinarySearch.length; i++)
 			System.out.print(re_BinarySearch[i] + " ");
-
 	}
 
 	// when length of arr1 and arr2 are almost the same
-
 	/*
 	 * Time Complexity: O(N+M) since in the worst case scenario we traverse both
 	 * arrays once. Note that O(N+M) is a linear time complexity because the
@@ -44,36 +37,26 @@ public class FindDuplicates {
 	 */
 
 	static int[] findDuplicates(int[] arr1, int[] arr2) {
-
 		int pointer1 = 0;
 		int pointer2 = 0;
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-
 		while (pointer1 < arr1.length && pointer2 < arr2.length) {
 			if (arr1[pointer1] == arr2[pointer2]) {
 				arrayList.add(arr1[pointer1]);
 				pointer1++;
 				pointer2++;
-			}
-
-			else if (arr1[pointer1] < arr2[pointer2])
+			} else if (arr1[pointer1] < arr2[pointer2])
 				pointer1++;
-
 			else // arr1[pointer1]>arr2[pointer2
-
 				pointer2++;
 		}
-
 		int[] result = new int[arrayList.size()];
 		int locationInResult = 0;
 		for (int i : arrayList) {
 			result[locationInResult] = i;
 			locationInResult++;
-
 		}
-
 		return result;
-
 	}
 
 	/*
@@ -100,19 +83,15 @@ public class FindDuplicates {
 	 */
 	static int[] findDuplicatesWithBinarySearch(int[] arr1, int[] arr2) {
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-
 		for (int number : arr1)
 			if (binarySearch(arr2, number) != -1)
 				arrayList.add(number);
-
 		int[] result = new int[arrayList.size()];
 		int locationInResult = 0;
 		for (int i : arrayList) {
 			result[locationInResult] = i;
 			locationInResult++;
-
 		}
-
 		return result;
 	}
 
@@ -124,16 +103,13 @@ public class FindDuplicates {
 		int high = array.length - 1;
 		while (low <= high) {
 			int mid = low + (high - low) / 2;
-
 			if (key < array[mid])
 				high = mid - 1;
 			else if (key > array[mid])
 				low = mid + 1;
-
 			else
 				return mid;
 		}
 		return -1;
 	}
-
 }
