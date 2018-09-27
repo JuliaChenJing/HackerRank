@@ -37,11 +37,10 @@ public class SmallestPositiveInteger {
 					continue;
 				if (n != i) {
 					return i;
-				} else
-
+				} else {
 					i++;
+				}
 			}
-
 		}
 		return i;
 	}

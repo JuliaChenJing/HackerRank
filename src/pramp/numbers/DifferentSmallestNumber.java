@@ -24,12 +24,9 @@ public class DifferentSmallestNumber {
 	 * 
 	 * Analyze the time and space complexities of your algorithm.
 	 * 
-	 * 
 	 * Example:
 	 * 
-	 * 
 	 * input: arr = [0, 1, 2, 3]
-	 * 
 	 * 
 	 * output: 4 #
 	 */
@@ -52,12 +49,10 @@ public class DifferentSmallestNumber {
 				i++;
 			}
 		}
-
 		return i;
 	}
 
 	static int differentNumWithSort(int[] arr) {
-
 		Arrays.sort(arr);
 		int i;
 		if (arr[0] != 0)
@@ -68,53 +63,39 @@ public class DifferentSmallestNumber {
 			if (arr[i] != arr[i - 1] + 1) {
 				return arr[i - 1] + 1;
 			}
-
 		}
-
 		return arr[i - 1] + 1;
 	}
 
 	// method one
 	static int getDifferentNumberWithProrityQueue(int[] arr) {
-
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
-
 		for (int i = 0; i < arr.length; i++) {
-
 			pq.offer(arr[i]);
 		}
-
-		// System.out.println(pq);
 		int i = 0;
 		int j = 0;
 		for (; i < arr.length; i++) {
-
 			int poll = pq.poll();
 			if (poll == j - 1) {
-
 				continue;
 			} else if (poll != j)
 				return j;
 			else
 				j++;
 		}
-
 		return j;
 	}
 
 	// method 2 , worst case will be consuming
-
 	static int getDifferentNumberWithFind(int[] arr) {
 		if (!find(0, arr))
 			return 0;
 		int max = max(arr);
-
 		for (int i = 0; i <= max; i++) {
-
 			if (!find(i, arr))
 				return i;
 		}
-
 		return max + 1;
 
 	}
@@ -122,7 +103,6 @@ public class DifferentSmallestNumber {
 	// return if int num is in array
 	static boolean find(int num, int[] arr) {
 		for (int i = 0; i < arr.length; i++) {
-
 			if (arr[i] == num)
 				return true;
 		}
@@ -132,13 +112,10 @@ public class DifferentSmallestNumber {
 	// return the max value in arr
 	static int max(int[] arr) {
 		int max = arr[0];
-
 		for (int i = 1; i < arr.length; i++) {
-
 			if (arr[i] > max)
 				max = arr[i];
 		}
 		return max;
 	}
-
 }
