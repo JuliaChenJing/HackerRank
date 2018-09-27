@@ -27,20 +27,17 @@ public class LargestSmallerBSTKey {
 	}
 
 	static class BinarySearchTree {
-
 		Node root;
 
 		int findLargestSmallerKey(int num) {
 			if (root == null)
 				return -1;
 			return findHelper(root, num);
-
 		}
 
 		static int findHelper(Node root, int num) {
 			if (root == null)
 				return -1;
-
 			int result = 0;
 			while (root != null) {
 				if (root.key < num) {
@@ -90,12 +87,7 @@ public class LargestSmallerBSTKey {
 		}
 	}
 
-	/*********************************************
-	 * Driver program to test above function *
-	 *********************************************/
-
 	public static void main(String[] args) {
-
 		// Create a Binary Search Tree
 		BinarySearchTree bst = new BinarySearchTree();
 		bst.insert(20);
@@ -112,6 +104,5 @@ public class LargestSmallerBSTKey {
 		System.out.println("Largest smaller number bigger than 17 is " + bst.findLargestSmallerKey(17));
 		System.out.println("Largest smaller number bigger than 21 is " + bst.findLargestSmallerKey(21));
 		System.out.println("Largest smaller number bigger than 26 is " + bst.findLargestSmallerKey(26));
-
 	}
 }
