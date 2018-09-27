@@ -6,21 +6,19 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 /**
- * Class: Fundamental Programming Practice <br />
- * 
- * @author "Jing Chen" <br />
- *         Description: Implement necessary string methods and random number to
- *         produce a username based on the user's first and last names. Assumes
- *         the last name is at least five characters long. Username = First
+ * Class: Fundamental Programming Practice  
+ *         Description: Implement necessary string methods and userName number to
+ *         produce a userName based on the user's first and last names. Assumes
+ *         the last name is at least five characters long. userName = First
  *         character from first name and first five characters from last name +
- *         three digit random number.<br />
+ *         three digit userName number.
  */
 public class CreateUserName {
 	public static void main(String[] args) throws IOException {
 
 		String firstName = null, lastName = null;
-		StringBuilder random = new StringBuilder();
-		Random r = new Random();
+		StringBuilder userName = new StringBuilder();
+		Random random = new Random();
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.print("Type your first name: ");
@@ -32,16 +30,19 @@ public class CreateUserName {
 		System.out.println("Your first Name " + lastName);
 
 		in.close();
-		random.append(firstName.charAt(0));
-		random.append(lastName.substring(0, 4));
-		random.append(r.nextInt(10));
-		random.append(r.nextInt(10));
-		random.append(r.nextInt(10));
-		System.out.println("Your username is:" + random);
+		userName.append(firstName.charAt(0));
+		userName.append(lastName.substring(0, 4));
+		userName.append(random.nextInt(10));
+		userName.append(random.nextInt(10));
+		userName.append(random.nextInt(10));
+		System.out.println("Your userName is:" + userName);
 	}
 }
 
 /*
- * Type your first name: Julia Your first Name Julia Type your last name: Chen
- * Your first Name Chen Your username is:JChen925
+Type your first name: julia
+Your first Name julia
+Type your last name: chen
+Your first Name chen
+Your userName is:jchen639
  */
