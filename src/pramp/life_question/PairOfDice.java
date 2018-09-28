@@ -1,7 +1,6 @@
 package pramp.life_question;
 
 /** Class: Fundamental Programming Practice  <br /> 
-@author "Jing Chen" <br /> 
 Description:  Complete the following code by implementing the body<br /> 
 */
 import java.util.Random;
@@ -58,7 +57,11 @@ class PairOfDice {
 }
 
 /*
- * Fist pair come up with total 6
-Second pair come up with total 6
-it took 1 time to reach the same value
+Fist pair come up with total 8
+Second pair come up with total 4
+Fist pair come up with total 6
+Second pair come up with total 4
+Fist pair come up with total 7
+Second pair come up with total 7
+it took 10 time to reach the same value
  */
