@@ -40,7 +40,6 @@ public class IslandCount {
 		int numOfIslands = 0;
 		for (int i = 0; i < sea.length; i++) {
 			for (int j = 0; j < sea[0].length; j++) {
-
 				if (visited[i][j])
 					continue;
 				if (sea[i][j] == 0) {
@@ -57,9 +56,10 @@ public class IslandCount {
 
 	public static void floodFill(int row, int col, int[][] sea, boolean[][] visited) {
 		if (sea[row][col] == 0 || visited[row][col])
-			return;// actually this condition is considered already
+			return;
 
 		visited[row][col] = true;// visited
+
 		if (col < sea[0].length - 1)
 			floodFill(row, col + 1, sea, visited);
 		if (row < sea.length - 1)
