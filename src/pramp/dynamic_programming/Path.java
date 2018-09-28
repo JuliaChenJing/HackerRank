@@ -1,4 +1,5 @@
 package pramp.dynamic_programming;
+
 public class Path {
 
 	// http://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/
@@ -39,7 +40,6 @@ public class Path {
 
 	static int numOfPathsToDest(int n) {
 		findPaths(0, 0, n);
-
 		return destinationTimes;
 	}
 
@@ -132,6 +132,7 @@ public class Path {
 	public static int uniquePathsWithDynamicProgramming(int m, int n) {
 		if (m == 0 || n == 0)
 			return 0;
+
 		if (m == 1 || n == 1)
 			return 1;
 
@@ -160,6 +161,7 @@ public class Path {
 	public static int uniquePathsWithDynamicProgrammingAndRestriction(int m, int n) {
 		if (m == 0 || n == 0)
 			return 0;
+
 		if (m == 1 || n == 1)
 			return 1;
 
