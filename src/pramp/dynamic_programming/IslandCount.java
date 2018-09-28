@@ -1,6 +1,5 @@
 package pramp.dynamic_programming;
 
-//请在文件开头注释里说明一下为什么选择这段代码作为例子。确保文件公开可见，然后贴链接作为回复：solution is easy to understand and beautiful.
 public class IslandCount {
 	
 	/*
@@ -9,14 +8,19 @@ public class IslandCount {
                                 [1,    0,    0,    1,    0],
                                 [0,    1,    1,    0,    0],
                                 [1,    0,    1,    0,    1] 
-                               ]
+                               ];
 
      output: 6 # since this is the number of islands in binaryMatrix.
           # See all 6 islands color-coded below.
 	 */
 	
 	public static void main(String[] args) {
-		int[][] binaryMatrix = { { 1, 1 }, { 0, 1 }, { 0, 1 } };
+		int[][] binaryMatrix = 
+			{
+				{ 1, 1 }, 
+				{ 0, 1 },
+				{ 0, 1 } 
+				};
 		System.out.println(getNumberOfIslands(binaryMatrix));
 
 		int[][] sea = new int[][] {
@@ -24,15 +28,15 @@ public class IslandCount {
 			new int[] { 0, 0, 1, 1, 1 },
 			new int[] { 1, 0, 0, 1, 0 },
 			new int[] { 0, 1, 1, 0, 0 },
-			new int[] { 1, 0, 1, 0, 1 } };
+			new int[] { 1, 0, 1, 0, 1 } 
+			};
 
-		int numOfIslands = IslandCount.countIslands(sea);
+		int numOfIslands = countIslands(sea);
 		System.out.println("Number of islands is " + numOfIslands);
 	}
 
 	// my method, some situation not considered
 	static int getNumberOfIslands(int[][] binaryMatrix) {
-
 		int numOfIslands = 0;
 		int row = binaryMatrix.length;
 		int column = binaryMatrix[0].length;
@@ -51,7 +55,6 @@ public class IslandCount {
 			}
 
 		return numOfIslands;
-
 	}
 
 	// https://www.careercup.com/question?id=5708658983829504
@@ -101,5 +104,4 @@ public class IslandCount {
 		if (row > 0)
 			floodFill(row - 1, col, sea, visited);
 	}
-
 }
