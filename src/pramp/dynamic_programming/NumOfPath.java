@@ -1,12 +1,6 @@
 package pramp.dynamic_programming;
 
-public class Path {
-
-	// http://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/
-
-	// http://www.programcreek.com/2014/05/leetcode-unique-paths-java/
-
-	// https://www.pramp.com/question/N5LYMbYzyOtbpovQoY7X
+public class NumOfPath {
 
 	/*
 	 * 8.2 p176 Imagine a robot sitting on the upper left hand corner of an NxN
@@ -18,12 +12,11 @@ public class Path {
 	 * robot.
 	 */
 
-	// Returns count of possible paths to reach cell at row number m and column
-	// number n from the topmost leftmost cell (cell at 1, 1)
+	// http://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/
+
+	// http://www.programcreek.com/2014/05/leetcode-unique-paths-java/
 
 	public static void main(String[] args) {
-
-		System.out.println(numOfPathsToDest(4));// 5
 
 		System.out.println(numberOfPathsWithRecursion(4, 4));// 20
 		System.out.println(numberOfPathsWithRecurtionAndRestriction(4, 4));// 7
@@ -34,27 +27,6 @@ public class Path {
 		System.out.println(uniquePathsWithDynamicProgramming(4, 4));// 20
 		System.out.println(uniquePathsWithDynamicProgrammingAndRestriction(4, 4));// 7
 
-	}
-
-	static int destinationTimes = 0;
-
-	static int numOfPathsToDest(int n) {
-		findPaths(0, 0, n);
-		return destinationTimes;
-	}
-
-	static void findPaths(int i, int j, int n) {
-		if (i == (n - 1) && j == (n - 1)) {
-			destinationTimes++;
-		} else {
-			if (i >= (j + 1) && (j + 1) <= (n - 1)) {
-				findPaths(i, j + 1, n);
-			}
-
-			if ((i + 1) >= j && (i + 1) <= (n - 1)) {
-				findPaths(i + 1, j, n);
-			}
-		}
 	}
 
 	static int numberOfPathsWithRecursion(int m, int n) {
