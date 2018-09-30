@@ -3,7 +3,6 @@ package pramp.binary_search_and_sort;
 import java.util.*;
 
 public class NumberMinusPair {
-
 	// Tim Sort : Merge + Quick
 	// Heap Sort: nlog
 	// Merge: nlogn --> O(n)
@@ -33,28 +32,22 @@ public class NumberMinusPair {
 	static int[][] findPairsWithGivenDifference(int[] arr, int k) {
 		List<int[]> list = new ArrayList<int[]>();
 		Arrays.sort(arr);
-
 		for (int i = 0; i < arr.length; i++) {
-
 			if (Arrays.binarySearch(arr, arr[i] + k) < 0)
 				continue;
 			else
 				list.add(new int[] { arr[i], arr[i] + k });
-
 		}
 		int[][] result = new int[list.size()][2];
-
 		int i = 0;
 		for (int[] temp : list) {
 			result[i] = temp;
 			i++;
 		}
-
 		return result;
 	}
 
 	public static void main(String[] args) {
-
 		int[] arr = { 0, -1, -2, 2, 1 };
 		int[][] result = findPairsWithGivenDifference(arr, 1);
 		for (int i = 0; i < result.length; i++) {
@@ -62,7 +55,5 @@ public class NumberMinusPair {
 				System.out.print(result[i][j] + " ");
 			System.out.println();
 		}
-
 	}
-
 }

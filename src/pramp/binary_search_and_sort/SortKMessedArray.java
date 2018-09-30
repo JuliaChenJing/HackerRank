@@ -1,6 +1,6 @@
 package pramp.binary_search_and_sort;
 
-public class KMessedArraySort {
+public class SortKMessedArray {
 
 	public static void main(String[] args) {
 
