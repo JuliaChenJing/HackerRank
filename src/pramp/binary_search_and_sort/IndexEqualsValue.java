@@ -8,11 +8,11 @@ public class IndexEqualsValue {
 		int[] arr1 = { -1, 0, 3, 6 };
 		int[] arr2 = { -8, 0, 2, 5 };
 
-		System.out.println(indexEqualsValueSearch(arr1));
-		System.out.println(indexEqualsValueSearchWithBinarySearch(arr1));
+		System.out.println(indexEqualsValueSearch(arr1));//-1
+		System.out.println(indexEqualsValueSearchWithBinarySearch(arr1));//-1
 
-		System.out.println(indexEqualsValueSearch(arr2));
-		System.out.println(indexEqualsValueSearchWithBinarySearch(arr2));
+		System.out.println(indexEqualsValueSearch(arr2));//2
+		System.out.println(indexEqualsValueSearchWithBinarySearch(arr2));//2
 	}
 
 	static int indexEqualsValueSearch(int[] arr) {
